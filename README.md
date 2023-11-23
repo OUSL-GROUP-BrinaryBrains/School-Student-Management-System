@@ -1,6 +1,3 @@
 # School-Student-Management-System
 
-## Project
-
-
-## Testing
+## Project Finalized
