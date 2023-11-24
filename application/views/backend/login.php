@@ -37,16 +37,16 @@ var baseurl = '<?php echo base_url();?>';
 
 <div class="login-container">
 	<div class="login-header login-caret">
-		<div class="login-content" style="width:100%;">
+		<div class="login-content" style="width:100%; height: fit-content;">
 			<A href="<?php echo base_url();?>" class="logo">
 				<img src="uploads/logo.png" height="120" alt="" />
 			</A>
 
 			<p class="description">
-            	<h1 style="color:#ffa900;">
+            	<h1 style="color:#ffa800; font-family: system-ui;">
 					<?php echo $system_name;?>
               </h1>
-			  <h5 style="color:#FFA800;">
+			  <h5 style="color:#00b376; font-family: monospace; margin-bottom: 24px;">
 					Developed by Binary Brains
               </h5>
            </p>
@@ -56,8 +56,8 @@ var baseurl = '<?php echo base_url();?>';
 		<div class="login-content">
 			
 			<div class="form-login-error">
-				<h4>Invalid Login</h4>
-				<p>Please Enter Correct Email and Password!</p>
+				<h4 style="color:#FFF; font-family: monospace;">Invalid Login</h4>
+				<p style="font-family: monospace;">Please Check Your Email and Password!</p>
 			</div>
 			
 			<form method="post" role="form" id="form_login">
@@ -66,7 +66,7 @@ var baseurl = '<?php echo base_url();?>';
 						<div class="input-group-addon">
 							<i class="entypo-user"></i>
 						</div>
-						<input type="text" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off" data-mask="email" />
+						<input type="text" class="form-control" name="email" id="email" placeholder="Enter Your Email" autocomplete="off" data-mask="email" />
 					</div>
 					
 				</div>
@@ -76,14 +76,13 @@ var baseurl = '<?php echo base_url();?>';
 						<div class="input-group-addon">
 							<i class="entypo-key"></i>
 						</div>
-						<input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
+						<input type="password" class="form-control" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
 					</div>
 				
 				</div>
 				
 				<div class="form-group">
 					<button type="submit" class="btn btn-success btn-block btn-login">
-						<i class="entypo-login"></i>
 						Login
 					</button>
 				</div>
@@ -93,7 +92,7 @@ var baseurl = '<?php echo base_url();?>';
 			
 			
 			<div class="login-bottom-links">
-				<A href="<?php echo base_url();?>index.php?login/forgot_password" class="link">
+				<A href="<?php echo base_url();?>index.php?login/forgot_password" class="link" >
 					<?php echo get_phrase('forgot_your_password');?>?
 				</A>
 			</div>

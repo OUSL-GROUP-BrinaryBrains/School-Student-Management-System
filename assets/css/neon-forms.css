@@ -1641,6 +1641,7 @@ button.toast-close-button {
 }
 html {
   font-size: 62.5%;
+  background-color: #001911;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -4001,7 +4002,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-success,
 .btn-green {
   color: #ffffff;
-  background-color: #00a651;
+  background-color: #008055;
   border-color: #00a651;
 }
 .btn-success:hover,
@@ -6337,11 +6338,12 @@ hr + .mail-env {
   background: #303641;
 }
 .login-page .login-content {
+  background-color: #001911;
   position: relative;
-  width: 320px;
+  width: 380px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px 0;
+  padding: 2px 0;
   -moz-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;
   -webkit-transition: all 550ms ease-in-out;
@@ -6352,7 +6354,7 @@ hr + .mail-env {
 }
 .login-page .login-header {
   position: relative;
-  background: #373e4a;
+  background: #001911;
   padding: 70px 0;
   -moz-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;
@@ -6378,7 +6380,7 @@ hr + .mail-env {
   height: 0px;
   border-style: solid;
   border-width: 13px 12.5px 0 12.5px;
-  border-color: #373e4a transparent transparent transparent;
+  border-color: #001911 transparent transparent transparent;
   bottom: -13px;
   -moz-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;
@@ -6387,7 +6389,7 @@ hr + .mail-env {
 }
 .login-page .login-form {
   position: relative;
-  padding-top: 60px;
+  padding-top: 20px;
   -moz-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;
   -webkit-transition: all 550ms ease-in-out;
@@ -6401,8 +6403,8 @@ hr + .mail-env {
   transition: all 550ms ease-in-out;
 }
 .login-page .login-form .form-group .input-group {
-  background: #373e4a;
-  border: 1px solid #373e4a;
+  background: #e6fff6;
+  border: 2px solid #008055;
   padding-top: 6px;
   padding-bottom: 6px;
   -moz-transition: all 300ms ease-in-out;
@@ -6425,11 +6427,13 @@ hr + .mail-env {
   border-color: rgba(236, 89, 86, 0.5);
 }
 .login-page .login-form .form-group .input-group.validate-has-error .error {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  margin-top: -8px;
-  font-size: 10px;
+  font-family: system-ui;
+    font-size: smaller;
+    font-weight: 600;
+    color: red;
+    position: absolute;
+    right: 5px;
+    margin-top: -18px;
 }
 .login-page .login-form .form-group .input-group .input-group-addon,
 .login-page .login-form .form-group .input-group .form-control {
@@ -6455,7 +6459,10 @@ hr + .mail-env {
   transform: scaleY(.56);
 }
 .login-page .login-form .form-group .input-group .form-control {
-  color: #ffffff;
+  color: #001911;
+  font-family: system-ui;
+  font-size: medium;
+  font-weight: 500;
 }
 .login-page .login-form .form-group .input-group .form-control:focus {
   -moz-box-shadow: none;
@@ -6519,10 +6526,10 @@ hr + .mail-env {
   padding-bottom: 5px;
 }
 .login-page .login-form .form-group .btn-login {
-  border: 1px solid #454a54;
-  text-align: left;
-  padding: 15px 20px;
-  font-size: 14px;
+  border: 2px solid #008055;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 18px;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
@@ -6952,7 +6959,7 @@ hr + .mail-env {
 }
 @media (max-width: 350px) {
   .login-page .login-content {
-    width: 280px;
+    width: 360px;
   }
 }
 .icheck-list {
