@@ -13,7 +13,6 @@
 	
 	<title><?php echo ('Login');?> | <?php echo $system_title;?></title>
 	
-
 	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
 	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
@@ -37,36 +36,20 @@ var baseurl = '<?php echo base_url();?>';
 </script>
 
 <div class="login-container">
-	
 	<div class="login-header login-caret">
-		
 		<div class="login-content" style="width:100%;">
-			
 			<A href="<?php echo base_url();?>" class="logo">
-				<img src="uploads/logo.png" height="60" alt="" />
+				<img src="uploads/logo.png" height="120" alt="" />
 			</A>
-			
+
 			<p class="description">
-            	<h1 style="color:#00ffa1;">
+            	<h1 style="color:#ffa900;">
 					<?php echo $system_name;?>
               </h1>
-			  <h4 style="color:#ffa900;">
+			  <h5 style="color:#FFA800;">
 					Developed by Binary Brains
-              </h4>
+              </h5>
            </p>
-			
-			<!-- progress bar indicator -->
-			<div class="login-progressbar-indicator">
-				<h4>43%</h4>
-				<span>Logging in....</span>
-			</div>
-		</div>
-		
-	</div>
-	
-	<div class="login-progressbar">
-		<div></div>
-	</div>
 	
 	<div class="login-form">
 		

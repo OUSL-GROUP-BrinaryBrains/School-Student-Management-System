@@ -30,7 +30,7 @@
 		
 			<?php include 'header.php';?>
 
-           <h3 style="">
+           <h3>
            	<i class="entypo-right-circled"></i> 
 				<?php echo $page_title;?>
            </h3>
