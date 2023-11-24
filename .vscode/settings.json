@@ -1,0 +1,29 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "XAMPP",
+            "database": "school_db",
+            "username": "root",
+            "password": ""
+        }
+    ],
+
+    // Mainly for static files
+    "liveServer.settings.useWebExt": true,
+
+    // This means that you change your real URL (current PHP url) 
+    // to another URL (which Live Sever starts).
+    "liveServer.settings.proxy": {
+        "enable": true,                             //   i. enabled
+        "baseUri": "/",                             //  ii. workspace
+        "proxyUri": "http://localhost:80/SM//" // iii. actual address
+    },
+}
