@@ -7,7 +7,6 @@
 	?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Admin Panel" />
 	<meta name="author" content="Binary Brains" />
@@ -26,13 +25,6 @@
 
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 
-	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
 	<link rel="shortcut icon" href="assets/images/favicon.png">
 	
 </head>
@@ -55,14 +47,17 @@ var baseurl = '<?php echo base_url();?>';
 			</A>
 			
 			<p class="description">
-            	<h2 style="color:#cacaca; font-weight:bold;">
+            	<h1 style="color:#00ffa1;">
 					<?php echo $system_name;?>
-              </h2>
+              </h1>
+			  <h4 style="color:#ffa900;">
+					Developed by Binary Brains
+              </h4>
            </p>
 			
 			<!-- progress bar indicator -->
 			<div class="login-progressbar-indicator">
-				<h3>43%</h3>
+				<h4>43%</h4>
 				<span>Logging in....</span>
 			</div>
 		</div>
@@ -78,31 +73,26 @@ var baseurl = '<?php echo base_url();?>';
 		<div class="login-content">
 			
 			<div class="form-login-error">
-				<h3>Invalid Login</h3>
+				<h4>Invalid Login</h4>
 				<p>Please Enter Correct Email and Password!</p>
 			</div>
 			
 			<form method="post" role="form" id="form_login">
-				
 				<div class="form-group">
-					
 					<div class="input-group">
 						<div class="input-group-addon">
 							<i class="entypo-user"></i>
 						</div>
-						
 						<input type="text" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off" data-mask="email" />
 					</div>
 					
 				</div>
 				
 				<div class="form-group">
-					
 					<div class="input-group">
 						<div class="input-group-addon">
 							<i class="entypo-key"></i>
 						</div>
-						
 						<input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
 					</div>
 				
@@ -121,7 +111,7 @@ var baseurl = '<?php echo base_url();?>';
 			
 			<div class="login-bottom-links">
 				<A href="<?php echo base_url();?>index.php?login/forgot_password" class="link">
-					<?php echo get_phrase('forgot_your_password');?> ?
+					<?php echo get_phrase('forgot_your_password');?>?
 				</A>
 			</div>
 			
