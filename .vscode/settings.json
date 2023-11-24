@@ -24,6 +24,6 @@
     "liveServer.settings.proxy": {
         "enable": true,                             //   i. enabled
         "baseUri": "/",                             //  ii. workspace
-        "proxyUri": "http://localhost:80/SM//" // iii. actual address
+        "proxyUri": "http://localhost:80//School-Student-Management-System/" // iii. actual address
     },
 }
