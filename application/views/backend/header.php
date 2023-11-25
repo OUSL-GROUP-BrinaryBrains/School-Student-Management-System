@@ -1,4 +1,4 @@
-<div class="row" >
+<div class="row">
 	<div class="col-md-12 col-sm-12 clearfix" style="text-align:center;">
 		<h1 style="font-weight:bold; margin:0px; color:#008055; font-family: 'system-ui';"><?php echo $system_name; ?></h1>
 	</div>
