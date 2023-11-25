@@ -5,7 +5,7 @@
             	<?php echo get_phrase('add_new_teacher');?>
                 </a> 
                 <br><br>
-               <table class="table table-bordered table-hover table-striped datatable" id="table_export">
+               <table class="table table-bordered table-hover table-striped datatable" id="table_export" style="color:#001911 ;font-family: system-ui;font-size:14px;">
                     <thead>
                         <tr>
                             <th width="80"><div><?php echo ('Photo');?></div></th>

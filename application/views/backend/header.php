@@ -5,7 +5,7 @@
 	<!-- Raw Links -->
 	<div class="col-md-12 col-sm-12 clearfix ">
 
-		<h3 style="font-weight: bold; margin-left:15px; margin-bottom:0px; color:#ffa800; font-family: system-ui;"><?php echo  $this->session->userdata('name'); ?></h3>
+		<h3 style="font-weight: bold; margin-left:15px; margin-bottom:0px; color:#ffa800; font-family: system-ui;"><?php echo "Welcome," ?> <?php echo  $this->session->userdata('name'); ?></h3>
 		<ul class="list-inline links-list pull-left">
 
 			<!-- Language Selector -->

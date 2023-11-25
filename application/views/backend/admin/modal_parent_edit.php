@@ -3,7 +3,7 @@
 	foreach ($edit_data as $row):
 ?>
 
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
 		<div class="panel panel-primary" data-collapsed="0">
         	<div class="panel-heading">
