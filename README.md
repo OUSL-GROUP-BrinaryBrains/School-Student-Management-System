@@ -2,23 +2,19 @@
 
 <img width="1458" alt="Screenshot 2023-11-25 at 5 37 46 AM" src="https://github.com/OUSL-GROUP-BrinaryBrains/School-Student-Management-System/assets/90142607/cc09a9c5-1abb-4ced-a169-ba1f2c981ad0">
 
-### Password is 123
-
-### School Admin <br>
+## User Credentials (Password for all is 123)
+#### School Admin <br>
 admin@gmail.com <br>
-
-### Parent's <br>
+#### Parent's <br>
 p_riham@gmail.com <br>
 p_zakir@gmail.com <br>
 p_safran@gmail.com <br>
 p_ilma@gmail.com <br>
-
-### Student's <br>
+#### Student's <br>
 riham@gmail.com <br>
 zakir@gmail.com <br>
 safran@gmail.com <br>
 ilma@gmail.com <br>
-
-### Teacher's <br>
+#### Teacher's <br>
 t_kasun@mail.com <br>
 t_savithree@gmail.com <br>
