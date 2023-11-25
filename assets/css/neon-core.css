@@ -9988,7 +9988,7 @@ body.page-fade-only-init > .page-container {
   border-radius: 0;
   background-clip: padding-box;
   padding: 10px 20px;
-  color: #8d929a;
+  color: #008055;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
@@ -10005,7 +10005,7 @@ body.page-fade-only-init > .page-container {
 }
 .language-selector .dropdown-menu > li.active a {
   background: rgba(235, 235, 235, 0.9);
-  color: #737881;
+  color: #008055;
 }
 .language-selector.open > .dropdown-toggle {
   -webkit-border-radius: 3px 3px 0 0;

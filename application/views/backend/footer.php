@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="main">
-	&copy; <?php echo date('Y')?> | School Management System in PHP using CodeIgniter Web Framework |
+<footer class="main" style="font-family:'system-ui'; color:#008055">
+	&copy; <?php echo date('Y')?> | School Management System |
     <strong>Developed by Binary Brains</strong>
 </footer>
