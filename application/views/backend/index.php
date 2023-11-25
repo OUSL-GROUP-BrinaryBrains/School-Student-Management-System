@@ -32,8 +32,8 @@ $active_sms_service =   $this->db->get_where('settings', array('type' => 'active
 
 			<?php include 'header.php'; ?>
 
-			<h3 style="color:#001911 ;font-family: 'system-ui';">
-				<i class="entypo-right-open-mini" style="color:#001911 ;font-family: 'system-ui';"></i>
+			<h3 style="color:#001911 ;font-family: system-ui;">
+				<i class="entypo-right-open-mini" style="color:#001911 ;font-family: system-ui;"></i>
 				<?php echo $page_title; ?>
 			</h3>
 
