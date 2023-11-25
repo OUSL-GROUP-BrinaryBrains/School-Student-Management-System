@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
     
     	<!------CONTROL TABS START------>
@@ -32,7 +32,7 @@
                 <div class="">
 
 
-						<div class="row">
+						<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
                     	<?php 
 						$current_editing_language	=	$edit_profile;
 						echo form_open(base_url() . 'index.php?admin/manage_language/update_phrase/'.$current_editing_language  , array('id' => 'phrase_form'));
