@@ -58,7 +58,7 @@
 					<div class="login-content">
 
 						<div class="form-login-error">
-							<h4 style="color:#FFFFFF; font-family: monospace;">Invalid Login</h4>
+							<h4 style="color:#FFFFFF; font-family: monospace;">Invalid Credentials</h4>
 							<p style="font-family: monospace;">Please Check Your Email and Password!</p>
 						</div>
 

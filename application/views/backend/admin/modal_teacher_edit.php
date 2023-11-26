@@ -2,7 +2,7 @@
 $edit_data		=	$this->db->get_where('teacher' , array('teacher_id' => $param2) )->result_array();
 foreach ( $edit_data as $row):
 ?>
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
 		<div class="panel panel-primary" data-collapsed="0">
         	<div class="panel-heading">
