@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
-
+        
+            <!-- Dashboard Tiles -->
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-graduation-cap"></i></div>
