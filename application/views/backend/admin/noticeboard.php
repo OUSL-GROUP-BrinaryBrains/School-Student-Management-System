@@ -3,8 +3,8 @@
 
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
-            <li class="active" >
-                <a href="#list" data-toggle="tab"><i class="entypo-menu" ></i>
+            <li class="active">
+                <a href="#list" data-toggle="tab"><i class="entypo-menu"></i>
                     <?php echo ('Noticeboard List'); ?>
                 </a>
             </li>
@@ -15,7 +15,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
 
         <div class="tab-content">
             <!----TABLE LISTING STARTS-->
