@@ -1,4 +1,4 @@
-<div class="sidebar-menu">
+<div class="sidebar-menu" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <header class="logo-env" >
 
         <!-- logo -->
@@ -93,16 +93,7 @@
                 </li>
             </ul>
         </li>
-
-
-        <!-- MESSAGE -->
-        <li class="<?php if ($page_name == 'message') echo 'active'; ?> ">
-            <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?<?php echo $account_type; ?>/message">
-                <i class="entypo-mail"></i>
-                <span><?php echo ('Message'); ?></span>
-            </a>
-        </li>
-
+        
         <!-- ACCOUNT -->
         <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
             <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?<?php echo $account_type; ?>/manage_profile">

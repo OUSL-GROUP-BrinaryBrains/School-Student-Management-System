@@ -1,4 +1,4 @@
-<div class="sidebar-menu">
+<div class="sidebar-menu" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <header class="logo-env" >
 
         <!-- logo -->
