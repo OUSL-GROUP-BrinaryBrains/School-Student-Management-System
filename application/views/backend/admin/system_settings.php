@@ -52,24 +52,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Language'); ?></label>
-                    <div class="col-sm-9">
-                        <select name="language" class="form-control">
-                            <?php
-                            $fields = $this->db->list_fields('language');
-                            foreach ($fields as $field) {
-                                if ($field == 'phrase_id' || $field == 'phrase') continue;
 
-                                $current_default_language    =    $this->db->get_where('settings', array('type' => 'language'))->row()->description;
-                            ?>
-                                <option value="<?php echo $field; ?>" <?php if ($current_default_language == $field) echo 'selected'; ?>> <?php echo $field; ?> </option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-                    </div>
-                </div>
 
 
 
