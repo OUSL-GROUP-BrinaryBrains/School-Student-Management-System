@@ -111,7 +111,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="black">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Apply Theme'); ?>
+                                    <?php echo ('Black Theme'); ?>
                                 </a>
                             </header>
                         </article>
@@ -124,7 +124,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="blue">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Apply Theme'); ?>
+                                    <?php echo ('Blue Theme'); ?>
                                 </a>
                             </header>
                         </article>

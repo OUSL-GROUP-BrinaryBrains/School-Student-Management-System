@@ -32,7 +32,7 @@
         <!-- DASHBOARD -->
         <li class="<?php if ($page_name == 'dashboard') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/dashboard" style='font-weight:550;font-size:14px'>
-                <i class="entypo-gauge"></i>
+                <i class="fa fa-desktop"></i>
                 <span><?php echo ('Dashboard'); ?></span>
             </a>
         </li>
@@ -40,7 +40,7 @@
 		<!-- NOTICEBOARD -->
         <li class="<?php if ($page_name == 'noticeboard') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/noticeboard" style='font-weight:550;font-size:14px'>
-                <i class="entypo-doc-text-inv"></i>
+                <i class="fa fa-bullhorn"></i>
                 <span><?php echo ('Noticeboard'); ?></span>
             </a>
         </li>
@@ -52,18 +52,18 @@
             echo 'opened active';
         ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
-                <i class="entypo-flow-tree"></i>
+                <i class="fa fa-sitemap"></i>
                 <span><?php echo ('Classes'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'class') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/classes" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Manage Classes'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Manage Classes'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if ($page_name == 'section') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/section" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Manage Sections'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Manage Sections'); ?></span>
                     </a>
                 </li>
             </ul>
@@ -72,7 +72,7 @@
         <!-- SUBJECT -->
         <li class="<?php if ($page_name == 'subject') echo 'opened active'; ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
-                <i class="entypo-docs"></i>
+                <i class="fa fa-book"></i>
                 <span><?php echo ('Subjects'); ?></span>
             </a>
             <ul>
@@ -92,7 +92,7 @@
         <!-- CLASS ROUTINE -->
         <li class="<?php if ($page_name == 'class_routine') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/class_routine" style='font-weight:550;font-size:14px'>
-                <i class="entypo-calendar"></i>
+                <i class="fa fa-calendar"></i>
                 <span><?php echo ('Class Routine'); ?></span>
             </a>
         </li>
@@ -100,7 +100,7 @@
          <!-- PARENTS -->
          <li class="<?php if ($page_name == 'parent') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/parent" style='font-weight:550;font-size:14px'>
-                <i class="entypo-user"></i>
+                <i class="fa fa-group"></i>
                 <span><?php echo ('Parents'); ?></span>
             </a>
         </li>
@@ -118,14 +118,14 @@
                       
                 <li class="<?php if ($page_name == 'student_add') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/student_add" style='font-weight:550;font-size:14px'> 
-                        <span><i class="entypo-dot"></i> <?php echo ('Add Student'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Add Student'); ?></span>
                     </a>
                 </li>
 
                 <!-- STUDENT INFORMATION -->
                 <li class="<?php if ($page_name == 'student_information') echo 'opened active'; ?> ">
                     <a href="#" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Student Information'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Student Information'); ?></span>
                     </a>
                     <ul>
                         <?php
@@ -144,7 +144,7 @@
                 <!-- STUDENT MARKSHEET -->
                 <li class="<?php if ($page_name == 'student_marksheet') echo 'opened active'; ?> ">
                     <a href="#" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Student Marksheet'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Student Marksheet'); ?></span>
                     </a>
                     <ul>
                         <?php
@@ -165,7 +165,7 @@
         <!-- TEACHER -->
         <li class="<?php if ($page_name == 'teacher') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/teacher" style='font-weight:550;font-size:14px'>
-                <i class="entypo-users"></i>
+                <i class="fa fa-users"></i>
                 <span><?php echo ('Teachers'); ?></span>
             </a>
         </li>
@@ -174,7 +174,7 @@
         <!-- DAILY ATTENDANCE -->
         <li class="<?php if ($page_name == 'manage_attendance') echo 'active'; ?> ">
             <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?admin/manage_attendance/<?php echo date("d/m/Y"); ?>">
-                <i class="entypo-chart-area"></i>
+                <i class="fa fa-check-square-o"></i>
                 <span><?php echo ('Daily Attendance'); ?></span>
             </a>
 
@@ -188,23 +188,23 @@
                         echo 'opened active';
         ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
-                <i class="entypo-graduation-cap"></i>
+                <i class="fa fa-puzzle-piece"></i>
                 <span><?php echo ('Examinations'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'exam') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/exam" style='font-weight:550;font-size:14px'> 
-                        <span><i class="entypo-dot"></i> <?php echo ('Exams List'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Exams List'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if ($page_name == 'grade') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/grade" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Exams Grades'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Exams Grades'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if ($page_name == 'marks') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/marks" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-dot"></i> <?php echo ('Manage Marks'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Manage Marks'); ?></span>
                     </a>
                 </li>
             </ul>
@@ -213,7 +213,7 @@
         <!-- ACCOUNT -->
         <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/manage_profile" style='font-weight:550;font-size:14px'>
-                <i class="entypo-lock"></i>
+                <i class="fa fa-user"></i>
                 <span><?php echo ('Account Profile'); ?></span>
             </a>
         </li>
@@ -221,7 +221,8 @@
         <!-- SETTINGS -->
         <li class="<?php if ($page_name == 'system_settings') echo 'active'; ?> ">
         <a href="<?php echo base_url(); ?>index.php?admin/system_settings" style='font-weight:550;font-size:14px'>
-                        <span><i class="entypo-lifebuoy"></i> <?php echo ('System Settings'); ?></span>
+        <i class="fa fa-cogs"></i>
+                        <span></i> <?php echo ('System Settings'); ?></span>
                     </a>
         </li>
 
