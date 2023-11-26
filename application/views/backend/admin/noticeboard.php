@@ -112,27 +112,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-3 control-label"><?php echo ('Send sms to all'); ?></label>
-                        <div class="col-sm-5">
-                            <select class="form-control" name="check_sms">
-                                <option value="1"><?php echo ('Yes'); ?></option>
-                                <option value="2"><?php echo ('No'); ?></option>
-                            </select>
-                            <br>
-                            <span class="badge badge-primary">
-                                <?php
-                                if ($active_sms_service == 'clickatell')
-                                    echo 'Clickatell ' . ('Activated');
-                                if ($active_sms_service == 'twilio')
-                                    echo 'Twilio ' . ('Activated');
-                                if ($active_sms_service == '' || $active_sms_service == 'disabled')
-                                    echo ('SMS service not activated');
-                                ?>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-5">
                             <button type="submit" class="btn btn-info"><?php echo ('Add Notice'); ?></button>
                         </div>
