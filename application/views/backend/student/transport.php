@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
     
     	<!------CONTROL TABS START------>
@@ -17,10 +17,10 @@
                 <table class="table table-bordered table-hover table-striped datatable" id="table_export">
                 	<thead>
                 		<tr>
-                    		<th><div><?php echo ('Route Name');?></div></th>
+                    		<th><div><?php echo ('Route name');?></div></th>
                     		<th><div><?php echo ('Number of vehicle');?></div></th>
                     		<th><div><?php echo ('Description');?></div></th>
-                    		<th><div><?php echo ('Route Fare');?></div></th>
+                    		<th><div><?php echo ('Route fare');?></div></th>
 						</tr>
 					</thead>
                     <tbody>
