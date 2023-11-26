@@ -1,9 +1,7 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
-    <div class="col-md-12">
-
+    <div class="col-md-12" >
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
-
             <li class="active">
                 <a href="#list" data-toggle="tab"><i class="entypo-user"></i>
                     <?php echo ('Manage Profile'); ?>
@@ -12,8 +10,7 @@
         </ul>
         <!------CONTROL TABS END------>
 
-
-        <div class="tab-content">
+        <div class="tab-content" style="margin-top:0px; margin-bottom:0px;">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
                 <div class="box-content">
@@ -35,7 +32,6 @@
                                 <input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>" />
                             </div>
                         </div>
-
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
@@ -70,8 +66,7 @@
         </ul>
         <!------CONTROL TABS END------->
 
-
-        <div class="tab-content">
+        <div class="tab-content" style="margin-top:0px; margin-bottom:0px;">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
                 <div class="box-content padded">
