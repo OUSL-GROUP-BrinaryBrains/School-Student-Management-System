@@ -98,14 +98,6 @@
             </ul>
         </li>
 
-        <!-- MESSAGE -->
-        <li class="<?php if ($page_name == 'message') echo 'active'; ?> ">
-            <a href="<?php echo base_url(); ?>index.php?parents/message" style='font-weight:550;font-size:14px'>
-                <i class="entypo-mail"></i>
-                <span><?php echo ('Message'); ?></span>
-            </a>
-        </li>
-
         <!-- ACCOUNT -->
         <li class="<?php if ($page_name == 'manage_profile') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?parents/manage_profile" style='font-weight:550;font-size:14px'>
