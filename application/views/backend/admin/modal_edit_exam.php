@@ -8,7 +8,7 @@ foreach ( $edit_data as $row):
         	<div class="panel-heading">
             	<div class="panel-title" >
             		<i class="entypo-plus-circled"></i>
-					<?php echo ('Edit Student');?>
+					<?php echo ('Edit Exam List');?>
             	</div>
             </div>
 			<div class="panel-body">
@@ -35,7 +35,7 @@ foreach ( $edit_data as $row):
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-5">
-                      <button type="submit" class="btn btn-info"><?php echo ('Edit_exam');?></button>
+                      <button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>
                     </div>
                 </div>
             </form>

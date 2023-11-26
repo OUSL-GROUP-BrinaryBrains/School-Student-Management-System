@@ -25,14 +25,14 @@
                 	<tr>
                         <td>
                         	<select name="exam_id" class="form-control"  style="float:left;">
-                                <option value=""><?php echo ('Select an exam');?></option>
+                                <option value=""><?php echo ('Select an Exam');?></option>
                                 <?php 
                                 $exams = $this->db->get('exam')->result_array();
                                 foreach($exams as $row):
                                 ?>
                                     <option value="<?php echo $row['exam_id'];?>"
                                         <?php if($exam_id == $row['exam_id'])echo 'selected';?>>
-                                            <?php echo ('Class');?> <?php echo $row['name'];?></option>
+                                            <?php echo $row['name'];?></option>
                                 <?php
                                 endforeach;
                                 ?>
@@ -40,14 +40,14 @@
                         </td>
                         <td>
                         	<select name="class_id" class="form-control"  onchange="show_subjects(this.value)"  style="float:left;">
-                                <option value=""><?php echo ('Select a class');?></option>
+                                <option value=""><?php echo ('Select a Class');?></option>
                                 <?php 
                                 $classes = $this->db->get('class')->result_array();
                                 foreach($classes as $row):
                                 ?>
                                     <option value="<?php echo $row['class_id'];?>"
                                         <?php if($class_id == $row['class_id'])echo 'selected';?>>
-                                            Class <?php echo $row['name'];?></option>
+                                            <?php echo $row['name'];?></option>
                                 <?php
                                 endforeach;
                                 ?>
@@ -63,7 +63,7 @@
                                       id="subject_id_<?php echo $row['class_id'];?>" 
                                           style="display:<?php if($class_id == $row['class_id'])echo 'block';else echo 'none';?>;" class="form-control"  style="float:left;">
                                   
-                                    <option value="">Subject of class <?php echo $row['name'];?></option>
+                                    <option value="">Subject of <?php echo $row['name'];?></option>
                                     
                                     <?php 
                                     $subjects	=	$this->crud_model->get_subjects_by_class($row['class_id']); 
@@ -81,7 +81,7 @@
                             
                             <select name="temp" id="subject_id_0" 
                               style="display:<?php if(isset($subject_id) && $subject_id >0)echo 'none';else echo 'block';?>;" class="form-control" style="float:left;">
-                                    <option value="">Select a class first</option>
+                                    <option value="">Select a Class First</option>
                             </select>
                         </td>
                         <td>

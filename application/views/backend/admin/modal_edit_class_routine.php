@@ -74,8 +74,8 @@ $edit_data		=	$this->db->get_where('class_routine' , array('class_routine_id' =>
                             <?php endfor;?>
                         </select>
                         <select name="starting_ampm" class="form-control">
-                            <option value="1" <?php if($starting_ampm	==	'1')echo 'selected="selected"';?>>am</option>
-                            <option value="2" <?php if($starting_ampm	==	'2')echo 'selected="selected"';?>>pm</option>
+                            <option value="1" <?php if($starting_ampm	==	'1')echo 'selected="selected"';?>>AM</option>
+                            <option value="2" <?php if($starting_ampm	==	'2')echo 'selected="selected"';?>>PM</option>
                         </select>
                     </div>
                 </div>
@@ -104,14 +104,14 @@ $edit_data		=	$this->db->get_where('class_routine' , array('class_routine_id' =>
                             <?php endfor;?>
                         </select>
                         <select name="ending_ampm" class="form-control">
-                            <option value="1" <?php if($ending_ampm	==	'1')echo 'selected="selected"';?>>am</option>
-                            <option value="2" <?php if($ending_ampm	==	'2')echo 'selected="selected"';?>>pm</option>
+                            <option value="1" <?php if($ending_ampm	==	'1')echo 'selected="selected"';?>>AM</option>
+                            <option value="2" <?php if($ending_ampm	==	'2')echo 'selected="selected"';?>>PM</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-3 col-sm-5">
-                      <button type="submit" class="btn btn-info"><?php echo ('Edit Class Routine');?></button>
+                      <button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>
                   </div>
                 </div>
         </form>

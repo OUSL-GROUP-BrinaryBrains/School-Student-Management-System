@@ -75,7 +75,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" class="btn btn-info"><?php echo ('Save'); ?></button>
+                        <button type="submit" class="btn btn-info"><?php echo ('Save Settings'); ?></button>
                     </div>
                 </div>
 
@@ -128,7 +128,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="black">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Select Theme'); ?>
+                                    <?php echo ('Apply Theme'); ?>
                                 </a>
                             </header>
                         </article>
@@ -141,7 +141,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="blue">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Select Theme'); ?>
+                                    <?php echo ('Apply Theme'); ?>
                                 </a>
                             </header>
                         </article>
@@ -150,7 +150,7 @@
                 </div>
                 <center>
                     <div class="label label-primary" style="font-size: 12px;">
-                        <i class="entypo-check"></i> <?php echo ('Select a theme to make changes'); ?>
+                        <i class="entypo-check"></i> <?php echo ('Select a Theme to Apply Changes'); ?>
                     </div>
                 </center>
             </div>

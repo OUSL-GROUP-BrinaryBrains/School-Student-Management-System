@@ -30,7 +30,7 @@
                                 <div class="panel-heading">
                                 		<h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordion-test-2" href="#collapse<?php echo $row['class_id'];?>">
-                                        <i class="entypo-rss"></i> Class <?php echo $row['name'];?>
+                                        <i class="entypo-rss"></i> <?php echo $row['name'];?>
                                     </a>
                                     </h4>
                                 </div>
@@ -42,13 +42,13 @@
                                                 <?php 
                                                 for($d=1;$d<=7;$d++):
                                                 
-                                                if($d==1)$day='sunday';
-                                                else if($d==2)$day='monday';
-                                                else if($d==3)$day='tuesday';
-                                                else if($d==4)$day='wednesday';
-                                                else if($d==5)$day='thursday';
-                                                else if($d==6)$day='friday';
-                                                else if($d==7)$day='saturday';
+                                                if($d==1)$day='Sunday';
+                                                else if($d==2)$day='Monday';
+                                                else if($d==3)$day='Tuesday';
+                                                else if($d==4)$day='Wednesday';
+                                                else if($d==5)$day='Thursday';
+                                                else if($d==6)$day='Friday';
+                                                else if($d==7)$day='Saturday';
                                                 ?>
                                                 <tr class="gradeA">
                                                     <td width="100"><?php echo strtoupper($day);?></td>
@@ -136,13 +136,13 @@
                                 <label class="col-sm-3 control-label"><?php echo ('Day');?></label>
                                 <div class="col-sm-5">
                                     <select name="day" class="form-control" style="width:100%;">
-                                        <option value="sunday">sunday</option>
-                                        <option value="monday">monday</option>
-                                        <option value="tuesday">tuesday</option>
-                                        <option value="wednesday">wednesday</option>
-                                        <option value="thursday">thursday</option>
-                                        <option value="friday">friday</option>
-                                        <option value="saturday">saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
                                     </select>
                                 </div>
                             </div>
@@ -155,8 +155,8 @@
                                         <?php endfor;?>
                                     </select>
                                     <select name="starting_ampm" class="form-control" style="width:100%">
-                                    	<option value="1">am</option>
-                                    	<option value="2">pm</option>
+                                    	<option value="1">AM</option>
+                                    	<option value="2">PM</option>
                                     </select>
                                 </div>
                             </div>
@@ -169,8 +169,8 @@
                                         <?php endfor;?>
                                     </select>
                                     <select name="ending_ampm" class="form-control" style="width:100%">
-                                    	<option value="1">am</option>
-                                    	<option value="2">pm</option>
+                                    	<option value="1">AM</option>
+                                    	<option value="2">PM</option>
                                     </select>
                                 </div>
                             </div>

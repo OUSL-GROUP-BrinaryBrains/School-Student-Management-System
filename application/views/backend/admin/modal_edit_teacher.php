@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-gray"><?php echo ('Edit Teacher');?></button>
+                            <button type="submit" class="btn btn-gray"><?php echo ('Upadte Now');?></button>
                         </div>
                     </form>
                     <?php endforeach;?>

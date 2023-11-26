@@ -155,7 +155,7 @@ foreach ( $edit_data as $row):
                     
                     <div class="form-group">
 						<div class="col-sm-offset-3 col-sm-5">
-							<button type="submit" class="btn btn-info"><?php echo ('Edit Student');?></button>
+							<button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>
 						</div>
 					</div>
                 <?php echo form_close();?>

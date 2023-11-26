@@ -218,7 +218,7 @@
             </table>
             <input type="hidden" name="date" value="<?php echo $full_date;?>" />
             <center>
-                <input type="submit" class="btn btn-info" value="save changes">
+                <input type="submit" class="btn btn-info" value="Save Changes">
             </center>
         </div>
     

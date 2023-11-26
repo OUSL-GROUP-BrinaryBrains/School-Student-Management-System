@@ -49,7 +49,7 @@
                                 <td class="span5"><?php echo $row['notice']; ?></td>
                                 <td><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
                                 <td>
-                                    <div class="btn-group">
+                                    <div class="btn-group" style="color:#001911 ;font-family: system-ui;">
                                         <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action <span class="caret"></span>
                                         </button>
