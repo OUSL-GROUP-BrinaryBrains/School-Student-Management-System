@@ -55,7 +55,7 @@ dfn {
 }
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0.68em 0;
 }
 mark {
   background: #ff0;
@@ -374,19 +374,19 @@ cite {
   text-align: justify;
 }
 .text-muted {
-  color: #999999;
+  color: #3f3c3c;
 }
 .text-primary {
-  color: #949494;
+  color: #565353;
 }
 a.text-primary:hover {
-  color: #7b7b7b;
+  color: #322f2f;
 }
 .text-success {
-  color: #045702;
+  color: #098407;
 }
 a.text-success:hover {
-  color: #022501;
+  color: #0d740a;
 }
 .text-info {
   color: #2c7ea1;
@@ -401,7 +401,7 @@ a.text-warning:hover {
   color: #251f01;
 }
 .text-danger {
-  color: #ac1818;
+  color: #961919;
 }
 a.text-danger:hover {
   color: #7f1212;
@@ -414,10 +414,10 @@ a.bg-primary:hover {
   background-color: #7b7b7b;
 }
 .bg-success {
-  background-color: #bdedbc;
+  background-color: #7ae278;
 }
 a.bg-success:hover {
-  background-color: #95e294;
+  background-color: #88dc87;
 }
 .bg-info {
   background-color: #c5e8f7;
@@ -485,7 +485,7 @@ h6 .small,
 h1,
 h2,
 h3 {
-  margin-top: 17px;
+  margin-top: 18px;
   margin-bottom: 8.5px;
 }
 h1 small,
