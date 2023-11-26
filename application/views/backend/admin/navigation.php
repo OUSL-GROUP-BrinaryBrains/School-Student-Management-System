@@ -213,17 +213,6 @@
             </ul>
         </li>
 
-
-        
-
-        <!-- MESSAGE -->
-        <li class="<?php if ($page_name == 'message') echo 'active'; ?> ">
-            <a href="<?php echo base_url(); ?>index.php?admin/message" style='font-weight:550;font-size:14px'>
-                <i class="entypo-mail"></i>
-                <span><?php echo ('Message'); ?></span>
-            </a>
-        </li>
-
         <!-- SETTINGS -->
         <li class="<?php
         if ($page_name == 'system_settings' ||

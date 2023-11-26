@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-8">
-    	<div class="row">
+    	<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
             <!-- CALENDAR-->
             <div class="col-md-12 col-xs-12">    
                 <div class="panel panel-primary " data-collapsed="0">
@@ -23,7 +23,7 @@
     </div>
     
 	<div class="col-md-4">
-		<div class="row">
+		<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
             <div class="col-md-12">
             
                 <div class="tile-stats tile-red">
