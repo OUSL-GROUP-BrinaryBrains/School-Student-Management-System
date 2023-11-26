@@ -2908,7 +2908,7 @@ input[type="date"] {
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .radio,
@@ -6974,7 +6974,7 @@ hr+.mail-env {
 .mail-env .mail-body .mail-compose .form-group {
   position: relative;
   border-bottom: 1px solid #ebebeb;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .mail-env .mail-body .mail-compose .form-group label {
@@ -7442,7 +7442,7 @@ hr+.mail-env {
 }
 
 .login-page .login-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   -moz-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;
   -webkit-transition: all 550ms ease-in-out;
