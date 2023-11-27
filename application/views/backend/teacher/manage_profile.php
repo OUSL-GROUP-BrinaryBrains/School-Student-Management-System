@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
     
     	<!------CONTROL TABS START------>
@@ -71,7 +71,7 @@
 
 
 <!--password-->
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
     
     	<!------CONTROL TABS START------->

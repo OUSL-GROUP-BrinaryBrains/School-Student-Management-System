@@ -5,7 +5,7 @@
 		<ul class="nav nav-tabs bordered">
 			<li class="active">
             	<a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-					<?php echo ('Grade list');?>
+					<?php echo ('Grade List');?>
                     	</a></li>
 			<li>
             	<a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>

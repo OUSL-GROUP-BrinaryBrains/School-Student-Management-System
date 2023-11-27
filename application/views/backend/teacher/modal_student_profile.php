@@ -4,7 +4,7 @@ foreach($student_info as $row):?>
 
 <div class="profile-env">
 	
-	<header class="row">
+	<header class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 		
 		<div class="col-sm-3">
 			
@@ -32,7 +32,7 @@ foreach($student_info as $row):?>
 	
 	<section class="profile-info-tabs">
 		
-		<div class="row">
+		<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 			
 			<div class="">
             		<br>

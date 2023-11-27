@@ -1,4 +1,4 @@
-<div class="sidebar-menu">
+<div class="sidebar-menu" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <header class="logo-env" >
 
         <!-- logo -->
@@ -96,14 +96,6 @@
                 </li>
             <?php endforeach;?>
             </ul>
-        </li>
-
-        <!-- MESSAGE -->
-        <li class="<?php if ($page_name == 'message') echo 'active'; ?> ">
-            <a href="<?php echo base_url(); ?>index.php?parents/message" style='font-weight:550;font-size:14px'>
-                <i class="entypo-mail"></i>
-                <span><?php echo ('Message'); ?></span>
-            </a>
         </li>
 
         <!-- ACCOUNT -->

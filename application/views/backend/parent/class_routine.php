@@ -8,7 +8,7 @@
 <div class="label label-primary pull-right" style="font-size: 14px;">
     <i class="entypo-user"></i> <?php echo $row['name'];?>
 </div>
-<div class="row">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
     
     	<!------CONTROL TABS START------>

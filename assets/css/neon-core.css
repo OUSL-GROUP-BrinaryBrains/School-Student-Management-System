@@ -1167,8 +1167,10 @@ fieldset[disabled] .btn {
   height: 100%;
 }
 .btn-default {
-  color: #303641;
-  background-color: #f0f0f1;
+  color: red;
+  font-family: system-ui;
+  font-size: 14px;
+  background-color: #ffd480;
   border-color: #f0f0f1;
 }
 .btn-default:hover,
@@ -2529,8 +2531,10 @@ fieldset[disabled] .btn-green.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  font-size:14px ;
+  font-family: system-ui;
+  background-color: #006644;
+  border-color: #006644;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -2538,8 +2542,8 @@ fieldset[disabled] .btn-green.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #1a8fbf;
-  border-color: #1782ad;
+  background-color: #009965;
+  border-color: #008055;
 }
 .btn-info:active,
 .btn-info.active,
@@ -2561,11 +2565,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
 }
 .btn-info .badge {
-  color: #21a9e1;
+  color: #006644;
   background-color: #ffffff;
 }
 .btn-info > .caret {
@@ -2573,7 +2577,9 @@ fieldset[disabled] .btn-info.active {
   border-bottom-color: #ffffff !important;
 }
 .btn-info.dropdown-toggle {
-  border-left-color: #1a92c4;
+  border-left-color: #006644;
+  font-size:14px ;
+  font-family: system-ui;
 }
 .btn-info.btn-icon {
   position: relative;
@@ -2581,7 +2587,7 @@ fieldset[disabled] .btn-info.active {
   border: none;
 }
 .btn-info.btn-icon i {
-  background-color: #1a8fbf;
+  background-color: #009965;
   padding: 6px 6px;
   font-size: 12px;
   line-height: 1.42857143;
@@ -4700,7 +4706,7 @@ input[type="button"].btn-block {
   > li.notification-info
   > a
   > i {
-  background-color: #21a9e1;
+  background-color: #006644;
   color: #ffffff;
 }
 .page-container.horizontal-menu
@@ -6048,7 +6054,7 @@ input[type="button"].btn-block {
   > li.notification-info
   > a
   > i {
-  background-color: #21a9e1;
+  background-color: #006644;
   color: #ffffff;
 }
 .notifications.dropdown .dropdown-menu > li > ul > li.notification-warning > i,
@@ -6197,7 +6203,7 @@ a:hover {
   text-decoration: none;
   color: #818da2;
 }
-.links-list {
+.links-s {
   white-space: nowrap;
   padding-top: 14px;
   padding-bottom: 8px;
@@ -7166,7 +7172,7 @@ blockquote.blockquote-danger small strong {
   font-weight: bold;
 }
 .dataTables_wrapper table + .row {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .dataTables_wrapper > table:first-child {
   -webkit-border-radius: 3px 3px 0 0;
@@ -7927,10 +7933,10 @@ textareatable .replace-inputs input {
   margin-top: 5px;
 }
 .tile-stats.tile-red {
-  background: #f56954;
+  background: #009965;
 }
 .tile-stats.tile-red:hover {
-  background: #f4543c;
+  background: #00b376;
 }
 .tile-stats.tile-red .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -7941,10 +7947,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-green {
-  background: #00a65a;
+  background: #009965;
 }
 .tile-stats.tile-green:hover {
-  background: #008d4c;
+  background: #00b376;
 }
 .tile-stats.tile-green .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -7955,10 +7961,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-blue {
-  background: #0073b7;
+  background: #009965;
 }
 .tile-stats.tile-blue:hover {
-  background: #00639e;
+  background: #00b376;
 }
 .tile-stats.tile-blue .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -7969,10 +7975,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-aqua {
-  background: #00c0ef;
+  background: #009965;
 }
 .tile-stats.tile-aqua:hover {
-  background: #00acd6;
+  background: #00b376;
 }
 .tile-stats.tile-aqua .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -7983,10 +7989,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-cyan {
-  background: #00b29e;
+  background: #009965;
 }
 .tile-stats.tile-cyan:hover {
-  background: #009987;
+  background: #00b376;
 }
 .tile-stats.tile-cyan .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -7997,10 +8003,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-purple {
-  background: #ba79cb;
+  background: #009965;
 }
 .tile-stats.tile-purple:hover {
-  background: #b167c4;
+  background: #00b376;
 }
 .tile-stats.tile-purple .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8011,10 +8017,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-pink {
-  background: #ec3b83;
+  background: #009965;
 }
 .tile-stats.tile-pink:hover {
-  background: #ea2474;
+  background: #00b376;
 }
 .tile-stats.tile-pink .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8025,10 +8031,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-orange {
-  background: #ffa812;
+  background: #009965;
 }
 .tile-stats.tile-orange:hover {
-  background: #f89d00;
+  background: #00b376;
 }
 .tile-stats.tile-orange .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8039,10 +8045,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-brown {
-  background: #6c541e;
+  background: #009965;
 }
 .tile-stats.tile-brown:hover {
-  background: #584418;
+  background: #00b376;
 }
 .tile-stats.tile-brown .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8053,10 +8059,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-plum {
-  background: #701c1c;
+  background: #009965;
 }
 .tile-stats.tile-plum:hover {
-  background: #5c1717;
+  background: #00b376;
 }
 .tile-stats.tile-plum .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8067,10 +8073,10 @@ textareatable .replace-inputs input {
   color: #ffffff;
 }
 .tile-stats.tile-gray {
-  background: #f5f5f5;
+  background: #009965;
 }
 .tile-stats.tile-gray:hover {
-  background: #e8e8e8;
+  background: #00b376;
 }
 .tile-stats.tile-gray .icon {
   color: rgba(0, 0, 0, 0.1);
@@ -8081,7 +8087,7 @@ textareatable .replace-inputs input {
   color: #8f8f8f;
 }
 .tile-stats.tile-white {
-  background: #ffffff;
+  background: #009965;
   border: 1px solid #ebebeb;
 }
 .tile-stats.tile-white:hover {

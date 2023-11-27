@@ -72,7 +72,7 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Roll');?></label>
+						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Roll No');?></label>
                         
 						<div class="col-sm-5">
 							<input type="text" class="form-control" name="roll" value="" >

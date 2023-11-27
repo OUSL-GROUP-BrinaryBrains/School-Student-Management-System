@@ -3,6 +3,9 @@
 	width       : 100%;
         height      : 250px;
         font-size   : 11px;
+        color:#001911;
+        font-family: system-ui;
+        font-size:14px;
 }	
 </style>
 
@@ -11,9 +14,9 @@ $student_info = $this->crud_model->get_student_info($param2);
 foreach ($student_info as $row1):
     ?>
     <center>
-        <div style="font-size: 20px;font-weight: 200;margin: 10px;"><?php echo $row1['name']; ?></div>
+        <div style="color:#001911 ;font-family: system-ui; font-size: 20px;font-weight: 600;margin: 10px;"><?php echo $row1['name']; ?></div>
 
-        <div class="panel-group joined" id="accordion-test-2">
+        <div class="panel-group joined" id="accordion-test-2" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 
             <?php
             /////SEMESTER WISE RESULT, RESULTSHEET FOR EACH SEMESTER SEPERATELY
@@ -91,13 +94,7 @@ foreach ($student_info as $row1):
                                                     endforeach;
                                                     ?>
                                                 </td>
-                                                <td>
-                                                    <?php
-                                                    $grade = $this->crud_model->get_grade($row3['mark_obtained']);
-                                                    echo $grade['name'];
-                                                    $total_grade_point += $grade['grade_point'];
-                                                    ?>
-                                                </td>
+                                                
                                                 <td></td>
                                             </tr>
                                         <?php endforeach; ?>
@@ -106,7 +103,6 @@ foreach ($student_info as $row1):
                                 <hr />
                                 Total Marks : <?php echo $total_marks; ?>
                                 <hr />
-                                GPA(grade point average) : <?php echo round($total_grade_point / $total_subjects, 2); ?>
                                 <div id="chartdiv"></div>
                                 <script>
                                     setTimeout(function() {

@@ -11,7 +11,7 @@
         	<div class="panel-heading">
             	<div class="panel-title" >
             		<i class="entypo-plus-circled"></i>
-					<?php echo ('Add New Section');?>
+					<?php echo ('Edit Section');?>
             	</div>
             </div>
 			<div class="panel-body">
@@ -82,7 +82,7 @@
                     
                     <div class="form-group">
 						<div class="col-sm-offset-3 col-sm-5">
-							<button type="submit" class="btn btn-info"><?php echo ('Update');?></button>
+							<button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>
 						</div>
 					</div>
                 <?php echo form_close();?>

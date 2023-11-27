@@ -86,7 +86,7 @@
 							<div class="form-group">
 								<button type="submit" class="btn btn-success btn-block btn-login">
 									Login
-									<i class="entypo-right-open-mini"></i>
+									<i class="entypo-login"></i>
 								</button>
 							</div>
 
@@ -96,7 +96,7 @@
 
 						<div class="login-bottom-links">
 							<A href="<?php echo base_url(); ?>index.php?login/forgot_password" class="link">
-								<?php echo get_phrase('forgot_your_password'); ?>?
+								Forgot Your Password ?
 							</A>
 						</div>
 

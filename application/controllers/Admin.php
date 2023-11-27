@@ -862,10 +862,6 @@ class Admin extends CI_Controller
             $this->db->where('type' , 'system_name');
             $this->db->update('settings' , $data);
 
-            $data['description'] = $this->input->post('language');
-            $this->db->where('type' , 'language');
-            $this->db->update('settings' , $data);
-
             $data['description'] = $this->input->post('text_align');
             $this->db->where('type' , 'text_align');
             $this->db->update('settings' , $data);

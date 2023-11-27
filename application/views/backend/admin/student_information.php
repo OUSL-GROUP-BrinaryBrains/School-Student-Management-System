@@ -38,7 +38,7 @@
                 <table class="table table-bordered datatable table-hover table-striped" id="table_export">
                     <thead>
                         <tr>
-                            <th width="80"><div><?php echo ('Roll');?></div></th>
+                            <th width="100"><div><?php echo ('Roll No');?></div></th>
                             <th width="80"><div><?php echo ('Photo');?></div></th>
                             <th><div><?php echo ('Name');?></div></th>
                             <th class="span3"><div><?php echo ('Address');?></div></th>

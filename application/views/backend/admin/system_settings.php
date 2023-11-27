@@ -52,30 +52,13 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Language'); ?></label>
-                    <div class="col-sm-9">
-                        <select name="language" class="form-control">
-                            <?php
-                            $fields = $this->db->list_fields('language');
-                            foreach ($fields as $field) {
-                                if ($field == 'phrase_id' || $field == 'phrase') continue;
 
-                                $current_default_language    =    $this->db->get_where('settings', array('type' => 'language'))->row()->description;
-                            ?>
-                                <option value="<?php echo $field; ?>" <?php if ($current_default_language == $field) echo 'selected'; ?>> <?php echo $field; ?> </option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-                    </div>
-                </div>
 
 
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" class="btn btn-info"><?php echo ('Save'); ?></button>
+                        <button type="submit" class="btn btn-info"><?php echo ('Save Settings'); ?></button>
                     </div>
                 </div>
 
@@ -128,7 +111,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="black">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Select Theme'); ?>
+                                    <?php echo ('Black Theme'); ?>
                                 </a>
                             </header>
                         </article>
@@ -141,7 +124,7 @@
                                 </a>
                                 <a href="#" class="album-options" id="blue">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Select Theme'); ?>
+                                    <?php echo ('Blue Theme'); ?>
                                 </a>
                             </header>
                         </article>
@@ -150,7 +133,7 @@
                 </div>
                 <center>
                     <div class="label label-primary" style="font-size: 12px;">
-                        <i class="entypo-check"></i> <?php echo ('Select a theme to make changes'); ?>
+                        <i class="entypo-check"></i> <?php echo ('Select a Theme to Apply Changes'); ?>
                     </div>
                 </center>
             </div>
