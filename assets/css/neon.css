@@ -16451,6 +16451,8 @@ canvas+.knob {
 
 .validate-has-error {
   border-color: #cc2424;
+  font-size: 11px;
+  font-family: system-ui;
 }
 
 .validate-has-error:focus {
@@ -16460,22 +16462,30 @@ canvas+.knob {
 .validate-has-error+span.validate-has-error,
 .validate-has-error>span.validate-has-error,
 .input-group+.validate-has-error {
+  font-size: 11px;
+  font-family: system-ui;
   color: #cc2424;
   display: inline-block;
   margin-top: 5px;
 }
 
 .validate-has-error .validate-has-error {
+  font-size: 11px;
+  font-family: system-ui;
   color: #cc2424;
   display: inline-block;
   margin-top: 5px;
 }
 
 .make-switch+.validate-has-error {
+  font-size: 11px;
+  font-family: system-ui;
   margin-left: 10px;
 }
 
 .validate-has-error .form-control {
+  font-size: 11px;
+  font-family: system-ui;
   border-color: #cc2424;
 }
 

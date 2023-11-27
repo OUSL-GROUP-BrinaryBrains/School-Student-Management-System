@@ -6236,6 +6236,8 @@ canvas + .knob {
 }
 .validate-has-error {
   border-color: #cc2424;
+  font-size: 11px;
+  font-family: system-ui;
 }
 .validate-has-error:focus {
   border-color: #cc2424;
@@ -6244,19 +6246,24 @@ canvas + .knob {
 .validate-has-error > span.validate-has-error,
 .input-group + .validate-has-error {
   color: #cc2424;
+  font-family: system-ui;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .validate-has-error .validate-has-error {
-  color: #cc2424;
+  color: #c71414;
+  font-size: 11px;
+  font-family: system-ui;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .make-switch + .validate-has-error {
   margin-left: 10px;
 }
 .validate-has-error .form-control {
   border-color: #cc2424;
+  font-size: 11px;
+  font-family: system-ui;
 }
 .file-input-wrapper.inline {
   display: inline-block;

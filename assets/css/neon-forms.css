@@ -7485,11 +7485,13 @@ hr+.mail-env {
 .login-page .login-form .form-group .input-group.validate-has-error {
   border-color: #ec5956;
   border-color: rgba(236, 89, 86, 0.5);
+  font-size: 11px;
+  font-family: system-ui;
 }
 
 .login-page .login-form .form-group .input-group.validate-has-error .error {
+  font-size: 11px;
   font-family: system-ui;
-  font-size: smaller;
   font-weight: 600;
   color: red;
   position: absolute;
