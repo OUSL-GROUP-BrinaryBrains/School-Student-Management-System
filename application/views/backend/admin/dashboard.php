@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
+        <div class="row" style="color:#001911 ;font-size:14px;">
         
             <!-- Dashboard Tiles -->
             <div class="col-md-4">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="tile-stats tile-black">
+                <div class="tile-stats tile-purple">
                     <div class="icon"><i class="entypo-flow-tree"></i></div>
                     <div class="num" data-start="0" data-end="<?php echo $this->db->count_all('class'); ?>" data-postfix="" data-duration="500" data-delay="0">0</div>
                     <h3><?php echo ('Available Classes'); ?></h3>

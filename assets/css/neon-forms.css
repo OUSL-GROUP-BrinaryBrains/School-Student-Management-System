@@ -1863,7 +1863,7 @@ button.toast-close-button {
 }
 
 .toast-info {
-  background-color: #21a9e1;
+  background-color: #006644;
 }
 
 .toast-warning {
@@ -4864,8 +4864,10 @@ fieldset[disabled] .btn-green.active {
 
 .btn-info {
   color: #ffffff;
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  font-size:14px ;
+  font-family: system-ui;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .btn-info:hover,
@@ -4874,8 +4876,8 @@ fieldset[disabled] .btn-green.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #1a8fbf;
-  border-color: #1782ad;
+  background-color: #009965;
+  border-color: #008055;
 }
 
 .btn-info:active,
@@ -4899,12 +4901,12 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .btn-info .badge {
-  color: #21a9e1;
+  color: #006644;
   background-color: #ffffff;
 }
 
@@ -4914,7 +4916,8 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-info.dropdown-toggle {
-  border-left-color: #1a92c4;
+  border-left-color: #006644;
+  
 }
 
 .btn-info.btn-icon {
@@ -4924,7 +4927,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-info.btn-icon i {
-  background-color: #1a8fbf;
+  background-color: #009965;
   padding: 6px 6px;
   font-size: 12px;
   line-height: 1.42857143;
@@ -5213,7 +5216,7 @@ input[type="button"].btn-block {
 
 .slider.slider-blue .ui-slider-handle,
 .slider.slider-info .ui-slider-handle {
-  background: #21a9e1;
+  background: #006644;
   border: 2px solid #ffffff;
 }
 
@@ -5221,7 +5224,7 @@ input[type="button"].btn-block {
 .slider.slider-info .ui-slider-range,
 .slider.slider-blue .ui-fill,
 .slider.slider-info .ui-fill {
-  background: #21a9e1;
+  background: #006644;
 }
 
 .slider.slider-gold,
@@ -5428,12 +5431,12 @@ input[type="button"].btn-block {
 
 .checkbox-replace.color-blue .cb-wrapper,
 .radio-replace.color-blue .cb-wrapper {
-  border: 1px solid #21a9e1;
+  border: 1px solid #006644;
 }
 
 .checkbox-replace.color-blue .cb-wrapper .checked,
 .radio-replace.color-blue .cb-wrapper .checked {
-  background: #21a9e1;
+  background: #006644;
 }
 
 .checkbox-replace.color-blue:hover .cb-wrapper,

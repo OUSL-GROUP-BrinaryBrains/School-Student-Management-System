@@ -817,8 +817,9 @@ pre code {
   clear: both;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: 10px;
+  font-family: system-ui;
+  margin-right: 10px;
 }
 .row:before,
 .row:after {
@@ -843,8 +844,10 @@ pre code {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11 {
   float: left;
@@ -1163,6 +1166,7 @@ pre code {
 @media (min-width: 992px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11 {
     float: left;
+    font-family: system-ui;
   }
   .col-md-12 {
     width: 100%;
@@ -3573,8 +3577,10 @@ fieldset[disabled] .btn-green.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  font-size:14px ;
+  font-family: system-ui;
+  background-color: #006644;
+  border-color: #006644;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3582,8 +3588,8 @@ fieldset[disabled] .btn-green.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #1a8fbf;
-  border-color: #1782ad;
+  background-color: #009965;
+  border-color: #008055;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3605,11 +3611,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
 }
 .btn-info .badge {
-  color: #21a9e1;
+  color: #006644;
   background-color: #ffffff;
 }
 .btn-info > .caret {
@@ -3617,7 +3623,7 @@ fieldset[disabled] .btn-info.active {
   border-bottom-color: #ffffff !important;
 }
 .btn-info.dropdown-toggle {
-  border-left-color: #1a92c4;
+  border-left-color: #006644;
 }
 .btn-info.btn-icon {
   position: relative;
@@ -3625,7 +3631,7 @@ fieldset[disabled] .btn-info.active {
   border: none;
 }
 .btn-info.btn-icon i {
-  background-color: #1a8fbf;
+  background-color: #009965;
   padding: 6px 6px;
   font-size: 12px;
   line-height: 1.42857143;
@@ -6186,7 +6192,7 @@ div.label {
   background-color: #007338;
 }
 .label-info {
-  background-color: #21a9e1;
+  background-color: #006644;
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
@@ -6235,7 +6241,7 @@ div.label {
   color: #ffffff;
 }
 .badge.badge-info {
-  background-color: #21a9e1;
+  background-color: #006644;
   color: #ffffff;
 }
 .badge.badge-warning {
@@ -6522,7 +6528,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-info {
-  background-color: #21a9e1;
+  background-color: #006644;
 }
 .progress-striped .progress-bar-info {
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));

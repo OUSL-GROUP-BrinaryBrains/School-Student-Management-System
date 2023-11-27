@@ -2959,8 +2959,10 @@ fieldset[disabled] .btn-green.active {
 
 .btn-info {
   color: #ffffff;
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  font-size:14px ;
+  font-family: system-ui;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .btn-info:hover,
@@ -2969,8 +2971,8 @@ fieldset[disabled] .btn-green.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #1a8fbf;
-  border-color: #1782ad;
+  background-color: #009965;
+  border-color: #008055;
 }
 
 .btn-info:active,
@@ -2994,12 +2996,12 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .btn-info .badge {
-  color: #21a9e1;
+  color: #006644;
   background-color: #ffffff;
 }
 
@@ -3009,7 +3011,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-info.dropdown-toggle {
-  border-left-color: #1a92c4;
+  border-left-color: #006644;
 }
 
 .btn-info.btn-icon {
@@ -3019,7 +3021,7 @@ fieldset[disabled] .btn-info.active {
 }
 
 .btn-info.btn-icon i {
-  background-color: #1a8fbf;
+  background-color: #009965;
   padding: 6px 6px;
   font-size: 12px;
   line-height: 1.42857143;
@@ -4915,7 +4917,7 @@ hr+.calendar-env {
 }
 
 .calendar-env .calendar-sidebar .events-list li a.color-blue {
-  background: #21a9e1;
+  background: #006644;
   color: #ffffff;
 }
 
@@ -5258,7 +5260,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-header .fc-button.active {
 }
 
 .calendar-env .calendar-body .fc-content .fc-view .fc-event.color-blue {
-  background: #21a9e1;
+  background: #006644;
   color: #ffffff;
 }
 
@@ -5321,8 +5323,8 @@ fieldset[disabled] .calendar-env .calendar-body .fc-header .fc-button.active {
 
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number {
   color: #ffffff;
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
   display: inline-block;
   padding: 5px 8px;
   -webkit-border-radius: 3px;
@@ -5339,8 +5341,8 @@ fieldset[disabled] .calendar-env .calendar-body .fc-header .fc-button.active {
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number.active,
 .open .dropdown-toggle.calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number {
   color: #ffffff;
-  background-color: #1a8fbf;
-  border-color: #1782ad;
+  background-color: #009965;
+  border-color: #008055;
 }
 
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number:active,
@@ -5364,12 +5366,12 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number.disabled.active,
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number[disabled].active,
 fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number.active {
-  background-color: #21a9e1;
-  border-color: #21a9e1;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number .badge {
-  color: #21a9e1;
+  color: #006644;
   background-color: #ffffff;
 }
 
@@ -5389,7 +5391,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 }
 
 .calendar-env .calendar-body .fc-content .fc-view table tbody tr td.fc-day.fc-today .fc-day-number.btn-icon i {
-  background-color: #1a8fbf;
+  background-color: #009965;
   padding: 6px 6px;
   font-size: 12px;
   line-height: 1.42857143;
@@ -6992,7 +6994,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 }
 
 .page-body .main-content .cbp_tmtimeline>li .cbp_tmicon.bg-info {
-  background-color: #21a9e1;
+  background-color: #006644;
   color: #ffffff;
 }
 
@@ -7249,7 +7251,7 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-info {
-  background-color: #21a9e1;
+  background-color: #006644;
   color: #ffffff;
 }
 
