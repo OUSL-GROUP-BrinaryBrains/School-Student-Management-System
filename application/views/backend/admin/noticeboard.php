@@ -3,7 +3,7 @@
 
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
-            <li class="active" >
+            <li class="active">
                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i>
                     <?php echo ('Noticeboard List'); ?>
                 </a>
@@ -88,7 +88,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Title'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="notice_title" />
+                            <input type="text" class="form-control" placeholder="<?php echo ('Enter Title'); ?>" name="notice_title" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -97,7 +97,7 @@
                             <div class="box closable-chat-box">
                                 <div class="box-content padded">
                                     <div class="chat-message-box">
-                                        <textarea name="notice" id="ttt" rows="5" placeholder="<?php echo ('Add Notice'); ?>" class="form-control"></textarea>
+                                        <textarea name="notice" id="ttt" rows="5" placeholder="<?php echo ('Enter Notice'); ?>" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Date'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="datepicker form-control" name="create_timestamp" />
+                            <input type="text" class="datepicker form-control" placeholder="<?php echo ('Pick Date'); ?>" name="create_timestamp" />
                         </div>
                     </div>
 

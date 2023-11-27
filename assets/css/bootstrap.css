@@ -8404,7 +8404,7 @@ lesshat-selector {
 button.close {
   padding: 0;
   cursor: pointer;
-  background: transparent;
+  background: s;
   border: 0;
   -webkit-appearance: none;
 }

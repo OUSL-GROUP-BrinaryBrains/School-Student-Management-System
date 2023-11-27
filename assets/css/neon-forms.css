@@ -2843,9 +2843,9 @@ output {
   line-height: 1.42857143;
   color: #001911;
   font-family: system-ui;
-  background-color: #fff6e6;
+  background-color: #e6fff6;
   background-image: none;
-  border: 1px solid #ffa800;
+  border: 1px solid #008055;
   border-radius: 3px;
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
@@ -2856,8 +2856,8 @@ output {
 }
 
 .form-control:focus {
-  border-color: #008055;
-  background-color: #e6fff6;
+  border-color: #ffa800 ;
+  background-color: #fff6e6;
   outline: 0;
   -moz-box-shadow: 0 2px 1px rgba(203, 208, 217, 0.08);
   -webkit-box-shadow: 0 2px 1px rgba(203, 208, 217, 0.08);
@@ -2893,7 +2893,7 @@ output {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #ffa800;
+  color: #00e698;
 }
 
 .form-control[disabled],

@@ -1,5 +1,5 @@
 <?php
-$edit_data        =    $this->db->get_where('noticeboard', array('notice_id' => $param2))->result_array();
+$edit_data = $this->db->get_where('noticeboard', array('notice_id' => $param2))->result_array();
 ?>
 <div class="tab-pane box active" id="edit" style="color:#001911 ;font-family: system-ui;font-size:14px;padding: 5px">
     <div class="box-content">
