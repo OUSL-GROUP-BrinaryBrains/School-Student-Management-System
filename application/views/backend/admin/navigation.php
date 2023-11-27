@@ -1,10 +1,10 @@
 <div class="sidebar-menu" style="font-family: system-ui;font-size:14px;">
-    <header class="logo-env" >
+    <header class="logo-env">
 
         <!-- logo -->
         <div class="logo" style="">
             <a href="<?php echo base_url(); ?>">
-                <img src="uploads/logo.png"  style="max-height:60px;"/>
+                <img src="uploads/logo.png" style="max-height:60px;" />
             </a>
         </div>
 
@@ -23,7 +23,7 @@
             </a>
         </div>
     </header>
-    <div style=""></div>	
+    <div style=""></div>
     <ul id="main-menu" class="">
         <!-- add class "multiple-expanded" to allow multiple submenus to open -->
         <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
@@ -36,8 +36,8 @@
                 <span><?php echo ('Dashboard'); ?></span>
             </a>
         </li>
-		
-		<!-- NOTICEBOARD -->
+
+        <!-- NOTICEBOARD -->
         <li class="<?php if ($page_name == 'noticeboard') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/noticeboard" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-bullhorn"></i>
@@ -47,10 +47,12 @@
 
         <!-- CLASS -->
         <li class="<?php
-        if ($page_name == 'class' ||
-                $page_name == 'section')
-            echo 'opened active';
-        ?> ">
+                    if (
+                        $page_name == 'class' ||
+                        $page_name == 'section'
+                    )
+                        echo 'opened active';
+                    ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-sitemap"></i>
                 <span><?php echo ('Classes'); ?></span>
@@ -78,8 +80,8 @@
             <ul>
                 <?php
                 $classes = $this->db->get('class')->result_array();
-                foreach ($classes as $row):
-                    ?>
+                foreach ($classes as $row) :
+                ?>
                     <li class="<?php if ($page_name == 'subject' && $class_id == $row['class_id']) echo 'active'; ?>">
                         <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?admin/subject/<?php echo $row['class_id']; ?>">
                             <span> <?php echo $row['name']; ?></span>
@@ -97,8 +99,8 @@
             </a>
         </li>
 
-         <!-- PARENTS -->
-         <li class="<?php if ($page_name == 'parent') echo 'active'; ?> ">
+        <!-- PARENTS -->
+        <li class="<?php if ($page_name == 'parent') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/parent" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-group"></i>
                 <span><?php echo ('Parents'); ?></span>
@@ -106,18 +108,20 @@
         </li>
 
         <!-- STUDENT -->
-        <li class="<?php if ($page_name == 'student_add' ||
-                $page_name == 'student_information' ||
-                $page_name == 'student_marksheet')
-            echo 'opened active has-sub'; ?> ">
+        <li class="<?php if (
+                        $page_name == 'student_add' ||
+                        $page_name == 'student_information' ||
+                        $page_name == 'student_marksheet'
+                    )
+                        echo 'opened active has-sub'; ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-group"></i>
                 <span><?php echo ('Students'); ?></span>
             </a>
-            <ul>                
-                      
+            <ul>
+
                 <li class="<?php if ($page_name == 'student_add') echo 'active'; ?> ">
-                    <a href="<?php echo base_url(); ?>index.php?admin/student_add" style='font-weight:550;font-size:14px'> 
+                    <a href="<?php echo base_url(); ?>index.php?admin/student_add" style='font-weight:550;font-size:14px'>
                         <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Add Student'); ?></span>
                     </a>
                 </li>
@@ -130,8 +134,8 @@
                     <ul>
                         <?php
                         $classes = $this->db->get('class')->result_array();
-                        foreach ($classes as $row):
-                            ?>
+                        foreach ($classes as $row) :
+                        ?>
                             <li class="<?php if ($page_name == 'student_information' && $class_id == $row['class_id']) echo 'active'; ?>">
                                 <a href="<?php echo base_url(); ?>index.php?admin/student_information/<?php echo $row['class_id']; ?>">
                                     <span> <?php echo $row['name']; ?></span>
@@ -149,8 +153,8 @@
                     <ul>
                         <?php
                         $classes = $this->db->get('class')->result_array();
-                        foreach ($classes as $row):
-                            ?>
+                        foreach ($classes as $row) :
+                        ?>
                             <li class="<?php if ($page_name == 'student_marksheet' && $class_id == $row['class_id']) echo 'active'; ?>">
                                 <a href="<?php echo base_url(); ?>index.php?admin/student_marksheet/<?php echo $row['class_id']; ?>">
                                     <span> <?php echo $row['name']; ?></span>
@@ -182,18 +186,20 @@
 
         <!-- EXAMS -->
         <li class="<?php
-        if ($page_name == 'exam' ||
-                $page_name == 'grade' ||
-                $page_name == 'marks')
+                    if (
+                        $page_name == 'exam' ||
+                        $page_name == 'grade' ||
+                        $page_name == 'marks'
+                    )
                         echo 'opened active';
-        ?> ">
+                    ?> ">
             <a href="#" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-puzzle-piece"></i>
                 <span><?php echo ('Examinations'); ?></span>
             </a>
             <ul>
                 <li class="<?php if ($page_name == 'exam') echo 'active'; ?> ">
-                    <a href="<?php echo base_url(); ?>index.php?admin/exam" style='font-weight:550;font-size:14px'> 
+                    <a href="<?php echo base_url(); ?>index.php?admin/exam" style='font-weight:550;font-size:14px'>
                         <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Exams List'); ?></span>
                     </a>
                 </li>
@@ -220,10 +226,10 @@
 
         <!-- SETTINGS -->
         <li class="<?php if ($page_name == 'system_settings') echo 'active'; ?> ">
-        <a href="<?php echo base_url(); ?>index.php?admin/system_settings" style='font-weight:550;font-size:14px'>
-        <i class="fa fa-cogs"></i>
-                        <span></i> <?php echo ('System Settings'); ?></span>
-                    </a>
+            <a href="<?php echo base_url(); ?>index.php?admin/system_settings" style='font-weight:550;font-size:14px'>
+                <i class="fa fa-cogs"></i>
+                <span> <?php echo ('System Settings'); ?></span>
+            </a>
         </li>
 
 

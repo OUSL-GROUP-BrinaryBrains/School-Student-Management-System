@@ -844,6 +844,7 @@ pre code {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
+  font-family: system-ui;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -1008,6 +1009,7 @@ pre code {
 @media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
     float: left;
+    font-family: system-ui;
   }
   .col-sm-12 {
     width: 100%;
@@ -1031,13 +1033,18 @@ pre code {
     width: 50%;
   }
   .col-sm-5 {
-    width: 41.66666667%;
+    width: 60%;
+    font-family: system-ui;
+    font-size: 14px;
   }
   .col-sm-4 {
     width: 33.33333333%;
   }
   .col-sm-3 {
-    width: 25%;
+    width: 20%;
+    font-family: system-ui;
+    font-size: 14px;
+    font-weight: 600;
   }
   .col-sm-2 {
     width: 16.66666667%;
@@ -1145,13 +1152,13 @@ pre code {
     margin-left: 50%;
   }
   .col-sm-offset-5 {
-    margin-left: 41.66666667%;
+    margin-left: 40%;
   }
   .col-sm-offset-4 {
     margin-left: 33.33333333%;
   }
   .col-sm-offset-3 {
-    margin-left: 25%;
+    margin-left: 40%;
   }
   .col-sm-offset-2 {
     margin-left: 16.66666667%;
@@ -2215,8 +2222,10 @@ fieldset[disabled] .btn {
   height: 100%;
 }
 .btn-default {
-  color: #303641;
-  background-color: #f0f0f1;
+  color: red;
+  font-family: system-ui;
+  font-size: 14px;
+  background-color: #ffd480;
   border-color: #f0f0f1;
 }
 .btn-default:hover,
@@ -4450,26 +4459,26 @@ input[type="button"].btn-block {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 7.5px 0;
+  margin: 0.5px 0;
   overflow: hidden;
-  background-color: #eeeeee;
+  background-color: #ccffee;
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 4px 8px;
+  padding: 4px 4px;
   clear: both;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   font-family: system-ui;
   line-height: 1.42857143;
   color: #008055;
   margin: 0 3px;
   white-space: nowrap;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 1px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 1px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 1px;
   background-clip: padding-box;
 }
 .dropdown-menu.dropdown-green {
@@ -4570,21 +4579,21 @@ input[type="button"].btn-block {
   color: #ffffff;
 }
 .dropdown-menu.dropdown-black > li:hover a {
-  background-color: #383838;
+  background-color: #008055;
   color: #ffffff;
 }
 .dropdown-menu.dropdown-black .divider,
 .dropdown-menu.dropdown-black .divider:hover {
   height: 1px;
-  margin: 7.5px 0;
+  margin: 5px 0;
   overflow: hidden;
-  background-color: #454545;
+  background-color: #008055;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #717379;
-  background-color: #f5f5f5;
+  color: #ffffff;
+  background-color: #008055;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -4592,7 +4601,7 @@ input[type="button"].btn-block {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #949494;
+  background-color: #008055;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -8442,22 +8451,25 @@ button.close {
   box-sizing: border-box;
 }
 .modal .modal-header .close {
-  background: #f0f0f1;
+  background: #ffa800;
   display: inline-block;
-  padding: 0px 5px;
-  line-height: 1;
-  color: #787878;
+  vertical-align: middle;
+  font-size: 22px;
+  padding: 3px 9px 6px 9px;
+  color: #001911;
+  font-size: 22px;
   -webkit-opacity: 0.7;
   -moz-opacity: 0.7;
   opacity: 0.7;
+  vertical-align: middle;
   filter: alpha(opacity=70);
   text-shadow: none;
-  font-weight: 300;
-  -webkit-border-radius: 3px;
+  font-weight: 600;
+  -webkit-border-radius: 1px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
+  -moz-border-radius: 1px;
   -moz-background-clip: padding;
-  border-radius: 3px;
+  border-radius: 1px;
   background-clip: padding-box;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -8468,13 +8480,22 @@ button.close {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+  color: #ffffff;
+  background-color: #006644;
+  font-family: system-ui;
   filter: alpha(opacity=100);
 }
 .modal .modal-header h4 {
   text-shadow: none;
+  font-size: 18px;
+  color:#001911 ;
+  font-family: system-ui;
 }
 .modal .modal-body > p:last-child {
   margin-bottom: 0;
+  color:#001911 ;
+  font-size: 14px;
+  font-family: system-ui;
 }
 .modal.inline {
   display: block;
@@ -8607,26 +8628,38 @@ button.close {
   filter: alpha(opacity=50);
 }
 .modal-header {
-  padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+  border-bottom: 1px solid #ffa800;
+  margin-left: 40px;
+  margin-right: 40px;
   min-height: 16.42857143px;
 }
 .modal-header .close {
-  margin-top: -2px;
+  margin-top: 2px;
 }
 .modal-title {
-  margin: 0;
-  line-height: 1.42857143;
+  color:#001911 ;
+  font-size: 18px;
+  font-family: system-ui;
+  line-height: 1;
 }
 .modal-body {
   position: relative;
-  padding: 20px;
+  padding: 10px;
+  color:#001911 ;
+
+  font-size: 14px;
+  font-family: system-ui;
 }
 .modal-footer {
-  margin-top: 15px;
-  padding: 19px 20px 20px;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px 15px 15px;
+  font-family: system-ui;
+  font-size: 14px;
   text-align: right;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #ffa800;
 }
 .modal-footer:before,
 .modal-footer:after {
@@ -8649,6 +8682,11 @@ button.close {
   clear: both;
 }
 .modal-footer .btn + .btn {
+  color: red;
+  font-family: system-ui;
+  font-size: 14px;
+  background-color: #ffd480;
+  border-color: #f0f0f1;
   margin-left: 5px;
   margin-bottom: 0;
 }

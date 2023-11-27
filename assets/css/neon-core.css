@@ -1167,8 +1167,10 @@ fieldset[disabled] .btn {
   height: 100%;
 }
 .btn-default {
-  color: #303641;
-  background-color: #f0f0f1;
+  color: red;
+  font-family: system-ui;
+  font-size: 14px;
+  background-color: #ffd480;
   border-color: #f0f0f1;
 }
 .btn-default:hover,
