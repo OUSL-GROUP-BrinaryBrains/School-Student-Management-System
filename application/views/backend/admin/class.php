@@ -89,13 +89,13 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Class Name'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Enter Class Name Here" name="name" data-validate="required" data-message-required="<?php echo('This Field Required); ?>" />
+                                <input type="text" class="form-control" placeholder="Enter Class Name Here"  name="name" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Numeric Name'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Enter Numeric Name Here"="name_numeric" />
+                                <input type="text" class="form-control" placeholder="Enter Numeric Name Here" name="name_numeric" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
                             </div>
                         </div>
                         <div class="form-group">

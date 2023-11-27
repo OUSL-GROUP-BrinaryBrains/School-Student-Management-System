@@ -88,7 +88,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Title'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" placeholder="<?php echo ('Enter Title Here'); ?>" name="notice_title" />
+                            <input type="text" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Enter Title Here'); ?>" name="notice_title" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -97,7 +97,7 @@
                             <div class="box closable-chat-box">
                                 <div class="box-content padded">
                                     <div class="chat-message-box">
-                                        <textarea name="notice" id="ttt" rows="5" placeholder="<?php echo ('Enter Notice Content Here'); ?>" class="form-control"></textarea>
+                                        <textarea name="notice" id="ttt" rows="5" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Enter Notice Content Here'); ?>" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Date'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="datepicker form-control" placeholder="<?php echo ('Pick a Date Here'); ?>" name="create_timestamp" />
+                            <input type="text" class="datepicker form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Pick a Date Here'); ?>" name="create_timestamp" />
                         </div>
                     </div>
 

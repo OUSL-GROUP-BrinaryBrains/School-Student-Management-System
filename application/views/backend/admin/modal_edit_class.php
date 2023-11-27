@@ -15,22 +15,22 @@ foreach ($edit_data as $row) :
 
                     <?php echo form_open(base_url() . 'index.php?admin/classes/do_update/' . $row['class_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top')); ?>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
+                        <label class="col-sm-3 control-label"><?php echo ('Class Name'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>" />
+                            <input type="text" class="form-control" placeholder="Enter Class Name Here" name="name" value="<?php echo $row['name']; ?>" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Numeric Name'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="name_numeric" value="<?php echo $row['name_numeric']; ?>" />
+                            <input type="text" placeholder="Enter Numeric Name Here" class="form-control" name="name_numeric" value="<?php echo $row['name_numeric']; ?>" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label"><?php echo ('Teacher'); ?></label>
+                        <label class="col-sm-3 control-label"><?php echo ('Class Teacher'); ?></label>
                         <div class="col-sm-5">
                             <select name="teacher_id" class="form-control">
-                                <option value=""></option>
+                                <option value="" disabled selected>Select A Teacher</option> <!-- Placeholder Option -->
                                 <?php
                                 $teachers = $this->db->get('teacher')->result_array();
                                 foreach ($teachers as $row2) :
