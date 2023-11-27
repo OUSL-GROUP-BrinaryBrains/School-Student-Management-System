@@ -28,12 +28,12 @@ $active_sms_service =   $this->db->get_where('settings', array('type' => 'active
 <body class="page-body <?php if ($skin_colour != '') echo 'skin-' . $skin_colour; ?>">
 	<div class="page-container <?php if ($text_align == 'right-to-left') echo 'right-sidebar'; ?>">
 		<?php include $account_type . '/navigation.php'; ?>
-		<div class="main-content" style="background:#e6fff6">
+		<div class="main-content" style="background:#e6fff6;font-family: system-ui;">
 
 			<?php include 'header.php'; ?>
 
-			<h3 style="color:#001911 ;font-family: system-ui;">
-				<i class="entypo-right-open-mini" style="color:#001911 ;font-family: system-ui;"></i>
+			<h3 style="color:#006644 ;font-family: system-ui; font-weight:600; font-size:24px">
+				<i class="fa fa-tags" style="color:#006644 ; font-size:24px"></i>
 				<?php echo $page_title; ?>
 			</h3>
 
@@ -42,9 +42,7 @@ $active_sms_service =   $this->db->get_where('settings', array('type' => 'active
 			<?php include 'footer.php'; ?>
 
 		</div>
-		<?php //include 'chat.php';
-		?>
-
+		
 	</div>
 	<?php include 'modal.php'; ?>
 	<?php include 'includes_bottom.php'; ?>

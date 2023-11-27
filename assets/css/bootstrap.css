@@ -4431,12 +4431,13 @@ input[type="button"].btn-block {
   float: left;
   min-width: 160px;
   padding: 3px 0;
+  font-size: 14px;
+  font-family: system-ui;
   margin: 2px 0 0;
   list-style: none;
   font-size: 12px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
-  border: 1px solid #ebebeb;
   border-radius: 3px;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -4458,8 +4459,10 @@ input[type="button"].btn-block {
   padding: 4px 8px;
   clear: both;
   font-weight: normal;
+  font-size: 14px;
+  font-family: system-ui;
   line-height: 1.42857143;
-  color: #7d8086;
+  color: #008055;
   margin: 0 3px;
   white-space: nowrap;
   -webkit-border-radius: 3px;
@@ -4670,6 +4673,7 @@ input[type="button"].btn-block {
 .btn-group,
 .btn-group-vertical {
   position: relative;
+  background-color: #003;
   display: inline-block;
   vertical-align: middle;
 }
@@ -5194,7 +5198,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #008055;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -5204,12 +5208,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs > li > a {
   margin-right: 4px;
+  background-color: #ffd480;
   line-height: 1.42857143;
   border: 1px solid transparent;
   border-radius: 3px 3px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #ebebeb;
+  background-color: #ffa800;
+  color: #001911;
+  border-color: #008055 #008055 #008055;
 }
 .nav-tabs > li:first-child > a {
   margin-left: 10px;
@@ -5217,9 +5224,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  color: #e6fff6;
+  background-color: #003322;
+  border: 1px solid #00b376;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -5287,8 +5294,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: 0;
 }
 .nav-tabs.bordered + .tab-content {
-  border: 1px solid #ebebeb;
   border-top: 0;
+  background-color: #ffffff;
   -webkit-border-radius: 0 0 3px 3px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 0 0 3px 3px;
@@ -5296,7 +5303,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 0 0 3px 3px;
   background-clip: padding-box;
   padding: 10px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .nav-tabs.bordered + .tab-content > p:last-child {
   margin-bottom: 0;

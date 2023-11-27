@@ -2518,7 +2518,8 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #ebebeb;
+  border: 1px solid #80ffd4;
+  color: #001911;
 }
 
 .table-bordered>thead>tr>th,
@@ -2527,31 +2528,32 @@ th {
 .table-bordered>thead>tr>td,
 .table-bordered>tbody>tr>td,
 .table-bordered>tfoot>tr>td {
-  border: 1px solid #ebebeb;
+  border: 1px solid #ffd480;
+  color: #001911;
 }
 
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {
-  background-color: #f5f5f6;
+  background-color: #ffa800;
   border-bottom-width: 1px;
-  color: #a6a7aa;
+  color: #001911;
 }
 
 .table-bordered>tfoot>tr>th,
 .table-bordered>tfoot>tr>td {
-  background-color: #f5f5f6;
+  background-color: #ffa800;
   border-top-width: 1px;
-  color: #a6a7aa;
+  color: #001911;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
-  background-color: #f8f8f8;
+  background-color: #e6fff6;
 }
 
 .table-hover>tbody>tr:hover>td,
 .table-hover>tbody>tr:hover>th {
-  background-color: #f2f2f4;
+  background-color: #ccffee;
 }
 
 table col[class*="col-"] {
@@ -2835,14 +2837,15 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 31px;
-  padding: 6px 12px;
-  font-size: 12px;
+  height: 32px;
+  padding: 6px 6px;
+  font-size: 14px;
   line-height: 1.42857143;
-  color: #555555;
-  background-color: #ffffff;
+  color: #001911;
+  font-family: system-ui;
+  background-color: #fff6e6;
   background-image: none;
-  border: 1px solid #ebebeb;
+  border: 1px solid #ffa800;
   border-radius: 3px;
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
@@ -2853,7 +2856,8 @@ output {
 }
 
 .form-control:focus {
-  border-color: #c8cdd7;
+  border-color: #008055;
+  background-color: #e6fff6;
   outline: 0;
   -moz-box-shadow: 0 2px 1px rgba(203, 208, 217, 0.08);
   -webkit-box-shadow: 0 2px 1px rgba(203, 208, 217, 0.08);
@@ -2889,7 +2893,7 @@ output {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #aaaaaa;
+  color: #ffa800;
 }
 
 .form-control[disabled],

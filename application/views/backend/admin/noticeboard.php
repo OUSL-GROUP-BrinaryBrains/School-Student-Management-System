@@ -22,7 +22,7 @@
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped datatable" id="table_export">
                     <thead>
                         <tr>
-                            <th>
+                            <th style="width: 50px;">
                                 <div>#</div>
                             </th>
                             <th>
@@ -43,7 +43,7 @@
                         <?php $count = 1;
                         foreach ($notices as $row) : ?>
                             <tr>
-                                <td><?php echo $count++; ?></td>
+                                <td style="width: 50px; text-align: center;"><?php echo $count++; ?></td>
                                 <td><?php echo $row['notice_title']; ?></td>
                                 <td class="span5"><?php echo $row['notice']; ?></td>
                                 <td><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
@@ -65,7 +65,7 @@
 
                                             <!-- DELETION LINK -->
                                             <li>
-                                                <a style="color:#001911; font-size:14px ;font-family: system-ui;" href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/noticeboard/delete/<?php echo $row['notice_id']; ?>');">
+                                                <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/noticeboard/delete/<?php echo $row['notice_id']; ?>');">
                                                     <i class="entypo-trash"></i>
                                                     <?php echo ('Delete'); ?>
                                                 </a>
@@ -88,7 +88,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Title'); ?></label>
                         <div class="col-sm-5">
-                            <input style="color:#001911; font-size:14px ;font-family: system-ui;" type="text" class="form-control" name="notice_title" />
+                            <input type="text" class="form-control" name="notice_title" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -97,7 +97,7 @@
                             <div class="box closable-chat-box">
                                 <div class="box-content padded">
                                     <div class="chat-message-box">
-                                        <textarea style="color:#001911; font-size:14px ;font-family: system-ui;" name="notice" id="ttt" rows="5" placeholder="<?php echo ('Add Notice'); ?>" class="form-control"></textarea>
+                                        <textarea name="notice" id="ttt" rows="5" placeholder="<?php echo ('Add Notice'); ?>" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -106,13 +106,13 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Date'); ?></label>
                         <div class="col-sm-5">
-                            <input style="color:#001911; font-size:14px ;font-family: system-ui;" type="text" class="datepicker form-control" name="create_timestamp" />
+                            <input type="text" class="datepicker form-control" name="create_timestamp" />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-5">
-                            <button style="font-size:14px ;font-family: system-ui;" type="submit" class="btn btn-info"><?php echo ('Add Notice'); ?></button>
+                            <button type="submit" class="btn btn-info"><?php echo ('Add Notice'); ?></button>
                         </div>
                     </div>
                     </form>

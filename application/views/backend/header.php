@@ -23,4 +23,4 @@
 	</div>
 </div>
 
-<hr style=" margin-bottom:0px; margin-top:0px;  border-bottom: 0.5px solid #ffa800; width: 100%" />
+<hr style="margin-bottom:0px; margin-top:0px;  border-bottom: 0.5px solid #ffa800; width: 100%" />
