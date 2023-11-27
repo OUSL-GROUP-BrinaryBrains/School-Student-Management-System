@@ -89,7 +89,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Class Name'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Enter Class Name Here" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>" />
+                                <input type="text" class="form-control" placeholder="Enter Class Name Here" name="name" data-validate="required" data-message-required="<?php echo('This Field Required); ?>" />
                             </div>
                         </div>
                         <div class="form-group">
