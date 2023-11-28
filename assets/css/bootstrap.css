@@ -4684,9 +4684,11 @@ input[type="button"].btn-block {
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  background-color: #003;
+  background-color: #ffffff;
   display: inline-block;
+  margin-top:7px;
   vertical-align: middle;
+  border-color: #ffffff;
 }
 .btn-group:before,
 .btn-group-vertical:before,
@@ -4789,21 +4791,27 @@ input[type="button"].btn-block {
 }
 .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
+  border-color: #ffffff;
 }
 .btn-group > .btn:first-child {
   margin-left: 0;
+  border-color: #ffffff;
 }
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  border-color: #ffffff;
 }
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  border-radius: 1px;
+  background:#006644;
+  color:#ffffff;
+  border-color: #ffffff;
 }
 .btn-group > .btn-group {
   float: left;
+  border-color: #ffffff;
 }
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
@@ -6082,13 +6090,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 2px;
-  border-top-right-radius: 2px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .pager {
   padding-left: 0;
@@ -7093,8 +7101,8 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 .panel-heading > .panel-title {
   float: left;
-  padding: 10px 15px;
-  color:#818da1;
+  padding: 10px;
+  color: #001911;
 }
 .panel-heading > .panel-title > * {
   margin: 0;
@@ -7479,7 +7487,7 @@ lesshat-selector {
   border-color: #373e4a transparent;
 }
 .panel-default > .panel-heading > .panel-title > a {
-  color: #373e4a;
+  color: #003322;
 }
 .panel-default > .panel-heading > .panel-options > a {
   display: inline-block;

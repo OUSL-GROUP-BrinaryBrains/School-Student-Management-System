@@ -7195,11 +7195,15 @@ blockquote.blockquote-danger small strong {
 }
 .dataTables_wrapper .col-right {
   padding-left: 0;
+  vertical-align: middle;
+  color: #006644;
+  font-size: 13px;
+  font-weight: 600;
 }
 .dataTables_wrapper .dataTables_length,
 .dataTables_wrapper .dataTables_filter {
-  background: #fff;
-  border: 1px solid #ebebeb;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   border-bottom: 0;
   padding: 15px 12px;
   height: 58px;
@@ -7217,26 +7221,34 @@ blockquote.blockquote-danger small strong {
 .dataTables_wrapper .dataTables_filter:after {
   clear: both;
 }
-.dataTables_wrapper .dataTables_length {
+..dataTables_wrapper .dataTables_length {
   border-right: 0;
-  -webkit-border-radius: 3px 0 0 0;
+  border-color: #ffffff;
+  -webkit-border-radius: 0px 0 0 0;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px 0 0 0;
+  -moz-border-radius: 0px 0 0 0;
   -moz-background-clip: padding;
-  border-radius: 3px 0 0 0;
+  border-radius: 0px 0 0 0;
   background-clip: padding-box;
 }
 .dataTables_wrapper .dataTables_length > label {
+  color: #006644;
   white-space: nowrap;
   margin-top: -7px;
+  font-size: 13px;
+  vertical-align: middle;
+  font-weight: 600;
+  font-family: system-ui;
 }
+.dataT
 .dataTables_wrapper .dataTables_length > label .select2-container {
   display: inline-block;
   width: auto !important;
-  min-width: 87px;
+  min-width: 80px;
 }
 .dataTables_wrapper .dataTables_filter {
   border-left: 0;
+  border-color: #ffffff;
   padding-top: 13px;
   -webkit-border-radius: 0 3px 0 0;
   -webkit-background-clip: padding-box;
@@ -7257,8 +7269,8 @@ blockquote.blockquote-danger small strong {
   padding: 6px 12px;
   font-size: 12px;
   line-height: 1.42857143;
-  color: #555555;
-  background-color: #ffffff;
+  background-color: #ffd480;
+  border: 2px solid #ffa800;
   background-image: none;
   border: 1px solid #ebebeb;
   border-radius: 3px;
@@ -7330,7 +7342,7 @@ textarea.dataTables_wrapper .dataTables_filter > label input {
   line-height: 24px;
 }
 .dataTables_wrapper .select2-container .select2-choice .select2-chosen {
-  padding-right: 15px;
+  padding-right: 20px;
 }
 .dataTables_wrapper .select2-container .select2-choice .select2-arrow {
   width: 25px;
@@ -7341,7 +7353,7 @@ textarea.dataTables_wrapper .dataTables_filter > label input {
   border: 1px solid #ebebeb;
   border-top: 0;
   background: #fafafa;
-  height: 47px;
+  height: auto;
 }
 .dataTables_wrapper .dataTables_info:before,
 .dataTables_wrapper .dataTables_paginate:before,
@@ -7359,18 +7371,21 @@ textarea.dataTables_wrapper .dataTables_filter > label input {
 .dataTables_wrapper .dataTables_info.dataTables_info,
 .dataTables_wrapper .dataTables_paginate.dataTables_info {
   border-right: 0;
-  -webkit-border-radius: 0 0 0 3px;
+  background:#ffffff;
+  color: #006644;
+  border-color:#ffffff;
+  -webkit-border-radius: 0 0 0 0px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 0 0 0 3px;
   -moz-background-clip: padding;
-  border-radius: 0 0 0 3px;
-  background-clip: padding-box;
   line-height: 30px;
 }
 .dataTables_wrapper .dataTables_info.dataTables_paginate,
 .dataTables_wrapper .dataTables_paginate.dataTables_paginate {
   border-left: 0;
-  -webkit-border-radius: 0 0 3px 0;
+  background:#ffffff;
+  border-color:#ffffff;
+  -webkit-border-radius: 0 0 0px 0;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 0 0 3px 0;
   -moz-background-clip: padding;

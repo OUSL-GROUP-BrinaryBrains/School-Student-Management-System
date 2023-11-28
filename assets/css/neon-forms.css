@@ -5682,23 +5682,24 @@ input[type="button"].btn-block {
 }
 
 .page-body .select2-container .select2-choice {
-  border-color: #ebebeb !important;
-  background: #fff;
+  border-color: #ffa800 !important;
+  background: #ffd480;
   -moz-box-shadow: none;
+  vertical-align:middle;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  height: 42px;
-  line-height: 41px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20x;
+  border-radius: 20px;
+  height: 30px;
+  line-height: 29px;
+  margin-top:7px;
   outline: none;
   padding-left: 15px;
 }
-
 .page-body .select2-container .select2-choice .select2-arrow {
   border-left: 1px solid #ebebeb;
   width: 40px;
@@ -5719,7 +5720,7 @@ input[type="button"].btn-block {
   font-family: 'Entypo';
   content: '\e873';
   display: block;
-  color: #303641;
+  color: #003322;
   -moz-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
@@ -5836,6 +5837,8 @@ input[type="button"].btn-block {
 .page-body .select2-drop .select2-search .select2-result-label,
 .page-body .select2-drop .select2-results .select2-result-label {
   padding: 4px 15px;
+  font-size: 14px;
+  font-family: system-ui;
 }
 
 .page-body .select2-drop .select2-search .select2-result-selectable,
