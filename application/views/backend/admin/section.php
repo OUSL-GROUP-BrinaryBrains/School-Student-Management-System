@@ -47,10 +47,10 @@
 							foreach ($sections as $row) :
 							?>
 								<tr>
-									<td><?php echo $count++; ?></td>
-									<td><?php echo $row['name']; ?></td>
-									<td><?php echo $row['nick_name']; ?></td>
-									<td>
+									<td style="vertical-align:middle;"><?php echo $count++; ?></td>
+									<td style="vertical-align:middle;"><?php echo $row['name']; ?></td>
+									<td style="vertical-align:middle;"><?php echo $row['nick_name']; ?></td>
+									<td style="vertical-align:middle;">
 										<?php if ($row['teacher_id'] != '')
 											echo $this->db->get_where('teacher', array('teacher_id' => $row['teacher_id']))->row()->name;
 										?>

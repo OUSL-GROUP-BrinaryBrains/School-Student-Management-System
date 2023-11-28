@@ -44,11 +44,11 @@
                         <?php $count = 1;
                         foreach ($classes as $row) : ?>
                             <tr>
-                                <td><?php echo $count++; ?></td>
-                                <td><?php echo $row['name']; ?></td>
-                                <td><?php echo $row['name_numeric']; ?></td>
-                                <td><?php echo $this->crud_model->get_type_name_by_id('teacher', $row['teacher_id']); ?></td>
-                                <td>
+                                <td style="vertical-align:middle;"><?php echo $count++; ?></td>
+                                <td style="vertical-align:middle;"><?php echo $row['name']; ?></td>
+                                <td style="vertical-align:middle;"><?php echo $row['name_numeric']; ?></td>
+                                <td style="vertical-align:middle;"><?php echo $this->crud_model->get_type_name_by_id('teacher', $row['teacher_id']); ?></td>
+                                <td style="vertical-align:middle;">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action <span class="caret"></span>

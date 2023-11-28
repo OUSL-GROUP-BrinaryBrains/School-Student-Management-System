@@ -43,11 +43,11 @@
                         <?php $count = 1;
                         foreach ($notices as $row) : ?>
                             <tr>
-                                <td style="width: 50px; text-align: center;"><?php echo $count++; ?></td>
-                                <td><?php echo $row['notice_title']; ?></td>
-                                <td class="span5"><?php echo $row['notice']; ?></td>
-                                <td><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
-                                <td>
+                                <td style="vertical-align:middle;"><?php echo $count++; ?></td>
+                                <td style="vertical-align:middle;"><?php echo $row['notice_title']; ?></td>
+                                <td style="vertical-align:middle;" class="span5"><?php echo $row['notice']; ?></td>
+                                <td style="vertical-align:middle;"><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
+                                <td style="vertical-align:middle;">
                                     <div class="btn-group" style="color:#001911 ;font-family: system-ui;">
                                         <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action <span class="caret"></span>
