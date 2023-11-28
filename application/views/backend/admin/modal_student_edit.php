@@ -28,7 +28,7 @@ foreach ( $edit_data as $row):
 								<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px"></div>
 								<div>
 									<span class="btn btn-white btn-file">
-										<span class="fileinput-new">Select image</span>
+										<span class="fileinput-new">Select Image</span>
 										<span class="fileinput-exists">Change</span>
 										<input type="file" name="userfile" accept="image/*">
 									</span>
@@ -93,7 +93,7 @@ foreach ( $edit_data as $row):
 						<div class="form-group">
 							<label for="field-2" class="col-sm-3 control-label"><?php echo ('Section');?></label>
 			                    <div class="col-sm-5">
-			                        <select name="section_id" class="form-control" id="section_selector_holder" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
+			                        <select name="section_id" class="form-control" id="section_selector_holder">
 			                            <option value=""><?php echo ('Select class first');?></option>
 				                        
 				                    </select>

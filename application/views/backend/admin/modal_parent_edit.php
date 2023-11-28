@@ -20,7 +20,7 @@ foreach ($edit_data as $row) :
 						<label for="field-1" class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
 
 						<div class="col-sm-5">
-							<input placeholder="Enter Name Here" type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
+							<input data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="Enter Name Here"  type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>">
 						</div>
 					</div>
 

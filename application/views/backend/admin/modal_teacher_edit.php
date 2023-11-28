@@ -25,7 +25,7 @@ foreach ( $edit_data as $row):
                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px"></div>
                                         <div>
                                             <span class="btn btn-white btn-file">
-                                                <span class="fileinput-new">Select image</span>
+                                                <span class="fileinput-new">Select Image</span>
                                                 <span class="fileinput-exists">Change</span>
                                                 <input type="file" name="userfile" accept="image/*">
                                             </span>
