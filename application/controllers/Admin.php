@@ -79,7 +79,7 @@ class Admin extends CI_Controller
                 $data['section_id'] = $this->input->post('section_id');
             }
             $data['parent_id']  = $this->input->post('parent_id');
-            $data['roll']       = $this->input->post('roll');
+            $data['index_no']       = $this->input->post('index_no');
             $this->db->insert('student', $data);
             $student_id = $this->db->insert_id();
             move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/student_image/' . $student_id . '.jpg');
@@ -97,7 +97,7 @@ class Admin extends CI_Controller
             $data['class_id']    = $this->input->post('class_id');
             $data['section_id']  = $this->input->post('section_id');
             $data['parent_id']   = $this->input->post('parent_id');
-            $data['roll']        = $this->input->post('roll');
+            $data['index_no']        = $this->input->post('index_no');
             $this->db->where('student_id', $param3);
             $this->db->update('student', $data);
             move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/student_image/' . $param3 . '.jpg');

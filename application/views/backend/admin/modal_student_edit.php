@@ -105,7 +105,7 @@ foreach ( $edit_data as $row):
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Index No');?></label>
                         
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="roll" value="<?php echo $row['roll'];?>" placeholder="Enter Index No Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" >
+							<input type="text" class="form-control" name="index_no" value="<?php echo $row['index_no'];?>" placeholder="Enter Index No Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" >
 						</div> 
 					</div>
 					

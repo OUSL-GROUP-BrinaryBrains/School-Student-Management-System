@@ -63,7 +63,7 @@
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Index No');?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="roll" value="" placeholder="Enter Index Number Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
+							<input type="text" class="form-control" name="index_no" value="" placeholder="Enter Index Number Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 						</div> 
 					</div>
 					<div class="form-group">

@@ -87,7 +87,7 @@ class Teacher extends CI_Controller
             $data['class_id']   = $this->input->post('class_id');
             $data['section_id'] = $this->input->post('section_id');
             $data['parent_id']  = $this->input->post('parent_id');
-            $data['roll']       = $this->input->post('roll');
+            $data['index_no']       = $this->input->post('index_no');
             $this->db->insert('student', $data);
             $student_id = $this->db->insert_id();
             move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/student_image/' . $student_id . '.jpg');
@@ -97,14 +97,14 @@ class Teacher extends CI_Controller
         if ($param2 == 'do_update') {
             $data['name']        = $this->input->post('name');
             $data['birthday']    = $this->input->post('birthday');
-            $data['gender']         = $this->input->post('gender');
+            $data['gender']      = $this->input->post('gender');
             $data['address']     = $this->input->post('address');
             $data['phone']       = $this->input->post('phone');
             $data['email']       = $this->input->post('email');
             $data['class_id']    = $this->input->post('class_id');
             $data['section_id']  = $this->input->post('section_id');
             $data['parent_id']   = $this->input->post('parent_id');
-            $data['roll']        = $this->input->post('roll');
+            $data['index_no']    = $this->input->post('index_no');
             
             $this->db->where('student_id', $param3);
             $this->db->update('student', $data);

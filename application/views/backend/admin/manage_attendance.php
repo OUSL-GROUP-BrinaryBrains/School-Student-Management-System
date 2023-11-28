@@ -108,7 +108,7 @@
                     $students   =   $this->db->get_where('student', array('class_id' => $class_id))->result_array();
                     foreach ($students as $row) : ?>
                         <tr class="gradeA">
-                            <td><?php echo $row['roll']; ?></td>
+                            <td><?php echo $row['index_no']; ?></td>
                             <td><?php echo $row['name']; ?></td>
                             <?php
                             //inserting blank data for students attendance if unavailable
@@ -161,7 +161,7 @@
                         foreach ($students as $row) {
                         ?>
                             <tr class="gradeA">
-                                <td><?php echo $row['roll']; ?></td>
+                                <td><?php echo $row['index_no']; ?></td>
                                 <td><?php echo $row['name']; ?></td>
                                 <td align="center">
                                     <?php

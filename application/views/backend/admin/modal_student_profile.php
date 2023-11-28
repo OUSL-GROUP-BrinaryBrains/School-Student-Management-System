@@ -52,10 +52,10 @@ foreach($student_info as $row):?>
                     </tr>
                     <?php endif;?>
                 
-                    <?php if($row['roll'] != ''):?>
+                    <?php if($row['index_no'] != ''):?>
                     <tr>
                         <td style="font-weight: 600; color:#008055">Index No</td>
-                        <td><b><?php echo $row['roll'];?></b></td>
+                        <td><b><?php echo $row['index_no'];?></b></td>
                     </tr>
                     <?php endif;?>
                 

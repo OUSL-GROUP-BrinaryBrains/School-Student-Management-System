@@ -43,7 +43,7 @@
                                 $students   =   $this->db->get_where('student' , array('class_id'=>$class_id))->result_array();
                                 foreach($students as $row):?>
                         <tr>
-                            <td><?php echo $row['roll'];?></td>
+                            <td><?php echo $row['index_no'];?></td>
                             <td align="center"><img src="<?php echo $this->crud_model->get_image_url('student',$row['student_id']);?>" class="img-circle" width="30" /></td>
                             <td><?php echo $row['name'];?></td>
                             <td>
@@ -84,7 +84,7 @@
                                 ))->result_array();
                                 foreach($students as $row):?>
                         <tr>
-                            <td><?php echo $row['roll'];?></td>
+                            <td><?php echo $row['index_no'];?></td>
                             <td align="center"><img src="<?php echo $this->crud_model->get_image_url('student',$row['student_id']);?>" class="img-circle" width="30" /></td>
                             <td><?php echo $row['name'];?></td>
                             <td>
