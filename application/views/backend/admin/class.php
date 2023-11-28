@@ -33,7 +33,7 @@
                                 <div><?php echo ('Numeric Name'); ?></div>
                             </th>
                             <th>
-                                <div><?php echo ('Teacher'); ?></div>
+                                <div><?php echo ('Class Teacher'); ?></div>
                             </th>
                             <th>
                                 <div><?php echo ('Options'); ?></div>
