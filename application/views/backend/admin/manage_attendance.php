@@ -6,7 +6,7 @@
             <th style="font-weight:600"><?php echo ('Select Month'); ?></th>
             <th style="font-weight:600"><?php echo ('Select Year'); ?></th>
             <th style="font-weight:600"><?php echo ('Select Class'); ?></th>
-            <th style="font-weight:600"><?php echo ('Select Date'); ?></th>
+            <th style="font-weight:600"><?php echo ('Options'); ?></th>
         </tr>
     </thead>
     <tbody>
