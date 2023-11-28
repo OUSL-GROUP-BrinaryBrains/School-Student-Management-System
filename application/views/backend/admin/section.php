@@ -17,8 +17,8 @@
 				?>
 					<li class="<?php if ($row['class_id'] == $class_id) echo 'active'; ?>">
 						<a href="<?php echo base_url(); ?>index.php?admin/section/<?php echo $row['class_id']; ?>">
-							<i class="entypo-dot"></i>
-							<?php echo ('Class'); ?> <?php echo $row['name']; ?>
+							<i class="fa fa-folder"></i>
+							<?php echo $row['name']; ?>
 						</a>
 					</li>
 				<?php endforeach; ?>
