@@ -589,29 +589,6 @@ class Admin extends CI_Controller
         $page_data['settings']   = $this->db->get('settings')->result_array();
         $this->load->view('backend/index', $page_data);
     }
-    // /*****BACKUP / RESTORE / DELETE DATA PAGE**********/
-    // function backup_restore($operation = '', $type = '')
-    // {
-    //     if ($this->session->userdata('admin_login') != 1)
-    //         redirect(base_url(), 'refresh');
-    //     if ($operation == 'create') {
-    //         $this->crud_model->create_backup($type);
-    //     }
-    //     if ($operation == 'restore') {
-    //         $this->crud_model->restore_backup();
-    //         $this->session->set_flashdata('backup_message', 'Backup Restored');
-    //         redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
-    //     }
-    //     if ($operation == 'delete') {
-    //         $this->crud_model->truncate($type);
-    //         $this->session->set_flashdata('backup_message', 'Data removed');
-    //         redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
-    //     }
-    //     $page_data['page_info']  = 'Create backup / restore from backup';
-    //     $page_data['page_name']  = 'backup_restore';
-    //     $page_data['page_title'] = 'Manage Backup Restore';
-    //     $this->load->view('backend/index', $page_data);
-    // }
     /******MANAGE OWN PROFILE AND CHANGE PASSWORD***/
     function manage_profile($param1 = '', $param2 = '', $param3 = '')
     {
