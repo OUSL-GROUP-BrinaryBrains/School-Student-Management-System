@@ -507,7 +507,6 @@ class Admin extends CI_Controller
         if ($param1 == 'create') {
             $data['name']    = $this->input->post('name');
             $data['date']    = $this->input->post('date');
-            $data['comment'] = $this->input->post('comment');
             $this->db->insert('exam', $data);
             $this->session->set_flashdata('flash_message' , get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/exam/', 'refresh');
@@ -515,8 +514,6 @@ class Admin extends CI_Controller
         if ($param1 == 'edit' && $param2 == 'do_update') {
             $data['name']    = $this->input->post('name');
             $data['date']    = $this->input->post('date');
-            $data['comment'] = $this->input->post('comment');
-            
             $this->db->where('exam_id', $param3);
             $this->db->update('exam', $data);
             $this->session->set_flashdata('flash_message' , get_phrase('data_updated'));

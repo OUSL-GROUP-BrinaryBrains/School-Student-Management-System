@@ -21,7 +21,6 @@
                 		<tr>
                     		<th><div><?php echo ('Exam Name');?></div></th>
                     		<th><div><?php echo ('Date');?></div></th>
-                    		<th><div><?php echo ('Comment');?></div></th>
                     		<th><div><?php echo ('Options');?></div></th>
 						</tr>
 					</thead>
@@ -30,7 +29,6 @@
                         <tr>
 							<td><?php echo $row['name'];?></td>
 							<td><?php echo $row['date'];?></td>
-							<td><?php echo $row['comment'];?></td>
 							<td>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -73,21 +71,16 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo ('Value Required');?>"/>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter Exam Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Date');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="datepicker form-control" name="date"/>
+                                    <input type="text" class="datepicker form-control" name="date" placeholder="Enter Date Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>"/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Comment');?></label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="comment"/>
-                                </div>
-                            </div>
+
                         		<div class="form-group">
                               	<div class="col-sm-offset-3 col-sm-5">
                                   <button type="submit" class="btn btn-info"><?php echo ('Add Exam');?></button>
