@@ -22,7 +22,7 @@
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped datatable" id="table_export">
                     <thead>
                         <tr>
-                            <th style="width: 50px;">
+                            <th>
                                 <div>#</div>
                             </th>
                             <th>

@@ -6,7 +6,7 @@
 </a> 
 <br><br><br>
 
-<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;"">
+<div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
 	
 		<div class="tabs-vertical-env">
