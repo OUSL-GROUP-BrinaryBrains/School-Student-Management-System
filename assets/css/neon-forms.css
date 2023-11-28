@@ -1695,17 +1695,23 @@ div.colorpicker {
 
 .toast-message {
   -ms-word-wrap: break-word;
+  font-family: system-ui;
+  font-size: 14px;
   word-wrap: break-word;
 }
 
 .toast-message a,
 .toast-message label {
   color: #ffffff;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-message a:hover {
   color: #cccccc;
   text-decoration: none;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-close-button {
@@ -1856,18 +1862,26 @@ button.toast-close-button {
 
 .toast-success {
   background-color: #00a651;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-error {
   background-color: #cc2424;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-info {
   background-color: #006644;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-warning {
   background-color: #f89406;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 /*Responsive Design*/
