@@ -2,7 +2,7 @@
             <a href="javascript:;" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_teacher_add/');" 
             	class="btn btn-primary pull-right">
                 <i class="entypo-plus-circled"></i>
-            	<?php echo ('Add Teacher');?>
+            	<?php echo ('Add New Teacher');?>
                 </a> 
                 <br><br>
                <table class="table table-bordered table-hover table-striped datatable" id="table_export" style="color:#001911 ;font-family: system-ui;font-size:14px;">
@@ -69,11 +69,6 @@
 			"sDom": "<'row'<'col-xs-3 col-left'l><'col-xs-9 col-right'<'export-data'T>f>r>t<'row'<'col-xs-3 col-left'i><'col-xs-9 col-right'p>>",
 			"oTableTools": {
 				"aButtons": [
-					
-					{
-						"sExtends": "xls",
-						"mColumns": [1,2]
-					},
 					{
 						"sExtends": "pdf",
 						"mColumns": [1,2]
