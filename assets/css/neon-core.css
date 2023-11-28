@@ -3496,27 +3496,28 @@ input[type="button"].btn-block {
   > li
   > a
   > span:not(.badge) {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 65px;
-  margin-top: -1px;
-  padding: 12px 10px;
-  background: #303641;
-  border-top: 1px solid #454a54;
-  border-bottom: 1px solid #454a54;
-  width: 250px;
-  visibility: hidden;
-  -webkit-border-radius: 0 3px 3px 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0 3px 3px 0;
-  -moz-background-clip: padding;
-  border-radius: 0 3px 3px 0;
-  background-clip: padding-box;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 65px;
+    margin-top: -1px;
+    padding: 8px 20px;
+    color: #ffa800;
+    background:#003322;
+    border-top: 1px solid #454a54;
+    border-bottom: 1px solid #454a54;
+    width: 250px;
+    visibility: hidden;
+    -webkit-border-radius: 0 3px 3px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 3px 3px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 3px 3px 0;
+    background-clip: padding-box;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
 .page-container.sidebar-collapsed .sidebar-menu #main-menu > li > a span {
   -moz-transition: none;
