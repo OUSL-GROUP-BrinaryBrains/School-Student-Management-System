@@ -32,7 +32,7 @@
                 <table class="table table-bordered table-hover table-striped datatable" id="table_export">
                     <thead>
                         <tr>
-                            <th><div><?php echo ('Roll');?></div></th>
+                            <th><div><?php echo ('Index No');?></div></th>
                             <th><div><?php echo ('Photo');?></div></th>
                             <th><div><?php echo ('Name');?></div></th>
                             <th><div><?php echo ('Options');?></div></th>
@@ -71,10 +71,10 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th><div><?php echo ('Roll');?></div></th>
-                            <th><div><?php echo ('Photo');?></div></th>
-                            <th><div><?php echo ('Name');?></div></th>
-                            <th><div><?php echo ('Options');?></div></th>
+                            <th style="font-weight:600"><div><?php echo ('Index No');?></div></th>
+                            <th style="font-weight:600"><div><?php echo ('Photo');?></div></th>
+                            <th style="font-weight:600"><div><?php echo ('Name');?></div></th>
+                            <th style="font-weight:600"><div><?php echo ('Options');?></div></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,7 +88,7 @@
                             <td align="center"><img src="<?php echo $this->crud_model->get_image_url('student',$row['student_id']);?>" class="img-circle" width="30" /></td>
                             <td><?php echo $row['name'];?></td>
                             <td>
-                                <a href="#" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_student_marksheet/<?php echo $row['student_id'];?>');" class="btn btn-default" >
+                                <a href="#" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_student_marksheet/<?php echo $row['student_id'];?>');" class="btn btn-info" >
                                       <i class="entypo-chart-bar"></i>
                                           <?php echo ('View Marksheet');?>
                                       </a>

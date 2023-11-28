@@ -187,18 +187,11 @@
 
 	jQuery(document).ready(function($)
 	{
-		
-
 		var datatable = $("#table_export").dataTable({
 			"sPaginationType": "bootstrap",
 			"sDom": "<'row'<'col-xs-3 col-left'l><'col-xs-9 col-right'<'export-data'T>f>r>t<'row'<'col-xs-3 col-left'i><'col-xs-9 col-right'p>>",
 			"oTableTools": {
 				"aButtons": [
-					
-					{
-						"sExtends": "xls",
-						"mColumns": [0, 2, 3, 4]
-					},
 					{
 						"sExtends": "pdf",
 						"mColumns": [0, 2, 3, 4]
