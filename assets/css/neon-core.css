@@ -2748,7 +2748,7 @@ input[type="button"].btn-block {
   right: 0;
   top: 0;
   bottom: 0;
-  padding-left: 280px;
+  padding-left: 240px;
   width: 100%;
 }
 .page-container:before,
@@ -2766,12 +2766,12 @@ input[type="button"].btn-block {
 }
 .page-container .sidebar-menu {
   position: absolute;
-  width: 280px;
+  width: 240px;
   top: 0;
   left: 0;
   bottom: 0;
-  background: #303641;
-  color: #aaabae;
+  background: #001911;
+  color: #ffffff;
   z-index: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2913,8 +2913,8 @@ input[type="button"].btn-block {
 .page-container .sidebar-menu #main-menu li a {
   position: relative;
   display: block;
-  padding: 10px 20px;
-  color: #aaabae;
+  padding: 8px 20px;
+  color: #ffa800;
   z-index: 2;
   -moz-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   -o-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
@@ -2933,8 +2933,8 @@ input[type="button"].btn-block {
   transition: 350ms opacity ease-in-out;
 }
 .page-container .sidebar-menu #main-menu li a:hover {
-  background-color: rgba(69, 74, 84, 0.3);
-  color: #ffffff;
+  background-color: rgb(230 255 246);
+  color: #001911;
 }
 .page-container .sidebar-menu #main-menu li a .badge {
   position: relative;
@@ -2947,8 +2947,8 @@ input[type="button"].btn-block {
   top: -1px;
 }
 .page-container .sidebar-menu #main-menu li.active > a {
-  background-color: #2b303a;
-  color: #ffffff;
+  background-color: #e6fff6;
+  color: #001911;
 }
 .page-container .sidebar-menu #main-menu li.has-sub > a:before {
   position: relative;
@@ -2956,8 +2956,7 @@ input[type="button"].btn-block {
   content: "\e879";
   display: inline-block;
   font-family: "Entypo";
-  color: #454a54;
-  color: #fff;
+  color: #e6fff6;
   float: right;
   font-size: 15px;
   margin-left: 13px;
@@ -2987,15 +2986,17 @@ input[type="button"].btn-block {
 .page-container .sidebar-menu #main-menu li ul.visible {
   display: block;
 }
-.page-container .sidebar-menu #main-menu li ul > li {
-  border-bottom: 1px solid rgba(69, 74, 84, 0.4);
-}
 .page-container .sidebar-menu #main-menu li ul > li > a {
-  background-color: #2b303a;
+  background-color: #003322;
   padding-left: 40px;
 }
 .page-container .sidebar-menu #main-menu li ul > li > a:hover {
-  background-color: #2d323d;
+  background-color: #e6fff6;
+  color:#001911;
+}
+.page-container .sidebar-menu #main-menu li ul > li > a:hover {
+  background-color: #e6fff6;
+  color:#001911;
 }
 .page-container .sidebar-menu #main-menu li ul > li:last-child {
   border-bottom: 0;
