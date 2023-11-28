@@ -342,7 +342,7 @@ class Admin extends CI_Controller
         if ($param1 == 'delete') {
             $this->db->where('teacher_id', $param2);
             $this->db->delete('teacher');
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', 'data_deleted');
             redirect(base_url() . 'index.php?admin/teacher/', 'refresh');
         }
         $page_data['teachers']   = $this->db->get('teacher')->result_array();
@@ -361,7 +361,7 @@ class Admin extends CI_Controller
             $data['class_id']   = $this->input->post('class_id');
             $data['teacher_id'] = $this->input->post('teacher_id');
             $this->db->insert('subject', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'data_added_successfully');
             redirect(base_url() . 'index.php?admin/subject/' . $data['class_id'], 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -766,7 +766,7 @@ class Admin extends CI_Controller
                 }
             }
 
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            $this->session->set_flashdata('flash_message', 'data_updated');
             redirect(base_url() . 'index.php?admin/noticeboard/', 'refresh');
         } else if ($param1 == 'edit') {
             $page_data['edit_data'] = $this->db->get_where('noticeboard', array(
