@@ -16,11 +16,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Sex');?></label>
+                                <label class="col-sm-3 control-label"><?php echo ('Gender');?></label>
                                 <div class="col-sm-5">
-                                    <select name="sex" class="uniform" style="width:100%;">
-                                    	<option value="male" <?php if($row['sex'] == 'male')echo 'selected';?>><?php echo ('Male');?></option>
-                                    	<option value="female" <?php if($row['sex'] == 'female')echo 'selected';?>><?php echo ('Female');?></option>
+                                    <select name="gender" class="uniform" style="width:100%;">
+                                    	<option value="male" <?php if($row['gender'] == 'male')echo 'selected';?>><?php echo ('Male');?></option>
+                                    	<option value="female" <?php if($row['gender'] == 'female')echo 'selected';?>><?php echo ('Female');?></option>
                                     </select>
                                 </div>
                             </div>

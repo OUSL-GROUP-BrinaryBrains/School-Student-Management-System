@@ -66,10 +66,10 @@ foreach($student_info as $row):?>
                     </tr>
                     <?php endif;?>
                 
-                    <?php if($row['sex'] != ''):?>
+                    <?php if($row['gender'] != ''):?>
                     <tr>
                         <td style="font-weight: 600; color:#008055">Gender</td>
-                        <td><b><?php echo $row['sex'];?></b></td>
+                        <td><b><?php echo $row['gender'];?></b></td>
                     </tr>
                     <?php endif;?>
                 

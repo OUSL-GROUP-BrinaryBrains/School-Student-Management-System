@@ -75,7 +75,7 @@
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Gender');?></label>
 						<div class="col-sm-5">
-							<select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="sex" class="form-control">
+							<select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="gender" class="form-control">
                               <option value=""><?php echo ('Select');?></option>
                               <option value="Male"><?php echo ('Male');?></option>
                               <option value="Female"><?php echo ('Female');?></option>

@@ -48,11 +48,11 @@ foreach ( $edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Sex');?></label>
+                                <label class="col-sm-3 control-label"><?php echo ('Gender');?></label>
                                 <div class="col-sm-5">
-                                    <select name="sex" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
-                                    	<option value="Male" <?php if($row['sex'] == 'Male')echo 'selected';?>><?php echo ('Male');?></option>
-                                    	<option value="Female" <?php if($row['sex'] == 'Female')echo 'selected';?>><?php echo ('Female');?></option>
+                                    <select name="gender" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
+                                    	<option value="Male" <?php if($row['gender'] == 'Male')echo 'selected';?>><?php echo ('Male');?></option>
+                                    	<option value="Female" <?php if($row['gender'] == 'Female')echo 'selected';?>><?php echo ('Female');?></option>
                                     </select>
                                 </div>
                             </div>

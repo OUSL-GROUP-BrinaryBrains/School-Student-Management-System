@@ -69,7 +69,7 @@ class Admin extends CI_Controller
         if ($param1 == 'create') {
             $data['name']       = $this->input->post('name');
             $data['birthday']   = $this->input->post('birthday');
-            $data['sex']        = $this->input->post('sex');
+            $data['gender']        = $this->input->post('gender');
             $data['address']    = $this->input->post('address');
             $data['phone']      = $this->input->post('phone');
             $data['email']      = $this->input->post('email');
@@ -90,7 +90,7 @@ class Admin extends CI_Controller
         if ($param2 == 'do_update') {
             $data['name']        = $this->input->post('name');
             $data['birthday']    = $this->input->post('birthday');
-            $data['sex']         = $this->input->post('sex');
+            $data['gender']         = $this->input->post('gender');
             $data['address']     = $this->input->post('address');
             $data['phone']       = $this->input->post('phone');
             $data['email']       = $this->input->post('email');
@@ -158,7 +158,7 @@ class Admin extends CI_Controller
         if ($param1 == 'create') {
             $data['name']        = $this->input->post('name');
             $data['birthday']    = $this->input->post('birthday');
-            $data['sex']         = $this->input->post('sex');
+            $data['gender']         = $this->input->post('gender');
             $data['address']     = $this->input->post('address');
             $data['phone']       = $this->input->post('phone');
             $data['email']       = $this->input->post('email');
@@ -173,7 +173,7 @@ class Admin extends CI_Controller
         if ($param1 == 'do_update') {
             $data['name']        = $this->input->post('name');
             $data['birthday']    = $this->input->post('birthday');
-            $data['sex']         = $this->input->post('sex');
+            $data['gender']         = $this->input->post('gender');
             $data['address']     = $this->input->post('address');
             $data['phone']       = $this->input->post('phone');
             $data['email']       = $this->input->post('email');
