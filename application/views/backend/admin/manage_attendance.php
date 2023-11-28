@@ -76,7 +76,7 @@
     <center>
         <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
             <div class="col-sm-offset-4 col-sm-4">
-                <div class="tile-stats tile-white-gray">
+                <div class="tile-stats tile-white-gray" style="padding:0px">
                     <div class="icon"><i class="entypo-suitcase"></i></div>
                     <?php
                     $full_date    =    $year . '-' . $month . '-' . $date;
@@ -84,7 +84,7 @@
                     $day        = strtolower(date('l', $timestamp));
                     ?>
                     <h2><?php echo ucwords($day); ?></h2>
-                    <h3>Attendance for the class</h3>
+                    <h3>Attendance for the Class</h3>
                     <p><?php echo $date . '-' . $month . '-' . $year; ?></p>
                 </div>
                 <a href="#" id="update_attendance_button" onclick="return update_attendance()" class="btn btn-info">

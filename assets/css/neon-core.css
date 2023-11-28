@@ -7894,8 +7894,8 @@ textareatable .replace-inputs input {
   position: relative;
   display: block;
   background: #303641;
-  padding: 0px;
-  margin-bottom: 0px;
+  padding: 30px 24px;
+  margin-bottom: 10px;
   overflow: hidden;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
