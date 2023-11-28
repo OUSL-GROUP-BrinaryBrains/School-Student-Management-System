@@ -22,14 +22,14 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>" />
+                                <input placeholder="Enter Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>" />
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Email'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>" />
+                                <input type="text" placeholder="Enter Email Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control" name="email" value="<?php echo $row['email']; ?>" />
                             </div>
                         </div>
 
@@ -77,19 +77,19 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Current Password'); ?></label>
                             <div class="col-sm-5">
-                                <input type="password" class="form-control" name="password" value="" />
+                                <input placeholder="Enter Old Password Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="password" class="form-control" name="password" value="" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('New Password'); ?></label>
                             <div class="col-sm-5">
-                                <input type="password" class="form-control" name="new_password" value="" />
+                                <input placeholder="Enter New Password Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="password" class="form-control" name="new_password" value="" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Confirm New Password'); ?></label>
                             <div class="col-sm-5">
-                                <input type="password" class="form-control" name="confirm_new_password" value="" />
+                                <input placeholder="Re-Enter New Password Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="password" class="form-control" name="confirm_new_password" value="" />
                             </div>
                         </div>
                         <div class="form-group">

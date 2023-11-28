@@ -18,37 +18,37 @@
             <div class="panel-body">
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('System Name'); ?></label>
+                    <label class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="system_name" value="<?php echo $this->db->get_where('settings', array('type' => 'system_name'))->row()->description; ?>">
+                        <input placeholder="Enter System Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="system_name" value="<?php echo $this->db->get_where('settings', array('type' => 'system_name'))->row()->description; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('System Title'); ?></label>
+                    <label class="col-sm-3 control-label"><?php echo ('Title'); ?></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="system_title" value="<?php echo $this->db->get_where('settings', array('type' => 'system_title'))->row()->description; ?>">
+                        <input placeholder="Enter System Title Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="system_title" value="<?php echo $this->db->get_where('settings', array('type' => 'system_title'))->row()->description; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Address'); ?></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="address" value="<?php echo $this->db->get_where('settings', array('type' => 'address'))->row()->description; ?>">
+                        <input placeholder="Enter System Address Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="address" value="<?php echo $this->db->get_where('settings', array('type' => 'address'))->row()->description; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Phone'); ?></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="phone" value="<?php echo $this->db->get_where('settings', array('type' => 'phone'))->row()->description; ?>">
+                        <input placeholder="Enter System Phone Number Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="phone" value="<?php echo $this->db->get_where('settings', array('type' => 'phone'))->row()->description; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('System Email'); ?></label>
+                    <label class="col-sm-3 control-label"><?php echo ('Email'); ?></label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="system_email" value="<?php echo $this->db->get_where('settings', array('type' => 'system_email'))->row()->description; ?>">
+                        <input placeholder="Enter System Email Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="system_email" value="<?php echo $this->db->get_where('settings', array('type' => 'system_email'))->row()->description; ?>">
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                                 <a href="#" id="default">
                                     <img src="assets/images/skins/default.png" <?php if ($skin == 'default') echo 'style="background-color: black; opacity: 0.3;"'; ?> />
                                 </a>
-                                <a href="#" class="album-options" id="default">
+                                <a href="#" class="album-options" id="default" style="font-family: system-ui;font-size:13px">
                                     <i class="entypo-check"></i>
                                     <?php echo ('Default'); ?>
                                 </a>
@@ -109,9 +109,9 @@
                                 <a href="#" id="black">
                                     <img src="assets/images/skins/black.png" <?php if ($skin == 'black') echo 'style="background-color: black; opacity: 0.3;"'; ?> />
                                 </a>
-                                <a href="#" class="album-options" id="black">
+                                <a href="#" class="album-options" id="black" style="font-family: system-ui;font-size:13px">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Black Theme'); ?>
+                                    <?php echo ('Black'); ?>
                                 </a>
                             </header>
                         </article>
@@ -122,9 +122,9 @@
                                 <a href="#" id="blue">
                                     <img src="assets/images/skins/blue.png" <?php if ($skin == 'blue') echo 'style="background-color: black; opacity: 0.3;"'; ?> />
                                 </a>
-                                <a href="#" class="album-options" id="blue">
+                                <a href="#" class="album-options" id="blue" style="font-family: system-ui;font-size:13px">
                                     <i class="entypo-check"></i>
-                                    <?php echo ('Blue Theme'); ?>
+                                    <?php echo ('Blue'); ?>
                                 </a>
                             </header>
                         </article>
@@ -132,7 +132,7 @@
 
                 </div>
                 <center>
-                    <div class="label label-primary" style="font-size: 12px;">
+                    <div class="label label-primary" style="font-size: 14px;">
                         <i class="entypo-check"></i> <?php echo ('Select a Theme to Apply Changes'); ?>
                     </div>
                 </center>
