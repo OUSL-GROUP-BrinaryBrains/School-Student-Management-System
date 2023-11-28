@@ -84,7 +84,7 @@
                 ?>
                     <li class="<?php if ($page_name == 'subject' && $class_id == $row['class_id']) echo 'active'; ?>">
                         <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?admin/subject/<?php echo $row['class_id']; ?>">
-                            <span> <?php echo $row['name']; ?></span>
+                            <span> <i class="fa fa-chevron-circle-right"></i><?php echo $row['name']; ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
