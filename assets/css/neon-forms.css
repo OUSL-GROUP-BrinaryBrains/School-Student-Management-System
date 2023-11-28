@@ -2518,8 +2518,9 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #80ffd4;
+  border: 1px solid #e6fff6;
   color: #001911;
+  vertical-align:middle;
 }
 
 .table-bordered>thead>tr>th,
@@ -2530,11 +2531,13 @@ th {
 .table-bordered>tfoot>tr>td {
   border: 1px solid #ffd480;
   color: #001911;
+  vertical-align:middle;
 }
 
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {
   background-color: #ffa800;
+  vertical-align:middle;
   border-bottom-width: 1px;
   color: #001911;
 }
@@ -2543,17 +2546,20 @@ th {
 .table-bordered>tfoot>tr>td {
   background-color: #ffa800;
   border-top-width: 1px;
+  vertical-align:middle;
   color: #001911;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: #e6fff6;
+  vertical-align:middle;
 }
 
 .table-hover>tbody>tr:hover>td,
 .table-hover>tbody>tr:hover>th {
   background-color: #ccffee;
+  vertical-align:middle;
 }
 
 table col[class*="col-"] {

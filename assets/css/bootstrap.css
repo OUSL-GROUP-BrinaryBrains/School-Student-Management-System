@@ -6044,9 +6044,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: #ffffff;
-  background-color: #303641;
-  border-color: #303641;
+  color: #003322;
+  background-color: #ffa800;
+  border-color: #ffd480;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -6055,9 +6055,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > .disabled > a,
 .pagination > .disabled > a:hover,
 .pagination > .disabled > a:focus {
-  color: #999999;
-  background-color: #ffffff;
-  border-color: #dddddd;
+  color: #003322;
+  background-color: #ffd480;
+  border-color: #ffffff;
   cursor: not-allowed;
 }
 .pagination-lg > li > a,
