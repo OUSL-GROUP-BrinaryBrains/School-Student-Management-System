@@ -6353,9 +6353,9 @@ canvas + .knob {
   background-clip: padding-box;
 }
 footer.main {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #ebebeb;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-top: 0px solid #ebebeb;
 }
 footer.main:before,
 footer.main:after {
@@ -7894,8 +7894,8 @@ textareatable .replace-inputs input {
   position: relative;
   display: block;
   background: #303641;
-  padding: 20px;
-  margin-bottom: 10px;
+  padding: 0px;
+  margin-bottom: 0px;
   overflow: hidden;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
@@ -7919,7 +7919,7 @@ textareatable .replace-inputs input {
   z-index: 1;
 }
 .tile-stats .icon i {
-  font-size: 100px;
+  font-size: 58px;
   line-height: 0;
   margin: 0;
   padding: 0;
@@ -7948,8 +7948,8 @@ textareatable .replace-inputs input {
   margin-top: 5px;
 }
 .tile-stats p {
-  font-size: 11px;
-  margin-top: 5px;
+  font-size: 14px;
+  margin-top: 2px;
 }
 .tile-stats.tile-red {
   background: #009965;
@@ -8304,22 +8304,23 @@ textareatable .replace-inputs input {
   background-color: #fafafa;
 }
 .tile-stats.tile-white-gray {
-  background: #ffffff;
-  border: 1px solid #ebebeb;
+  background: #e6fff6;
+  border: 0px solid #ebebeb;
 }
 .tile-stats.tile-white-gray:hover {
-  background: #f2f2f2;
+  background: #e6fff6;
+  border: 0px solid #ebebeb;
 }
 .tile-stats.tile-white-gray .icon {
-  color: #f2f2f2;
+  color: #b3ffe5;
 }
 .tile-stats.tile-white-gray .num,
 .tile-stats.tile-white-gray h3,
 .tile-stats.tile-white-gray p {
-  color: #8f8f8f;
+  color: #008055;
 }
 .tile-stats.tile-white-gray:hover {
-  background-color: #fafafa;
+  background-color: #e6fff6;
 }
 .tile-title {
   position: relative;

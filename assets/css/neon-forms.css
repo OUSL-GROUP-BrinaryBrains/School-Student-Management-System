@@ -2219,6 +2219,8 @@ h1,
 h2,
 .h2 {
   font-size: 25px;
+  font-family: system-ui;
+  color:#001811
 }
 
 h3,
@@ -2450,7 +2452,7 @@ th {
 
 .table {
   width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }
 
 .table>thead>tr>th,
