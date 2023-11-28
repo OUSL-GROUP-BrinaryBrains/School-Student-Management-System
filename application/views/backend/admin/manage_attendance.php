@@ -98,9 +98,9 @@
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr>
-                        <td><?php echo ('Index No'); ?></td>
-                        <td><?php echo ('Name'); ?></td>
-                        <td><?php echo ('Status'); ?></td>
+                        <td style="font-weight:600"><?php echo ('Index No'); ?></td>
+                        <td style="font-weight:600"><?php echo ('Name'); ?></td>
+                        <td style="font-weight:600"><?php echo ('Status'); ?></td>
                     </tr>
                 </thead>
                 <tbody>
