@@ -6964,7 +6964,7 @@ body {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 20px 0 20px 13px;
+    border-width: 21px 0 20px 12px;
   border-color: transparent transparent transparent #ebebeb;
   top: 0;
   right: -1px;
@@ -6978,7 +6978,7 @@ body {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 18px 0 18px 12px;
+  border-width: 20px 0 20px 12px;
   border-color: transparent transparent transparent #ffa800;
   top: 2px;
   right: 0;
