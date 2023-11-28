@@ -35,15 +35,37 @@
 
 
 <!-- SHOW TOASTR NOTIFIVATION -->
-<?php if ($this->session->flashdata('flash_message') != ""):?>
+<?php if ($this->session->flashdata('flash_success') != ""):?>
 
 <script type="text/javascript">
-	toastr.success('<?php echo $this->session->flashdata("flash_message");?>');
+	toastr.success('<?php echo $this->session->flashdata("flash_success");?>');
 </script>
 
 <?php endif;?>
 
+<?php if ($this->session->flashdata('flash_error') != ""):?>
 
+<script type="text/javascript">
+	toastr.error('<?php echo $this->session->flashdata("flash_error");?>');
+</script>
+
+<?php endif;?>
+
+<?php if ($this->session->flashdata('flash_info') != ""):?>
+
+<script type="text/javascript">
+	toastr.info('<?php echo $this->session->flashdata("flash_info");?>');
+</script>
+
+<?php endif;?>
+
+<?php if ($this->session->flashdata('flash_warning') != ""):?>
+
+<script type="text/javascript">
+	toastr.warning('<?php echo $this->session->flashdata("flash_warning");?>');
+</script>
+
+<?php endif;?>
 <!-----  DATA TABLE EXPORT CONFIGURATIONS ----->                      
 <script type="text/javascript">
 
