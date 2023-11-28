@@ -581,7 +581,6 @@ class Admin extends CI_Controller
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $data['name']        = $this->input->post('name');
-            $data['grade_point'] = $this->input->post('grade_point');
             $data['mark_from']   = $this->input->post('mark_from');
             $data['mark_upto']   = $this->input->post('mark_upto');
             $data['comment']     = $this->input->post('comment');
@@ -591,7 +590,6 @@ class Admin extends CI_Controller
         }
         if ($param1 == 'do_update') {
             $data['name']        = $this->input->post('name');
-            $data['grade_point'] = $this->input->post('grade_point');
             $data['mark_from']   = $this->input->post('mark_from');
             $data['mark_upto']   = $this->input->post('mark_upto');
             $data['comment']     = $this->input->post('comment');

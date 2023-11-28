@@ -16,33 +16,27 @@ foreach ( $edit_data as $row):
                 <?php echo form_open(base_url() . 'index.php?admin/grade/do_update/'.$row['grade_id'] , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
             <div class="padded">
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
+                    <label class="col-sm-3 control-label"><?php echo ('Mark Name');?></label>
                     <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Grade Point');?></label>
-                    <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="grade_point" value="<?php echo $row['grade_point'];?>"/>
+                        <input placeholder="Enter Mark Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Mark From');?></label>
                     <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="mark_from" value="<?php echo $row['mark_from'];?>"/>
+                        <input placeholder="Enter Minimum Range Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="mark_from" value="<?php echo $row['mark_from'];?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Mark Upto');?></label>
                     <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="mark_upto" value="<?php echo $row['mark_upto'];?>"/>
+                        <input placeholder="Enter Maximum Range Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="mark_upto" value="<?php echo $row['mark_upto'];?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Comment');?></label>
                     <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="comment" value="<?php echo $row['comment'];?>"/>
+                        <input placeholder="Enter Comment Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="comment" value="<?php echo $row['comment'];?>"/>
                     </div>
                 </div>
                   <div class="form-group">
