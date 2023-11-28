@@ -38,7 +38,7 @@
                 <table class="table table-bordered datatable table-hover table-striped" id="table_export">
                     <thead>
                         <tr>
-                            <th width="100"><div><?php echo ('Roll No');?></div></th>
+                            <th width="100" ><div><?php echo ('Index No');?></div></th>
                             <th width="80"><div><?php echo ('Photo');?></div></th>
                             <th><div><?php echo ('Name');?></div></th>
                             <th class="span3"><div><?php echo ('Address');?></div></th>
@@ -109,12 +109,12 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th width="80"><div><?php echo ('Roll');?></div></th>
-                            <th width="80"><div><?php echo ('Photo');?></div></th>
-                            <th><div><?php echo ('Name');?></div></th>
-                            <th class="span3"><div><?php echo ('Address');?></div></th>
-                            <th><div><?php echo ('Email');?></div></th>
-                            <th><div><?php echo ('Options');?></div></th>
+                            <th style="font-weight:600" width="80"><div><?php echo ('Index No');?></div></th>
+                            <th style="font-weight:600" width="80"><div><?php echo ('Photo');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Name');?></div></th>
+                            <th style="font-weight:600" class="span3"><div><?php echo ('Address');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Email');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Options');?></div></th>
                         </tr>
                     </thead>
                     <tbody>
