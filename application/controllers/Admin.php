@@ -525,27 +525,6 @@ class Admin extends CI_Controller
             $data['create_timestamp'] = strtotime($this->input->post('create_timestamp'));
             $this->db->insert('noticeboard', $data);
             $check_sms_send = $this->input->post('check_sms');
-            if ($check_sms_send == 1) {
-                // sms sending configurations
-                $parents  = $this->db->get('parent')->result_array();
-                $students = $this->db->get('student')->result_array();
-                $teachers = $this->db->get('teacher')->result_array();
-                $date     = $this->input->post('create_timestamp');
-                $message  = $data['notice_title'] . ' ';
-                $message .= 'on' . ' ' . $date;
-                foreach ($parents as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-                foreach ($students as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-                foreach ($teachers as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-            }
             $this->session->set_flashdata('flash_message', 'Successfully Added!');
             redirect(base_url() . 'index.php?admin/noticeboard/', 'refresh');
         }
@@ -555,28 +534,6 @@ class Admin extends CI_Controller
             $data['create_timestamp'] = strtotime($this->input->post('create_timestamp'));
             $this->db->where('notice_id', $param2);
             $this->db->update('noticeboard', $data);
-            $check_sms_send = $this->input->post('check_sms');
-            if ($check_sms_send == 1) {
-                // sms sending configurations
-                $parents  = $this->db->get('parent')->result_array();
-                $students = $this->db->get('student')->result_array();
-                $teachers = $this->db->get('teacher')->result_array();
-                $date     = $this->input->post('create_timestamp');
-                $message  = $data['notice_title'] . ' ';
-                $message .= 'on' . ' ' . $date;
-                foreach ($parents as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-                foreach ($students as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-                foreach ($teachers as $row) {
-                    $reciever_phone = $row['phone'];
-                    $this->sms_model->send_sms($message, $reciever_phone);
-                }
-            }
             $this->session->set_flashdata('flash_message', 'Successfully Updated!');
             redirect(base_url() . 'index.php?admin/noticeboard/', 'refresh');
         } else if ($param1 == 'edit') {
@@ -595,30 +552,7 @@ class Admin extends CI_Controller
         $page_data['notices']    = $this->db->get('noticeboard')->result_array();
         $this->load->view('backend/index', $page_data);
     }
-    /* private messaging */
-    function message($param1 = 'message_home', $param2 = '', $param3 = '')
-    {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
-        if ($param1 == 'send_new') {
-            $message_thread_code = $this->crud_model->send_new_private_message();
-            $this->session->set_flashdata('flash_message', 'message_sent!');
-            redirect(base_url() . 'index.php?admin/message/message_read/' . $message_thread_code, 'refresh');
-        }
-        if ($param1 == 'send_reply') {
-            $this->crud_model->send_reply_message($param2);  //$param2 = message_thread_code
-            $this->session->set_flashdata('flash_message', 'message_sent!');
-            redirect(base_url() . 'index.php?admin/message/message_read/' . $param2, 'refresh');
-        }
-        if ($param1 == 'message_read') {
-            $page_data['current_message_thread_code'] = $param2;  // $param2 = message_thread_code
-            $this->crud_model->mark_thread_messages_read($param2);
-        }
-        $page_data['message_inner_page_name']   = $param1;
-        $page_data['page_name']                 = 'message';
-        $page_data['page_title']                = 'Messages';
-        $this->load->view('backend/index', $page_data);
-    }
+   
     /*****SITE/SYSTEM SETTINGS*********/
     function system_settings($param1 = '', $param2 = '', $param3 = '')
     {
@@ -637,34 +571,17 @@ class Admin extends CI_Controller
             $data['description'] = $this->input->post('phone');
             $this->db->where('type', 'phone');
             $this->db->update('settings', $data);
-            $data['description'] = $this->input->post('paypal_email');
-            $this->db->where('type', 'paypal_email');
-            $this->db->update('settings', $data);
-            $data['description'] = $this->input->post('currency');
-            $this->db->where('type', 'currency');
-            $this->db->update('settings', $data);
             $data['description'] = $this->input->post('system_email');
             $this->db->where('type', 'system_email');
             $this->db->update('settings', $data);
-            $data['description'] = $this->input->post('system_name');
-            $this->db->where('type', 'system_name');
-            $this->db->update('settings', $data);
-            $data['description'] = $this->input->post('text_align');
-            $this->db->where('type', 'text_align');
-            $this->db->update('settings', $data);
-            $this->session->set_flashdata('flash_message', 'Successfully Updated!');
-            redirect(base_url() . 'index.php?admin/system_settings/', 'refresh');
-        }
-        if ($param1 == 'upload_logo') {
-            move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/logo.png');
-            $this->session->set_flashdata('flash_message', 'settings_updated');
+            $this->session->set_flashdata('flash_message', 'System Successfully Updated!');
             redirect(base_url() . 'index.php?admin/system_settings/', 'refresh');
         }
         if ($param1 == 'change_skin') {
             $data['description'] = $param2;
             $this->db->where('type', 'skin_colour');
             $this->db->update('settings', $data);
-            $this->session->set_flashdata('flash_message', 'theme_selected');
+            $this->session->set_flashdata('flash_message', 'System Theme Updated!');
             redirect(base_url() . 'index.php?admin/system_settings/', 'refresh');
         }
         $page_data['page_name']  = 'system_settings';
@@ -672,29 +589,29 @@ class Admin extends CI_Controller
         $page_data['settings']   = $this->db->get('settings')->result_array();
         $this->load->view('backend/index', $page_data);
     }
-    /*****BACKUP / RESTORE / DELETE DATA PAGE**********/
-    function backup_restore($operation = '', $type = '')
-    {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
-        if ($operation == 'create') {
-            $this->crud_model->create_backup($type);
-        }
-        if ($operation == 'restore') {
-            $this->crud_model->restore_backup();
-            $this->session->set_flashdata('backup_message', 'Backup Restored');
-            redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
-        }
-        if ($operation == 'delete') {
-            $this->crud_model->truncate($type);
-            $this->session->set_flashdata('backup_message', 'Data removed');
-            redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
-        }
-        $page_data['page_info']  = 'Create backup / restore from backup';
-        $page_data['page_name']  = 'backup_restore';
-        $page_data['page_title'] = 'Manage Backup Restore';
-        $this->load->view('backend/index', $page_data);
-    }
+    // /*****BACKUP / RESTORE / DELETE DATA PAGE**********/
+    // function backup_restore($operation = '', $type = '')
+    // {
+    //     if ($this->session->userdata('admin_login') != 1)
+    //         redirect(base_url(), 'refresh');
+    //     if ($operation == 'create') {
+    //         $this->crud_model->create_backup($type);
+    //     }
+    //     if ($operation == 'restore') {
+    //         $this->crud_model->restore_backup();
+    //         $this->session->set_flashdata('backup_message', 'Backup Restored');
+    //         redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
+    //     }
+    //     if ($operation == 'delete') {
+    //         $this->crud_model->truncate($type);
+    //         $this->session->set_flashdata('backup_message', 'Data removed');
+    //         redirect(base_url() . 'index.php?admin/backup_restore/', 'refresh');
+    //     }
+    //     $page_data['page_info']  = 'Create backup / restore from backup';
+    //     $page_data['page_name']  = 'backup_restore';
+    //     $page_data['page_title'] = 'Manage Backup Restore';
+    //     $this->load->view('backend/index', $page_data);
+    // }
     /******MANAGE OWN PROFILE AND CHANGE PASSWORD***/
     function manage_profile($param1 = '', $param2 = '', $param3 = '')
     {
@@ -705,8 +622,7 @@ class Admin extends CI_Controller
             $data['email'] = $this->input->post('email');
             $this->db->where('admin_id', $this->session->userdata('admin_id'));
             $this->db->update('admin', $data);
-            move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/admin_image/' . $this->session->userdata('admin_id') . '.jpg');
-            $this->session->set_flashdata('flash_message', 'account_updated');
+            $this->session->set_flashdata('flash_message', 'Account Updated!');
             redirect(base_url() . 'index.php?admin/manage_profile/', 'refresh');
         }
         if ($param1 == 'change_password') {
@@ -721,9 +637,9 @@ class Admin extends CI_Controller
                 $this->db->update('admin', array(
                     'password' => $data['new_password']
                 ));
-                $this->session->set_flashdata('flash_message', 'password_updated');
+                $this->session->set_flashdata('flash_message', 'Account Password Updated!');
             } else {
-                $this->session->set_flashdata('flash_message', 'password_mismatch');
+                $this->session->set_flashdata('flash_message', 'Password Mismatch!');
             }
             redirect(base_url() . 'index.php?admin/manage_profile/', 'refresh');
         }
