@@ -4564,6 +4564,8 @@ fieldset[disabled] .btn-warning.active {
   color: #ffffff;
   background-color: #cc2424;
   border-color: #cc2424;
+  font-family:system-ui;
+  font-size:14px;
 }
 
 .btn-danger:hover,

@@ -8467,7 +8467,6 @@ button.close {
   background: #ffa800;
   display: inline-block;
   vertical-align: middle;
-  font-size: 22px;
   padding: 3px 9px 6px 9px;
   color: #001911;
   font-size: 22px;
@@ -8610,9 +8609,9 @@ button.close {
 }
 .modal-content {
   position: relative;
-  background-color: #ffffff;
-  border: 1px solid #ebebeb;
-  border-radius: 3px;
+  background-color: rgb(230, 255, 246);
+  border: 0px solid #ebebeb;
+  border-radius: 15px;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -8641,10 +8640,10 @@ button.close {
   filter: alpha(opacity=50);
 }
 .modal-header {
-  padding: 10px;
+  padding: 10px 0px 5px 0px;
   border-bottom: 1px solid #ffa800;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   min-height: 16.42857143px;
 }
 .modal-header .close {
@@ -8666,9 +8665,9 @@ button.close {
 }
 .modal-footer {
   margin-top: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
-  padding: 10px 15px 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 0px 15px;
   font-family: system-ui;
   font-size: 14px;
   text-align: right;
@@ -8695,13 +8694,8 @@ button.close {
   clear: both;
 }
 .modal-footer .btn + .btn {
-  color: red;
-  font-family: system-ui;
-  font-size: 14px;
-  background-color: #ffd480;
-  border-color: #f0f0f1;
-  margin-left: 5px;
-  margin-bottom: 0;
+  font-family:system-ui;
+  font-size:14px;
 }
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
