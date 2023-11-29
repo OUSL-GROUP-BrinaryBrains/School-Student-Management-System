@@ -56,7 +56,7 @@
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Section');?></label>
 		                    <div class="col-sm-5">
 		                        <select name="section_id" class="form-control" id="section_selector_holder">
-		                            <option value=""><?php echo ('Select class first');?></option>
+		                            <option value=""><?php echo ('Select Class First');?></option>
 			                    </select>
 			                </div>
 					</div>

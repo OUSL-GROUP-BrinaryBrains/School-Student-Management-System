@@ -35,17 +35,17 @@
                                         <?php
                                         for ($d = 1; $d <= 7; $d++) :
 
-                                            if ($d == 1) $day = 'sunday';
-                                            else if ($d == 2) $day = 'monday';
-                                            else if ($d == 3) $day = 'tuesday';
-                                            else if ($d == 4) $day = 'wednesday';
-                                            else if ($d == 5) $day = 'thursday';
-                                            else if ($d == 6) $day = 'friday';
-                                            else if ($d == 7) $day = 'saturday';
+                                            if ($d == 1) $day = 'Monday';
+                                            else if ($d == 2) $day = 'Tuesday';
+                                            else if ($d == 3) $day = 'Wednesday';
+                                            else if ($d == 4) $day = 'Thursday';
+                                            else if ($d == 5) $day = 'Friday';
+                                            else if ($d == 6) $day = 'Saturday';
+                                            else if ($d == 7) $day = 'Sunday';
                                         ?>
                                             <tr class="gradeA">
-                                                <td width="100"><?php echo strtoupper($day); ?></td>
-                                                <td>
+                                                <td style="font-weight:600; vertical-align:middle;" width="100"><?php echo strtoupper($day); ?></td>
+                                                <td style="font-weight:600; vertical-align:middle;">
                                                     <?php
                                                     $this->db->order_by("time_start", "asc");
                                                     $this->db->where('day', $day);
@@ -59,7 +59,7 @@
                                                         </button>
                                                     <?php endforeach; ?>
 
-                                                </td>
+                                                </td style="font-weight:600; vertical-align:middle;">
                                             </tr>
                                         <?php endfor; ?>
 

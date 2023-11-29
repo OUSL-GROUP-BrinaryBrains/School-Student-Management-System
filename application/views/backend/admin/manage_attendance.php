@@ -59,7 +59,7 @@
                     <select name="class_id" class="form-control">
                         <option value="">Select a class</option>
                         <?php
-                        $classes    =    $this->db->get('class')->result_array();
+                        $classes    =   $this->db->get('class')->result_array();
                         foreach ($classes as $row) : ?>
                             <option value="<?php echo $row['class_id']; ?>" <?php if (isset($class_id) && $class_id == $row['class_id']) echo 'selected="selected"'; ?>>
                                 <?php echo $row['name']; ?>
@@ -78,7 +78,7 @@
             <div class="col-sm-offset-4 col-sm-4">
                 <div class="tile-stats tile-white-gray" style="padding:0px">
                     <?php
-                    $full_date    =    $year . '-' . $month . '-' . $date;
+                    $full_date  =   $year . '-' . $month . '-' . $date;
                     $timestamp  = strtotime($full_date);
                     $day        = strtolower(date('l', $timestamp));
                     ?>
@@ -156,7 +156,7 @@
                     <tbody>
                         <?php
                         //STUDENTS ATTENDANCE
-                        $students    =    $this->db->get_where('student', array('class_id' => $class_id))->result_array();
+                        $students   =   $this->db->get_where('student', array('class_id' => $class_id))->result_array();
                         foreach ($students as $row) {
                         ?>
                             <tr class="gradeA">
@@ -165,7 +165,7 @@
                                 <td align="center">
                                     <?php
                                     //inserting blank data for students attendance if unavailable
-                                    $verify_data    =    array(
+                                    $verify_data    =   array(
                                         'student_id' => $row['student_id'],
                                         'date' => $full_date
                                     );
@@ -174,7 +174,7 @@
                                         $this->db->insert('attendance', $verify_data);
                                     //showing the attendance status editing option
                                     $attendance = $this->db->get_where('attendance', $verify_data)->row();
-                                    $status        = $attendance->status;
+                                    $status     = $attendance->status;
                                     ?>
                                     <select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="status_<?php echo $row['student_id']; ?>" class="form-control" style="width:100px; float:left;">
                                         <option value="0" <?php if ($status == 0) echo 'selected="selected"'; ?>></option>
@@ -198,6 +198,7 @@
 <?php endif; ?>
 <script type="text/javascript">
     $("#update_attendance").hide();
+
     function update_attendance() {
         $("#attendance_list").hide();
         $("#update_attendance_button").hide();

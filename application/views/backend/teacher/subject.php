@@ -72,15 +72,15 @@
                 	<?php echo form_open(base_url() . 'index.php?teacher/subject/create' , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
                         <div class="padded">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
+                                <label class="col-sm-3 control-label"><?php echo ('Subject Name');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required');?>"/>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter Subject Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>""/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Class');?></label>
                                 <div class="col-sm-5">
-                                    <select name="class_id" class="form-control" style="width:100%;">
+                                    <select name="class_id" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control" style="width:100%;">
                                     	<?php 
 										$classes = $this->db->get('class')->result_array();
 										foreach($classes as $row):
@@ -95,7 +95,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Teacher');?></label>
                                 <div class="col-sm-5">
-                                    <select name="teacher_id" class="form-control" style="width:100%;">
+                                    <select name="teacher_id" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control" style="width:100%;">
                                     	<?php 
 										$teachers = $this->db->get('teacher')->result_array();
 										foreach($teachers as $row):

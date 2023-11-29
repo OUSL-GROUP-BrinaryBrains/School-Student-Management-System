@@ -23,8 +23,6 @@ foreach ($student_info as $row1) :
             $toggle = true;
             $exams = $this->crud_model->get_exams();
             foreach ($exams as $row0) :
-
-                $total_grade_point = 0;
                 $total_marks = 0;
                 $total_subjects = 0;
             ?>
@@ -51,7 +49,6 @@ foreach ($student_info as $row1) :
                                     <th style="font-weight:600">Subject</th>
                                     <th style="font-weight:600">Obtained Marks</th>
                                     <th style="font-weight:600">Highest Mark</th>
-                                    <th style="font-weight:600">Comments</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -98,7 +95,6 @@ foreach ($student_info as $row1) :
                                             endforeach;
                                             ?>
                                         </td>
-                                        <td></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

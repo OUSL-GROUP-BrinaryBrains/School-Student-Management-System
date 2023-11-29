@@ -83,7 +83,7 @@
                     <?php echo form_open(base_url() . 'index.php?admin/subject/create', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top')); ?>
                     <div class="padded">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
+                            <label class="col-sm-3 control-label"><?php echo ('Subject Name'); ?></label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" name="name" placeholder="Enter Subject Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>""/>
                                 </div>

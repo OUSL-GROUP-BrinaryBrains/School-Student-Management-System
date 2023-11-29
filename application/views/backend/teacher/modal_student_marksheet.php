@@ -1,18 +1,18 @@
 <style>
     #chartdiv {
-	width       : 100%;
-        height      : 250px;
-        font-size   : 11px;
-        color:#001911;
+        width: 100%;
+        height: 250px;
+        font-size: 11px;
+        color: #001911;
         font-family: system-ui;
-        font-size:14px;
-}	
+        font-size: 14px;
+    }
 </style>
 
 <?php
 $student_info = $this->crud_model->get_student_info($param2);
-foreach ($student_info as $row1):
-    ?>
+foreach ($student_info as $row1) :
+?>
     <center>
         <div style="color:#001911 ;font-family: system-ui; font-size: 20px;font-weight: 600;margin: 10px;"><?php echo $row1['name']; ?></div>
 
@@ -22,80 +22,79 @@ foreach ($student_info as $row1):
             /////SEMESTER WISE RESULT, RESULTSHEET FOR EACH SEMESTER SEPERATELY
             $toggle = true;
             $exams = $this->crud_model->get_exams();
-            foreach ($exams as $row0):
-
-                $total_grade_point = 0;
+            foreach ($exams as $row0) :
                 $total_marks = 0;
                 $total_subjects = 0;
-                ?>
+            ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion-test-2" href="#collapse<?php echo $row0['exam_id']; ?>">
-                                <i class="entypo-rss"></i>  <?php echo $row0['name']; ?>
+                                <i class="entypo-rss"></i> <?php echo $row0['name']; ?>
                             </a>
                         </h4>
                     </div>
 
                     <div id="collapse<?php echo $row0['exam_id']; ?>" class="panel-collapse collapse <?php
-                    if ($toggle) {
-                        echo 'in';
-                        $toggle = false;
-                    }
-                    ?>" >
+                                                                                                        if ($toggle) {
+                                                                                                            echo 'in';
+                                                                                                            $toggle = false;
+                                                                                                        }
+                                                                                                        ?>">
                         <div class="panel-body">
                             <center>
-                                <table class="table table-bordered table-hover table-striped " >
+                                <table class="table table-bordered table-hover table-striped ">
                                     <thead>
                                         <tr>
-                                            <th>Subject</th>
-                                            <th>Obtained marks</th>
-                                            <th>Highest mark</th>
-                                            <th>Grade</th>
-                                            <th>Comment</th>
+                                            <th style="font-weight:600; font-size: 14px;">Subject</th>
+                                            <th style="font-weight:600; font-size: 14px;">Obtained Marks</th>
+                                            <th style="font-weight:600; font-size: 14px;">Highest Mark</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         $subjects = $this->crud_model->get_subjects_by_class($row1['class_id']);
-                                        foreach ($subjects as $row2):
+                                        foreach ($subjects as $row2) :
                                             $total_subjects++;
-                                            ?>
+                                        ?>
                                             <tr>
-                                                <td><?php echo $row2['name']; $subject_name[] = $row2['name']; ?></td>
-                                                <td>
+                                                <td style="font-size: 14px;"><?php echo $row2['name'];
+                                                    $subject_name[] = $row2['name']; ?></td>
+                                                <td style="font-size: 14px;"> 
                                                     <?php
                                                     //obtained marks
-                                                    $verify_data = array('exam_id' => $row0['exam_id'],
+                                                    $verify_data = array(
+                                                        'exam_id' => $row0['exam_id'],
                                                         'class_id' => $row1['class_id'],
                                                         'subject_id' => $row2['subject_id'],
-                                                        'student_id' => $row1['student_id']);
+                                                        'student_id' => $row1['student_id']
+                                                    );
 
                                                     $query = $this->db->get_where('mark', $verify_data);
                                                     $marks = $query->result_array();
-                                                    foreach ($marks as $row3):
+                                                    foreach ($marks as $row3) :
                                                         echo $row3['mark_obtained'];
                                                         $mark_obtained[] = $row3['mark_obtained'];
                                                         $total_marks += $row3['mark_obtained'];
                                                     endforeach;
                                                     ?>
                                                 </td>
-                                                <td>
+                                                <td style="font-size: 14px;">
                                                     <?php
                                                     //highest marks
-                                                    $verify_data = array('exam_id' => $row0['exam_id'],
-                                                        'subject_id' => $row2['subject_id']);
+                                                    $verify_data = array(
+                                                        'exam_id' => $row0['exam_id'],
+                                                        'subject_id' => $row2['subject_id']
+                                                    );
                                                     $this->db->select_max('mark_obtained', 'mark_highest');
                                                     $query = $this->db->get_where('mark', $verify_data);
                                                     $marks = $query->result_array();
-                                                    foreach ($marks as $row4):
+                                                    foreach ($marks as $row4) :
                                                         echo $row4['mark_highest'];
                                                         $mark_highest[] = $row4['mark_highest'];
                                                     endforeach;
                                                     ?>
                                                 </td>
-                                                
-                                                <td></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
@@ -110,8 +109,7 @@ foreach ($student_info as $row1):
                                             "theme": "none",
                                             "type": "serial",
                                             "dataProvider": [
-                                                <?php for( $i = 0; $i < count($subjects); $i++ ) { ?>
-                                                    {
+                                                <?php for ($i = 0; $i < count($subjects); $i++) { ?> {
                                                         "subject": "<?php echo $subject_name[$i]; ?>",
                                                         "mark_obtained": <?php echo $mark_obtained[$i]; ?>,
                                                         "mark_highest": <?php echo $mark_highest[$i]; ?>
@@ -131,7 +129,7 @@ foreach ($student_info as $row1):
                                                 "lineAlpha": 0.2,
                                                 "title": "2004",
                                                 "type": "column",
-                                                "fillColors":"#7f8c8d",
+                                                "fillColors": "#7f8c8d",
                                                 "valueField": "mark_obtained"
                                             }, {
                                                 "balloonText": "Highest Mark in [[category]]: <b>[[value]]</b>",
@@ -139,7 +137,7 @@ foreach ($student_info as $row1):
                                                 "lineAlpha": 0.2,
                                                 "title": "2005",
                                                 "type": "column",
-                                                "fillColors":"#34495e",
+                                                "fillColors": "#34495e",
                                                 "valueField": "mark_highest"
                                             }],
                                             "plotAreaFillAlphas": 0.1,
@@ -149,12 +147,12 @@ foreach ($student_info as $row1):
                                             "categoryAxis": {
                                                 "gridPosition": "start"
                                             },
-                                            "exportConfig":{
-                                                "menuTop":"20px",
-                                                "menuRight":"20px",
+                                            "exportConfig": {
+                                                "menuTop": "20px",
+                                                "menuRight": "20px",
                                                 "menuItems": [{
-                                                    "format": 'png'	  
-                                                }]  
+                                                    "format": 'png'
+                                                }]
                                             }
                                         });
                                     }, 500);
