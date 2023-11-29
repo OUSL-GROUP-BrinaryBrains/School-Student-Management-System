@@ -3334,7 +3334,7 @@ input[type="button"].btn-block {
   position: relative;
   margin: 0;
   font-size: 12px;
-  border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+  border-bottom: 1px solid rgb(0 179 118 / 37%);
 }
 
 .page-container .sidebar-menu #main-menu li#search {
@@ -3406,9 +3406,10 @@ input[type="button"].btn-block {
 .page-container .sidebar-menu #main-menu li a {
   position: relative;
   display: block;
-  padding: 8px 20px;
+  padding: 10px 20px;
   color: #ffa800;
   z-index: 2;
+  font-size: 14px;
   -moz-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   -o-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   -webkit-transition: color 250ms ease-in-out,
@@ -7932,7 +7933,7 @@ textareatable .replace-inputs input {
 }
 
 .tile-stats.tile-red {
-  background: #ffa800;
+  background: #ffc24d;
 }
 
 .tile-stats.tile-red:hover {

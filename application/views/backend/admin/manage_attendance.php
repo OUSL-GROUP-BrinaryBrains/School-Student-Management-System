@@ -77,7 +77,6 @@
         <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
             <div class="col-sm-offset-4 col-sm-4">
                 <div class="tile-stats tile-white-gray" style="padding:0px">
-                    <div class="icon"><i class="entypo-suitcase"></i></div>
                     <?php
                     $full_date    =    $year . '-' . $month . '-' . $date;
                     $timestamp  = strtotime($full_date);
