@@ -7958,7 +7958,7 @@ textareatable .replace-inputs input {
   margin-top: 2px;
 }
 .tile-stats.tile-red {
-  background: #009965;
+  background: #ffa800;
 }
 .tile-stats.tile-red:hover {
   background: #00b376;
@@ -7969,7 +7969,7 @@ textareatable .replace-inputs input {
 .tile-stats.tile-red .num,
 .tile-stats.tile-red h3,
 .tile-stats.tile-red p {
-  color: #ffffff;
+  color: #001911;
 }
 .tile-stats.tile-green {
   background: #009965;
