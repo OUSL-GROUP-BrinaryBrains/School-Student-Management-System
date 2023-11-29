@@ -6197,8 +6197,10 @@ div.label {
   background-color: #d2d2d2;
 }
 .label-primary {
-  background-color: #303641;
+  background-color: #006644;
   color: #ffffff;
+  font-family: system-ui;
+  margin-right: 14px;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {

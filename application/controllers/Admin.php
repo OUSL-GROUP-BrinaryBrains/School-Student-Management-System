@@ -39,7 +39,7 @@ class Admin extends CI_Controller
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         $page_data['page_name']  = 'student_add';
-        $page_data['page_title'] = 'Add New Student';
+        $page_data['page_title'] = 'Add Student';
         $this->load->view('backend/index', $page_data);
     }
     function student_information($class_id = '')
@@ -146,7 +146,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('flash_success', 'Successfully Deleted!');
             redirect(base_url() . 'index.php?admin/parent/', 'refresh');
         }
-        $page_data['page_title']     = 'All Parents';
+        $page_data['page_title']     = 'Manage Parents';
         $page_data['page_name']  = 'parent';
         $this->load->view('backend/index', $page_data);
     }
@@ -440,7 +440,7 @@ class Admin extends CI_Controller
         }
         $page_data['grades']     = $this->db->get('grade')->result_array();
         $page_data['page_name']  = 'grade';
-        $page_data['page_title'] = 'Manage Grade Range';
+        $page_data['page_title'] = 'Manage Grading';
         $this->load->view('backend/index', $page_data);
     }
     /**********MANAGING CLASS ROUTINE******************/
@@ -548,7 +548,7 @@ class Admin extends CI_Controller
             redirect(base_url() . 'index.php?admin/noticeboard/', 'refresh');
         }
         $page_data['page_name']  = 'noticeboard';
-        $page_data['page_title'] = 'Manage Noticeboard';
+        $page_data['page_title'] = 'Manage Announcements';
         $page_data['notices']    = $this->db->get('noticeboard')->result_array();
         $this->load->view('backend/index', $page_data);
     }
@@ -615,12 +615,12 @@ class Admin extends CI_Controller
                 ));
                 $this->session->set_flashdata('flash_success', 'Account Password Updated!');
             } else {
-                $this->session->set_flashdata('flash_error_message', 'Password Not Matching!');
+                $this->session->set_flashdata('flash_error_message', 'Password is Not Matching!');
             }
             redirect(base_url() . 'index.php?admin/manage_profile/', 'refresh');
         }
         $page_data['page_name']  = 'manage_profile';
-        $page_data['page_title'] = 'Manage Profile';
+        $page_data['page_title'] = 'Account Profile';
         $page_data['edit_data']  = $this->db->get_where('admin', array(
             'admin_id' => $this->session->userdata('admin_id')
         ))->result_array();
