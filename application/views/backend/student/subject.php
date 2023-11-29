@@ -5,7 +5,7 @@
 		<ul class="nav nav-tabs bordered">
 			<li class="active">
             	<a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-					<?php echo ('Subject List');?>
+					<?php echo ('Subjects List');?>
                     	</a></li>
 		</ul>
     	<!------CONTROL TABS END------>
