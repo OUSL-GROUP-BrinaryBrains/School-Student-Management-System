@@ -47,7 +47,7 @@ class Admin extends CI_Controller
         if ($this->session->userdata('admin_login') != 1)
             redirect('login', 'refresh');
         $page_data['page_name']      = 'student_information';
-        $page_data['page_title']     = 'Student Information' . " - " .
+        $page_data['page_title']     = 'Student Information' . " : " .
             $this->crud_model->get_class_name($class_id);
         $page_data['class_id']     = $class_id;
         $this->load->view('backend/index', $page_data);
@@ -57,7 +57,7 @@ class Admin extends CI_Controller
         if ($this->session->userdata('admin_login') != 1)
             redirect('login', 'refresh');
         $page_data['page_name']  = 'student_marksheet';
-        $page_data['page_title']     = 'Student Marksheet' . " - " .
+        $page_data['page_title']     = 'Student Marksheet' . " : " .
             $this->crud_model->get_class_name($class_id);
         $page_data['class_id']     = $class_id;
         $this->load->view('backend/index', $page_data);
@@ -384,7 +384,7 @@ class Admin extends CI_Controller
             if ($page_data['exam_id'] > 0 && $page_data['class_id'] > 0 && $page_data['subject_id'] > 0) {
                 redirect(base_url() . 'index.php?admin/marks/' . $page_data['exam_id'] . '/' . $page_data['class_id'] . '/' . $page_data['subject_id'], 'refresh');
             } else {
-                $this->session->set_flashdata('mark_message', 'Choose exam, class and subject');
+                $this->session->set_flashdata('flash_error', 'Choose Exam, Class and Subject');
                 redirect(base_url() . 'index.php?admin/marks/', 'refresh');
             }
         }
@@ -552,7 +552,6 @@ class Admin extends CI_Controller
         $page_data['notices']    = $this->db->get('noticeboard')->result_array();
         $this->load->view('backend/index', $page_data);
     }
-   
     /*****SITE/SYSTEM SETTINGS*********/
     function system_settings($param1 = '', $param2 = '', $param3 = '')
     {
@@ -616,7 +615,7 @@ class Admin extends CI_Controller
                 ));
                 $this->session->set_flashdata('flash_success', 'Account Password Updated!');
             } else {
-                $this->session->set_flashdata('flash_error_message', 'Password Mismatch!');
+                $this->session->set_flashdata('flash_error_message', 'Password Not Matching!');
             }
             redirect(base_url() . 'index.php?admin/manage_profile/', 'refresh');
         }
