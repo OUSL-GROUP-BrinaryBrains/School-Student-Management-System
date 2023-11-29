@@ -4,7 +4,7 @@
 		<ul class="nav nav-tabs bordered">
 			<li class="active">
 				<a href="#list" data-toggle="tab"><i class="entypo-menu"></i>
-					<?php echo ('Noticeboard List'); ?>
+					<?php echo ('Announcements List'); ?>
 				</a>
 			</li>
 		</ul>

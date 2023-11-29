@@ -46,7 +46,7 @@ class Parents extends CI_Controller
         }
         $page_data['teachers']   = $this->db->get('teacher')->result_array();
         $page_data['page_name']  = 'teacher';
-        $page_data['page_title'] = 'Teachers List';
+        $page_data['page_title'] = 'Teachers';
         $this->load->view('backend/index', $page_data);
     }
     /****MANAGE EXAM MARKS*****/

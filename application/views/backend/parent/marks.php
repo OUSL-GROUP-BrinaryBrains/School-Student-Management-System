@@ -41,7 +41,6 @@ foreach ($child_of_parent as $row) :
                                     <tr>
                                         <th style="font-weight:600" width="15%"><?php echo ('Class'); ?></th>
                                         <th style="font-weight:600"><?php echo ('Subject'); ?></th>
-                                        <th style="font-weight:600"><?php echo ('Total Mark'); ?></th>
                                         <th style="font-weight:600"><?php echo ('Mark Obtained'); ?></th>
                                         <th style="font-weight:600" width="33%"><?php echo ('Comment'); ?></th>
                                     </tr>
@@ -59,7 +58,6 @@ foreach ($child_of_parent as $row) :
                                                     'subject_id' => $mark['subject_id']
                                                 ))->row()->name; ?>
                                             </td>
-                                            <td><?php echo $mark['mark_total']; ?></td>
                                             <td><?php echo $mark['mark_obtained']; ?></td>
                                             <td><?php echo $mark['comment']; ?></td>
                                         </tr>
