@@ -22,7 +22,7 @@
                 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped datatable" id="table_export">
                     <thead>
                         <tr>
-                            <th style="width: 50px;">
+                            <th>
                                 <div>#</div>
                             </th>
                             <th>
@@ -43,11 +43,11 @@
                         <?php $count = 1;
                         foreach ($notices as $row) : ?>
                             <tr>
-                                <td style="width: 50px; text-align: center;"><?php echo $count++; ?></td>
-                                <td><?php echo $row['notice_title']; ?></td>
-                                <td class="span5"><?php echo $row['notice']; ?></td>
-                                <td><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
-                                <td>
+                                <td style="vertical-align:middle;"><?php echo $count++; ?></td>
+                                <td style="vertical-align:middle;"><?php echo $row['notice_title']; ?></td>
+                                <td style="vertical-align:middle;" class="span5"><?php echo $row['notice']; ?></td>
+                                <td style="vertical-align:middle;"><?php echo date('d M,Y', $row['create_timestamp']); ?></td>
+                                <td style="vertical-align:middle;">
                                     <div class="btn-group" style="color:#001911 ;font-family: system-ui;">
                                         <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action <span class="caret"></span>
@@ -88,7 +88,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Title'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Enter Title Here'); ?>" name="notice_title" />
+                            <input placeholder="Enter Title Here" type="text" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="notice_title" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -97,7 +97,7 @@
                             <div class="box closable-chat-box">
                                 <div class="box-content padded">
                                     <div class="chat-message-box">
-                                        <textarea name="notice" id="ttt" rows="5" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Enter Notice Content Here'); ?>" class="form-control"></textarea>
+                                        <textarea placeholder="Enter Notice Content Here" name="notice" id="ttt" rows="5" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label"><?php echo ('Date'); ?></label>
                         <div class="col-sm-5">
-                            <input type="text" class="datepicker form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" placeholder="<?php echo ('Pick a Date Here'); ?>" name="create_timestamp" />
+                            <input placeholder="Pick a Date Here" type="text" class="datepicker form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="create_timestamp" />
                         </div>
                     </div>
 

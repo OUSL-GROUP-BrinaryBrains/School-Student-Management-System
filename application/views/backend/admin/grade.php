@@ -22,7 +22,6 @@
                 		<tr>
                     		<th><div>#</div></th>
                     		<th><div><?php echo ('Grade Name');?></div></th>
-                    		<th><div><?php echo ('Grade Point');?></div></th>
                     		<th><div><?php echo ('Mark From');?></div></th>
                     		<th><div><?php echo ('Mark Upto');?></div></th>
                     		<th><div><?php echo ('Comment');?></div></th>
@@ -34,7 +33,6 @@
                         <tr>
                             <td><?php echo $count++;?></td>
 							<td><?php echo $row['name'];?></td>
-							<td><?php echo $row['grade_point'];?></td>
 							<td><?php echo $row['mark_from'];?></td>
 							<td><?php echo $row['mark_upto'];?></td>
 							<td><?php echo $row['comment'];?></td>
@@ -77,33 +75,27 @@
                 <div class="box-content">
                 	<?php echo form_open(base_url() . 'index.php?admin/grade/create' , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
+                                <label class="col-sm-3 control-label"><?php echo ('Mark Name');?></label>
                                 <div class="col-sm-5 controls">
-                                    <input type="text" class="form-control" name="name"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Grade Point');?></label>
-                                <div class="col-sm-5 controls">
-                                    <input type="text" class="form-control" name="grade_point"/>
+                                    <input placeholder="Enter Mark Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Mark From');?></label>
                                 <div class="col-sm-5 controls">
-                                    <input type="text" class="form-control" name="mark_from"/>
+                                    <input placeholder="Enter Minimum Range Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="mark_from"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Mark Upto');?></label>
                                 <div class="col-sm-5 controls">
-                                    <input type="text" class="form-control" name="mark_upto"/>
+                                    <input placeholder="Enter Maximum Range Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="mark_upto"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Comment');?></label>
                                 <div class="col-sm-5 controls">
-                                    <input type="text" class="form-control" name="comment"/>
+                                    <input placeholder="Enter Comment Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="comment"/>
                                 </div>
                             </div>
                             <div class="form-group">

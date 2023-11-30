@@ -8,21 +8,21 @@ foreach ( $edit_data as $row):
         	<div class="panel-heading">
             	<div class="panel-title" >
             		<i class="entypo-plus-circled"></i>
-					<?php echo ('Edit subject');?>
+					<?php echo ('Edit Subject');?>
             	</div>
             </div>
 			<div class="panel-body">
                 <?php echo form_open(base_url() . 'index.php?teacher/subject/do_update/'.$row['subject_id'] , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
+                    <label class="col-sm-3 control-label"><?php echo ('Subject Name');?></label>
                     <div class="col-sm-5 controls">
-                        <input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
+                        <input placeholder="Enter Subject Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Class');?></label>
                     <div class="col-sm-5 controls">
-                        <select name="class_id" class="form-control">
+                        <select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="class_id" class="form-control">
                             <?php 
                             $classes = $this->db->get('class')->result_array();
                             foreach($classes as $row2):
@@ -40,7 +40,7 @@ foreach ( $edit_data as $row):
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Teacher');?></label>
                     <div class="col-sm-5 controls">
-                        <select name="teacher_id" class="form-control">
+                        <select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="teacher_id" class="form-control">
                             <option value=""></option>
                             <?php 
                             $teachers = $this->db->get('teacher')->result_array();
@@ -58,7 +58,7 @@ foreach ( $edit_data as $row):
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-5">
-                        <button type="submit" class="btn btn-info"><?php echo ('Edit subject');?></button>
+                        <button type="submit" class="btn btn-info"><?php echo ('Edit Subject');?></button>
                     </div>
                  </div>
         		</form>

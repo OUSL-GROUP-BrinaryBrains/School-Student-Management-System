@@ -41,7 +41,7 @@
         <li class="<?php if ($page_name == 'noticeboard') echo 'active'; ?> ">
             <a href="<?php echo base_url(); ?>index.php?admin/noticeboard" style='font-weight:550;font-size:14px'>
                 <i class="fa fa-bullhorn"></i>
-                <span><?php echo ('Noticeboard'); ?></span>
+                <span><?php echo ('Announcements'); ?></span>
             </a>
         </li>
 
@@ -84,7 +84,7 @@
                 ?>
                     <li class="<?php if ($page_name == 'subject' && $class_id == $row['class_id']) echo 'active'; ?>">
                         <a style='font-weight:550;font-size:14px' href="<?php echo base_url(); ?>index.php?admin/subject/<?php echo $row['class_id']; ?>">
-                            <span> <?php echo $row['name']; ?></span>
+                            <span> <i class="fa fa-chevron-circle-right"></i><?php echo $row['name']; ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
@@ -205,7 +205,7 @@
                 </li>
                 <li class="<?php if ($page_name == 'grade') echo 'active'; ?> ">
                     <a href="<?php echo base_url(); ?>index.php?admin/grade" style='font-weight:550;font-size:14px'>
-                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Exams Grades'); ?></span>
+                        <span><i class="fa fa-chevron-circle-right"></i> <?php echo ('Manage Grading'); ?></span>
                     </a>
                 </li>
                 <li class="<?php if ($page_name == 'marks') echo 'active'; ?> ">

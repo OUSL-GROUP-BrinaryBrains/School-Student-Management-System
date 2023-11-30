@@ -8,7 +8,7 @@ foreach ( $edit_data as $row):
         	<div class="panel-heading">
             	<div class="panel-title" >
             		<i class="entypo-plus-circled"></i>
-					<?php echo ('Edit Teacher');?>
+					<?php echo ('Edit Teacher Details');?>
             	</div>
             </div>
 			<div class="panel-body">
@@ -25,7 +25,7 @@ foreach ( $edit_data as $row):
                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px"></div>
                                         <div>
                                             <span class="btn btn-white btn-file">
-                                                <span class="fileinput-new">Select image</span>
+                                                <span class="fileinput-new">Select Image</span>
                                                 <span class="fileinput-exists">Change</span>
                                                 <input type="file" name="userfile" accept="image/*">
                                             </span>
@@ -38,50 +38,48 @@ foreach ( $edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
+                                    <input placeholder="Enter Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name" value="<?php echo $row['name'];?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Birthday');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="datepicker form-control" name="birthday" value="<?php echo $row['birthday'];?>"/>
+                                    <input placeholder="Enter Birthday Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="datepicker form-control" name="birthday" value="<?php echo $row['birthday'];?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ('Sex');?></label>
+                                <label class="col-sm-3 control-label"><?php echo ('Gender');?></label>
                                 <div class="col-sm-5">
-                                    <select name="sex" class="form-control">
-                                    	<option value="Male" <?php if($row['sex'] == 'Male')echo 'selected';?>><?php echo ('Male');?></option>
-                                    	<option value="Female" <?php if($row['sex'] == 'Female')echo 'selected';?>><?php echo ('Female');?></option>
+                                    <select name="gender" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
+                                    	<option value="Male" <?php if($row['gender'] == 'Male')echo 'selected';?>><?php echo ('Male');?></option>
+                                    	<option value="Female" <?php if($row['gender'] == 'Female')echo 'selected';?>><?php echo ('Female');?></option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Address');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="address" value="<?php echo $row['address'];?>"/>
+                                    <input placeholder="Enter Address Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="address" value="<?php echo $row['address'];?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Phone');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="phone" value="<?php echo $row['phone'];?>"/>
+                                    <input placeholder="Enter Phone Number Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="phone" value="<?php echo $row['phone'];?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Email');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="email" value="<?php echo $row['email'];?>"/>
+                                    <input placeholder="Enter Email Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="email" value="<?php echo $row['email'];?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ('Password');?></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="password" value="<?php echo $row['password'];?>"/>
+                                    <input placeholder="Enter Password Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="password" value="<?php echo $row['password'];?>"/>
                                 </div>
-                            </div>
-                            
-                            
+                            </div>            
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
                                 <button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>

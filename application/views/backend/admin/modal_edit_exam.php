@@ -18,21 +18,16 @@ foreach ( $edit_data as $row):
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Name');?></label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="name" value="<?php echo $row['name'];?>" data-validate="required" data-message-required="<?php echo ('Value Required');?>"/>
+                        <input type="text" placeholder="Enter Exam Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control" name="name" value="<?php echo $row['name'];?>" data-validate="required" data-message-required="<?php echo ('Value Required');?>"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label"><?php echo ('Date');?></label>
                     <div class="col-sm-5">
-                        <input type="text" class="datepicker form-control" name="date" value="<?php echo $row['date'];?>"/>
+                        <input placeholder="Enter Date Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="datepicker form-control" name="date" value="<?php echo $row['date'];?>"/>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ('Comment');?></label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" name="comment" value="<?php echo $row['comment'];?>"/>
-                    </div>
-                </div>
+            
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-5">
                       <button type="submit" class="btn btn-info"><?php echo ('Update Now');?></button>

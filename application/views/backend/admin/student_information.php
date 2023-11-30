@@ -38,7 +38,7 @@
                 <table class="table table-bordered datatable table-hover table-striped" id="table_export">
                     <thead>
                         <tr>
-                            <th width="100"><div><?php echo ('Roll No');?></div></th>
+                            <th width="100" ><div><?php echo ('Index No');?></div></th>
                             <th width="80"><div><?php echo ('Photo');?></div></th>
                             <th><div><?php echo ('Name');?></div></th>
                             <th class="span3"><div><?php echo ('Address');?></div></th>
@@ -51,7 +51,7 @@
                                 $students   =   $this->db->get_where('student' , array('class_id'=>$class_id))->result_array();
                                 foreach($students as $row):?>
                         <tr>
-                            <td><?php echo $row['roll'];?></td>
+                            <td><?php echo $row['index_no'];?></td>
                             <td><img src="<?php echo $this->crud_model->get_image_url('student',$row['student_id']);?>" class="img-circle" width="30" /></td>
                             <td><?php echo $row['name'];?></td>
                             <td><?php echo $row['address'];?></td>
@@ -109,12 +109,12 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th width="80"><div><?php echo ('Roll');?></div></th>
-                            <th width="80"><div><?php echo ('Photo');?></div></th>
-                            <th><div><?php echo ('Name');?></div></th>
-                            <th class="span3"><div><?php echo ('Address');?></div></th>
-                            <th><div><?php echo ('Email');?></div></th>
-                            <th><div><?php echo ('Options');?></div></th>
+                            <th style="font-weight:600" width="80"><div><?php echo ('Index No');?></div></th>
+                            <th style="font-weight:600" width="80"><div><?php echo ('Photo');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Name');?></div></th>
+                            <th style="font-weight:600" class="span3"><div><?php echo ('Address');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Email');?></div></th>
+                            <th style="font-weight:600" ><div><?php echo ('Options');?></div></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -124,7 +124,7 @@
                                 ))->result_array();
                                 foreach($students as $row):?>
                         <tr>
-                            <td><?php echo $row['roll'];?></td>
+                            <td><?php echo $row['index_no'];?></td>
                             <td><img src="<?php echo $this->crud_model->get_image_url('student',$row['student_id']);?>" class="img-circle" width="30" /></td>
                             <td><?php echo $row['name'];?></td>
                             <td><?php echo $row['address'];?></td>
@@ -187,18 +187,11 @@
 
 	jQuery(document).ready(function($)
 	{
-		
-
 		var datatable = $("#table_export").dataTable({
 			"sPaginationType": "bootstrap",
 			"sDom": "<'row'<'col-xs-3 col-left'l><'col-xs-9 col-right'<'export-data'T>f>r>t<'row'<'col-xs-3 col-left'i><'col-xs-9 col-right'p>>",
 			"oTableTools": {
 				"aButtons": [
-					
-					{
-						"sExtends": "xls",
-						"mColumns": [0, 2, 3, 4]
-					},
 					{
 						"sExtends": "pdf",
 						"mColumns": [0, 2, 3, 4]

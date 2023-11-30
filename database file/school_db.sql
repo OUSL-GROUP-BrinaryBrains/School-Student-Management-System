@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 26, 2023 at 11:14 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 30, 2023 at 02:01 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 5.6.40
 
@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `admin_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `email` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `password` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `level` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `level` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -51,24 +51,10 @@ INSERT INTO `admin` (`admin_id`, `name`, `email`, `password`, `level`) VALUES
 
 CREATE TABLE `attendance` (
   `attendance_id` int(11) NOT NULL,
-  `status` int(11) NOT NULL COMMENT '0 undefined , 1 present , 2  absent',
+  `status` int(11) NOT NULL COMMENT '0 undefined , 1 present , 2 absent',
   `student_id` int(11) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `attendance`
---
-
-INSERT INTO `attendance` (`attendance_id`, `status`, `student_id`, `date`) VALUES
-(1, 2, 2, '2023-11-25'),
-(2, 1, 3, '2023-11-25'),
-(3, 1, 4, '2023-11-25'),
-(4, 2, 5, '2023-11-25'),
-(5, 1, 2, '2023-11-26'),
-(6, 1, 3, '2023-11-26'),
-(7, 2, 4, '2023-11-26'),
-(8, 1, 5, '2023-11-26');
 
 -- --------------------------------------------------------
 
@@ -77,61 +63,18 @@ INSERT INTO `attendance` (`attendance_id`, `status`, `student_id`, `date`) VALUE
 --
 
 CREATE TABLE `ci_sessions` (
-  `id` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `ip_address` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `id` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `data` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ci_sessions`
 --
 
 INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('0316129d67ff3c3b2652849c2211c3af916c54e4', '::1', 1701035786, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033353537393b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('0f3ae85d879c383dc7197787c5c682d9c5e2fb43', '::1', 1701029013, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032383731373b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('10cd6b6756927ff540b9381db2e2817ff05f97e6', '::1', 1701036743, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033363534393b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b666c6173685f6d6573736167657c4e3b),
-('153ce6182724589fd6402d307abbdbdea8a823fc', '::1', 1701028372, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032383038383b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('1e294e8273a6174f382277069485948fb67318ce', '::1', 1701030284, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032393939313b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('219955043db2f0a93e9a5a07631c8c015f8190f3', '::1', 1701028019, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032373734343b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('228ddb39cc56b3bb465d6832ec128b54e723ac5e', '::1', 1701023840, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032333534393b73747564656e745f6c6f67696e7c733a313a2231223b73747564656e745f69647c733a313a2232223b6c6f67696e5f757365725f69647c733a313a2232223b6e616d657c733a353a22526968616d223b6c6f67696e5f747970657c733a373a2253747564656e74223b),
-('2a5f96c24d389f5fcccdfc82fe3a5b3419701a14', '::1', 1701027354, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032373131373b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('2e13603ed4acd8c547f2dddfc38758b167d1ea28', '::1', 1701031788, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033313632353b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('3005bfbf609c6c6431cefd5d41cf44d54e9e06a1', '::1', 1701020944, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032303638373b706172656e745f6c6f67696e7c733a313a2231223b706172656e745f69647c733a323a223136223b6c6f67696e5f757365725f69647c733a323a223136223b6e616d657c733a31333a22496c6d61277320506172656e74223b6c6f67696e5f747970657c733a363a22506172656e74223b),
-('31765c028663e0d9973d65e895534a724c21f1bb', '::1', 1701020589, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032303333373b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('378cb27be5eb7ec72d249c085386bff078582c78', '::1', 1701031215, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033303935343b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('37f8a28842377a5fb008937cd04538e683c6f6f6', '::1', 1701035546, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033353237343b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('4447f5f5fa64a96160ff53365e7bba5c01346537', '::1', 1701023147, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032323836363b706172656e745f6c6f67696e7c733a313a2231223b706172656e745f69647c733a323a223136223b6c6f67696e5f757365725f69647c733a323a223136223b6e616d657c733a31333a22496c6d61277320506172656e74223b6c6f67696e5f747970657c733a363a22506172656e74223b),
-('44eaa2584e72ba3ac97abdc1da790822c7bba12c', '::1', 1701026618, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032363338313b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('457068d4ff4fd5434fcd3b4523a352a17f7c958c', '::1', 1701034232, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033333936333b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('4ebe8def25c89357e2c56b21671e5b150bb7456b', '::1', 1701027720, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032373431393b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('4f13b576f722492cd03af4d3955419bcf844ac95', '::1', 1701034452, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033343330383b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('532478be2ab45cb38e1c0ac203f3e166415cb9dc', '::1', 1701032979, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033323930313b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b666c6173685f6d6573736167657c4e3b),
-('563bd225254fd4395f104f889c9f56a5a45f21be', '::1', 1701022227, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032313933333b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('67073503bb88df75ace1e9567284a6c8c6d1cba9', '::1', 1701029617, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032393333303b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('6bf1325120cf0f9988a20bd5ce831551f466b85d', '::1', 1701030917, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033303631373b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('6e26d543ed079fbc9f0ebaaa59bae35ddb112a52', '::1', 1701021479, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032313337373b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('79a56d24b96615918ae8513c6caec7405695b996', '::1', 1701031479, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033313238333b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('8431c2fd111e22d5ff1274ba071eab276e41222f', '::1', 1701036167, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033353838383b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('85dea0149a60948a48b56ec0a84b0d507bc1598d', '::1', 1701029989, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032393637313b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('87fa5c2a2bf4581aa7348391fdd3333027d083f1', '::1', 1701028630, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032383430303b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('89ee49803554b4a486767f029ee898223220e773', '::1', 1701032360, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033323038363b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('8a8ed58824a1cdb451b98f49c9c0ac29d569b2db', '::1', 1701036521, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033363232383b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('8bc6c378ff04df770984d9c1e85caed3d4299f07', '::1', 1701022557, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032323236333b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('93c5928eb49d54bd9aff6c49e555396cf7e81801', '::1', 1701025192, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032343839333b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('98f81c8a3bdc562ad5a8383a2887c265bdfd225b', '::1', 1701034627, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033343632373b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('9e76e94484718fe37e81c0b1c5dfd5e5ff128f97', '::1', 1701030615, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033303331363b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('a21b55129256dd9d1632052ecd440d7c4d61fbf5', '::1', 1701022861, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032323536343b706172656e745f6c6f67696e7c733a313a2231223b706172656e745f69647c733a323a223136223b6c6f67696e5f757365725f69647c733a323a223136223b6e616d657c733a31333a22496c6d61277320506172656e74223b6c6f67696e5f747970657c733a363a22506172656e74223b),
-('a6ccf54750a9790556331d0a051b307b7509e665', '::1', 1701033815, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033333634393b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b666c6173685f6d6573736167657c4e3b),
-('b2ace5da6e72bfa45cd10a5755bcaf66b11c8635', '::1', 1701029327, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032393032323b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('c34cd03bb9b49b8f4c91c03511a6ac6d44947288', '::1', 1701026916, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032363638343b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('d54fb97ea5a92b4b36ed5bd6c373c8825bbefe91', '::1', 1701024138, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032343038333b746561636865725f6c6f67696e7c733a313a2231223b746561636865725f69647c733a313a2232223b6c6f67696e5f757365725f69647c733a313a2232223b6e616d657c733a393a22536176697468726565223b6c6f67696e5f747970657c733a373a2254656163686572223b),
-('de7d3b3c081bc2e43e156168b32d2a52d4794297', '::1', 1701025516, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032353230313b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('dea097f6d64c00cb84c85b0c75206cabf911272a', '::1', 1701032892, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033323539363b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b666c6173685f6d6573736167657c4e3b),
-('e7f97b3589328feabb681d219121641ad5e7d1b4', '::1', 1701024699, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032343430303b746561636865725f6c6f67696e7c733a313a2231223b746561636865725f69647c733a313a2232223b6c6f67696e5f757365725f69647c733a313a2232223b6e616d657c733a393a22536176697468726565223b6c6f67696e5f747970657c733a373a2254656163686572223b),
-('eba4e98282602ed9f3b7bf8fd03bfb648e78dab4', '::1', 1701025965, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032353534353b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('f43e4c3ea0e9bad9abdf2b3223e61b6be3fc7a71', '::1', 1701026230, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313032353939303b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b),
-('f4657792189c836fb8e812f6326cca25d500301a', '::1', 1701033597, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313033333330363b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b63757272656e745f6c616e67756167657c733a373a22656e676c697368223b666c6173685f6d6573736167657c4e3b);
+('10906ed010bc195f0f4163b15aa638eab6b1b545', '::1', 1701344980, 0x5f5f63695f6c6173745f726567656e65726174657c693a313730313334343937363b61646d696e5f6c6f67696e7c733a313a2231223b61646d696e5f69647c733a313a2231223b6c6f67696e5f757365725f69647c733a313a2231223b6e616d657c733a31323a225363686f6f6c2041646d696e223b6c6f67696e5f747970657c733a353a2241646d696e223b);
 
 -- --------------------------------------------------------
 
@@ -141,21 +84,21 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 
 CREATE TABLE `class` (
   `class_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `name_numeric` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `name_numeric` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
 --
 
 INSERT INTO `class` (`class_id`, `name`, `name_numeric`, `teacher_id`) VALUES
-(3, 'Grade 1', '1', 2),
-(4, 'Grade 2', '2', 1),
-(5, 'Grade 3', '3', 2),
-(6, 'Grade 4', '4', 1),
-(7, 'Grade 5', '5', 1);
+(1, 'Grade 1', '1', 1),
+(2, 'Grade 2', '2', 1),
+(3, 'Grade 3', '3', 2),
+(4, 'Grade 4', '4', 2),
+(5, 'Grade 5', '5', 3);
 
 -- --------------------------------------------------------
 
@@ -169,21 +112,8 @@ CREATE TABLE `class_routine` (
   `subject_id` int(11) NOT NULL,
   `time_start` int(11) NOT NULL,
   `time_end` int(11) NOT NULL,
-  `day` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `class_routine`
---
-
-INSERT INTO `class_routine` (`class_routine_id`, `class_id`, `subject_id`, `time_start`, `time_end`, `day`) VALUES
-(1, 1, 1, 8, 9, 'Monday'),
-(2, 1, 2, 9, 10, 'Monday'),
-(3, 7, 8, 8, 9, 'Monday'),
-(4, 7, 10, 8, 13, 'Tuesday'),
-(5, 7, 11, 8, 13, 'Wednesday'),
-(6, 7, 10, 8, 1, 'Thursday'),
-(7, 7, 10, 10, 14, 'Friday');
+  `day` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -193,19 +123,9 @@ INSERT INTO `class_routine` (`class_routine_id`, `class_id`, `subject_id`, `time
 
 CREATE TABLE `exam` (
   `exam_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `date` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `comment` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `exam`
---
-
-INSERT INTO `exam` (`exam_id`, `name`, `date`, `comment`) VALUES
-(1, 'First Term Exam', '03/25/2022', '1st Term'),
-(2, 'Second Term Exam', '08/25/2022', '2nd Term'),
-(3, 'Third Term Exam', '11/21/2023', '3rd Term');
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `date` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -215,23 +135,22 @@ INSERT INTO `exam` (`exam_id`, `name`, `date`, `comment`) VALUES
 
 CREATE TABLE `grade` (
   `grade_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `grade_point` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mark_from` int(11) NOT NULL,
   `mark_upto` int(11) NOT NULL,
-  `comment` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `comment` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `grade`
 --
 
-INSERT INTO `grade` (`grade_id`, `name`, `grade_point`, `mark_from`, `mark_upto`, `comment`) VALUES
-(1, 'A', '', 75, 100, 'Distinction Pass'),
-(2, 'B', '', 65, 74, 'Very Good Pass'),
-(3, 'C', '', 55, 64, 'Credit Pass'),
-(4, 'S', '', 40, 54, 'Ordinary Pass'),
-(5, 'F', '', 0, 39, 'Failure');
+INSERT INTO `grade` (`grade_id`, `name`, `mark_from`, `mark_upto`, `comment`) VALUES
+(1, 'A', 75, 100, 'Distinction Pass'),
+(2, 'B', 65, 74, 'Very Good Pass'),
+(3, 'C', 55, 64, 'Credit Pass'),
+(4, 'S', 40, 54, 'Ordinary Pass'),
+(5, 'F', 0, 39, 'Failure');
 
 -- --------------------------------------------------------
 
@@ -247,30 +166,8 @@ CREATE TABLE `mark` (
   `exam_id` int(11) NOT NULL,
   `mark_obtained` int(11) NOT NULL DEFAULT '0',
   `mark_total` int(11) NOT NULL DEFAULT '100',
-  `comment` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `mark`
---
-
-INSERT INTO `mark` (`mark_id`, `student_id`, `subject_id`, `class_id`, `exam_id`, `mark_obtained`, `mark_total`, `comment`) VALUES
-(1, 2, 8, 7, 1, 70, 100, ''),
-(2, 3, 8, 7, 1, 50, 100, ''),
-(3, 4, 8, 7, 1, 45, 100, ''),
-(4, 5, 8, 7, 1, 35, 100, ''),
-(5, 2, 10, 7, 1, 89, 100, ''),
-(6, 3, 10, 7, 1, 78, 100, ''),
-(7, 4, 10, 7, 1, 50, 100, ''),
-(8, 5, 10, 7, 1, 45, 100, ''),
-(9, 2, 11, 7, 1, 90, 100, ''),
-(10, 3, 11, 7, 1, 87, 100, ''),
-(11, 4, 11, 7, 1, 70, 100, ''),
-(12, 5, 11, 7, 1, 80, 100, ''),
-(13, 2, 8, 7, 2, 0, 100, ''),
-(14, 3, 8, 7, 2, 0, 100, ''),
-(15, 4, 8, 7, 2, 0, 100, ''),
-(16, 5, 8, 7, 2, 0, 100, '');
+  `comment` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -280,17 +177,10 @@ INSERT INTO `mark` (`mark_id`, `student_id`, `subject_id`, `class_id`, `exam_id`
 
 CREATE TABLE `noticeboard` (
   `notice_id` int(11) NOT NULL,
-  `notice_title` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `notice` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `notice_title` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `notice` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `create_timestamp` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `noticeboard`
---
-
-INSERT INTO `noticeboard` (`notice_id`, `notice_title`, `notice`, `create_timestamp`) VALUES
-(4, 'Urgent', 'This is Testing on Nov 26', 1700953200);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -300,23 +190,23 @@ INSERT INTO `noticeboard` (`notice_id`, `notice_title`, `notice`, `create_timest
 
 CREATE TABLE `parent` (
   `parent_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `email` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `password` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `phone` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `address` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `profession` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `profession` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `parent`
 --
 
 INSERT INTO `parent` (`parent_id`, `name`, `email`, `password`, `phone`, `address`, `profession`) VALUES
-(13, 'Riham\'s Parent', 'p_riham@gmail.com', '123', '+94752202440', 'Katankudy', 'Bussiness Man'),
-(14, 'Zakir\'s Parent', 'p_zakir@gmail.com', '123', '+94752202441', 'Nintavur', 'Teacher'),
-(15, 'Safran\'s Parent', 'p_safran@gmail.com', '123', '+94752202442', 'Pottuvil', 'Doctor'),
-(16, 'Ilma\'s Parent', 'p_ilma@gmail.com', '123', '+94752202444', 'Katankudy', 'Engineer');
+(1, 'Zakir\'s Parent', 'p_zakir@gmail.com', '123', '+94752202440', 'Nintavur', 'Teacher'),
+(2, 'Riham\'s Parent', 'p_riham@gmail.com', '123', '+94752202441', 'Katankudy', 'Bussiness Man'),
+(3, 'Safran\'s Parent', 'p_safran@gmail.com', '123', '+94752202442', 'Pottuvil', 'Doctor'),
+(4, 'Ilma\'s Parent', 'p_ilma@gmail.com', '123', '+94752202443', 'Katankudy', 'Engineer');
 
 -- --------------------------------------------------------
 
@@ -326,20 +216,20 @@ INSERT INTO `parent` (`parent_id`, `name`, `email`, `password`, `phone`, `addres
 
 CREATE TABLE `section` (
   `section_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `nick_name` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `nick_name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `class_id` int(11) NOT NULL,
   `teacher_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `section`
 --
 
 INSERT INTO `section` (`section_id`, `name`, `nick_name`, `class_id`, `teacher_id`) VALUES
-(8, 'A', 'Alpha', 7, 1),
-(9, 'B', 'Beta', 7, 2),
-(10, 'C', 'Charlie', 7, 1);
+(1, 'A', 'Alpha', 5, 1),
+(2, 'B', 'Beta', 5, 2),
+(3, 'C', 'Charlie', 5, 3);
 
 -- --------------------------------------------------------
 
@@ -351,7 +241,7 @@ CREATE TABLE `settings` (
   `settings_id` int(11) NOT NULL,
   `type` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `settings`
@@ -362,8 +252,8 @@ INSERT INTO `settings` (`settings_id`, `type`, `description`) VALUES
 (2, 'system_title', 'School Student Management System'),
 (3, 'address', 'Colombo'),
 (4, 'phone', '0771234123'),
-(7, 'system_email', 'binarybrains@gmail.com'),
-(16, 'skin_colour', 'default');
+(5, 'system_email', 'binarybrains@gmail.com'),
+(6, 'skin_colour', 'default');
 
 -- --------------------------------------------------------
 
@@ -373,35 +263,28 @@ INSERT INTO `settings` (`settings_id`, `type`, `description`) VALUES
 
 CREATE TABLE `student` (
   `student_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `birthday` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `sex` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `religion` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `blood_group` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `address` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `phone` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `email` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `password` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `father_name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `mother_name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `class_id` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gender` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_id` int(11) NOT NULL,
   `section_id` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL,
-  `roll` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `transport_id` int(11) NOT NULL,
-  `dormitory_id` int(11) NOT NULL,
-  `dormitory_room_number` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `index_no` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`student_id`, `name`, `birthday`, `sex`, `religion`, `blood_group`, `address`, `phone`, `email`, `password`, `father_name`, `mother_name`, `class_id`, `section_id`, `parent_id`, `roll`, `transport_id`, `dormitory_id`, `dormitory_room_number`) VALUES
-(2, 'Riham', '01/14/1999', 'Female', '', '', 'Katankudy', '0752202440', 'riham@gmail.com', '123', '', '', '7', 8, 13, '001', 0, 0, ''),
-(3, 'Zakir', '12/31/1998', 'Male', '', '', 'Nintavur', '0752202441', 'zakir@gmail.com', '123', '', '', '7', 8, 14, '002', 0, 0, ''),
-(4, 'Safran', '06/17/1998', 'Male', '', '', 'Pottuvil', '0752202442', 'safran@gmail.com', '123', '', '', '7', 8, 15, '003', 0, 0, ''),
-(5, 'Ilma', '11/17/1998', 'Female', '', '', 'Katankudy', '0752202443', 'ilma@gmail.com', '123', '', '', '7', 10, 16, '004', 0, 0, '');
+INSERT INTO `student` (`student_id`, `name`, `birthday`, `gender`, `address`, `phone`, `email`, `password`, `class_id`, `section_id`, `parent_id`, `index_no`) VALUES
+(1, 'Zakir', '12/31/1998', 'Male', 'Nintavur', '0752202440', 'zakir@gmail.com', '123', 5, 1, 1, '001'),
+(2, 'Riham', '01/14/1999', 'Female', 'Katankudy', '0752202441', 'riham@gmail.com', '123', 5, 1, 2, '002'),
+(3, 'Safran', '06/17/1998', 'Male', 'Pottuvil', '0752202442', 'safran@gmail.com', '123', 5, 2, 3, '003'),
+(4, 'Ilma', '11/17/1999', 'Female', 'Katankudy', '0752202443', 'ilma@gmail.com', '123', 5, 2, 4, '004');
 
 -- --------------------------------------------------------
 
@@ -411,19 +294,19 @@ INSERT INTO `student` (`student_id`, `name`, `birthday`, `sex`, `religion`, `blo
 
 CREATE TABLE `subject` (
   `subject_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `class_id` int(11) NOT NULL,
   `teacher_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `subject`
 --
 
 INSERT INTO `subject` (`subject_id`, `name`, `class_id`, `teacher_id`) VALUES
-(8, 'Maths', 7, 1),
-(10, 'English', 7, 2),
-(11, 'Science', 7, 1);
+(1, 'Maths', 5, 1),
+(2, 'English', 5, 2),
+(3, 'Science', 5, 3);
 
 -- --------------------------------------------------------
 
@@ -433,24 +316,23 @@ INSERT INTO `subject` (`subject_id`, `name`, `class_id`, `teacher_id`) VALUES
 
 CREATE TABLE `teacher` (
   `teacher_id` int(11) NOT NULL,
-  `name` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `birthday` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `sex` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `religion` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `blood_group` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `address` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `phone` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `email` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `password` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `name` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gender` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` longtext CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `teacher`
 --
 
-INSERT INTO `teacher` (`teacher_id`, `name`, `birthday`, `sex`, `religion`, `blood_group`, `address`, `phone`, `email`, `password`) VALUES
-(1, 'Kasun', '07/13/1989', 'Male', '', '', 'Kandy', '+94772201111', 't_kasun@mail.com', '123'),
-(2, 'Savithree', '08/13/1989', 'Female', '', '', 'Colombo', '+94772202440', 't_savithree@gmail.com', '123');
+INSERT INTO `teacher` (`teacher_id`, `name`, `birthday`, `gender`, `address`, `phone`, `email`, `password`) VALUES
+(1, 'Kasun', '07/13/1989', 'Male', 'Kandy', '0772201111', 't_kasun@mail.com', '123'),
+(2, 'Padmini', '07/23/1989', 'Female', 'Batticaloa', '0772201112', 't_padmini@mail.com', '123'),
+(3, 'Lahiru', '08/12/1989', 'Male', 'Colombo', '0772201113', 't_lahiru@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
@@ -466,7 +348,8 @@ ALTER TABLE `admin`
 -- Indexes for table `attendance`
 --
 ALTER TABLE `attendance`
-  ADD PRIMARY KEY (`attendance_id`);
+  ADD PRIMARY KEY (`attendance_id`),
+  ADD KEY `fk_attendance_student` (`student_id`);
 
 --
 -- Indexes for table `ci_sessions`
@@ -479,13 +362,16 @@ ALTER TABLE `ci_sessions`
 -- Indexes for table `class`
 --
 ALTER TABLE `class`
-  ADD PRIMARY KEY (`class_id`);
+  ADD PRIMARY KEY (`class_id`),
+  ADD KEY `fk_class_teacher` (`teacher_id`);
 
 --
 -- Indexes for table `class_routine`
 --
 ALTER TABLE `class_routine`
-  ADD PRIMARY KEY (`class_routine_id`);
+  ADD PRIMARY KEY (`class_routine_id`),
+  ADD KEY `fk_class_routine_class` (`class_id`),
+  ADD KEY `fk_class_routine_subject` (`subject_id`);
 
 --
 -- Indexes for table `exam`
@@ -503,7 +389,11 @@ ALTER TABLE `grade`
 -- Indexes for table `mark`
 --
 ALTER TABLE `mark`
-  ADD PRIMARY KEY (`mark_id`);
+  ADD PRIMARY KEY (`mark_id`),
+  ADD KEY `fk_mark_student` (`student_id`),
+  ADD KEY `fk_mark_class` (`class_id`),
+  ADD KEY `fk_mark_subject` (`subject_id`),
+  ADD KEY `fk_mark_exam` (`exam_id`);
 
 --
 -- Indexes for table `noticeboard`
@@ -521,7 +411,9 @@ ALTER TABLE `parent`
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
-  ADD PRIMARY KEY (`section_id`);
+  ADD PRIMARY KEY (`section_id`),
+  ADD KEY `fk_section_class` (`class_id`),
+  ADD KEY `fk_section_teacher` (`teacher_id`);
 
 --
 -- Indexes for table `settings`
@@ -533,13 +425,18 @@ ALTER TABLE `settings`
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
-  ADD PRIMARY KEY (`student_id`);
+  ADD PRIMARY KEY (`student_id`),
+  ADD KEY `fk_student_class` (`class_id`),
+  ADD KEY `fk_student_parent` (`parent_id`),
+  ADD KEY `fk_student_section` (`section_id`);
 
 --
 -- Indexes for table `subject`
 --
 ALTER TABLE `subject`
-  ADD PRIMARY KEY (`subject_id`);
+  ADD PRIMARY KEY (`subject_id`),
+  ADD KEY `fk_subject_class` (`class_id`),
+  ADD KEY `fk_subject_teacher` (`teacher_id`);
 
 --
 -- Indexes for table `teacher`
@@ -548,92 +445,58 @@ ALTER TABLE `teacher`
   ADD PRIMARY KEY (`teacher_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Constraints for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `attendance`
+-- Constraints for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  ADD CONSTRAINT `fk_attendance_student` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`);
 
 --
--- AUTO_INCREMENT for table `class`
+-- Constraints for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  ADD CONSTRAINT `fk_class_teacher` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`);
 
 --
--- AUTO_INCREMENT for table `class_routine`
+-- Constraints for table `class_routine`
 --
 ALTER TABLE `class_routine`
-  MODIFY `class_routine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  ADD CONSTRAINT `fk_class_routine_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  ADD CONSTRAINT `fk_class_routine_subject` FOREIGN KEY (`subject_id`) REFERENCES `subject` (`subject_id`);
 
 --
--- AUTO_INCREMENT for table `exam`
---
-ALTER TABLE `exam`
-  MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `grade`
---
-ALTER TABLE `grade`
-  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `mark`
+-- Constraints for table `mark`
 --
 ALTER TABLE `mark`
-  MODIFY `mark_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  ADD CONSTRAINT `fk_mark_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  ADD CONSTRAINT `fk_mark_exam` FOREIGN KEY (`exam_id`) REFERENCES `exam` (`exam_id`),
+  ADD CONSTRAINT `fk_mark_student` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
+  ADD CONSTRAINT `fk_mark_subject` FOREIGN KEY (`subject_id`) REFERENCES `subject` (`subject_id`);
 
 --
--- AUTO_INCREMENT for table `noticeboard`
---
-ALTER TABLE `noticeboard`
-  MODIFY `notice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `parent`
---
-ALTER TABLE `parent`
-  MODIFY `parent_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `section`
+-- Constraints for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  ADD CONSTRAINT `fk_section_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  ADD CONSTRAINT `fk_section_teacher` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`);
 
 --
--- AUTO_INCREMENT for table `settings`
---
-ALTER TABLE `settings`
-  MODIFY `settings_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `student`
+-- Constraints for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  ADD CONSTRAINT `fk_student_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  ADD CONSTRAINT `fk_student_parent` FOREIGN KEY (`parent_id`) REFERENCES `parent` (`parent_id`),
+  ADD CONSTRAINT `fk_student_section` FOREIGN KEY (`section_id`) REFERENCES `section` (`section_id`);
 
 --
--- AUTO_INCREMENT for table `subject`
+-- Constraints for table `subject`
 --
 ALTER TABLE `subject`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `teacher`
---
-ALTER TABLE `teacher`
-  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  ADD CONSTRAINT `fk_subject_class` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  ADD CONSTRAINT `fk_subject_teacher` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

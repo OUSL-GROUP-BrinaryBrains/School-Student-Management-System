@@ -1695,17 +1695,23 @@ div.colorpicker {
 
 .toast-message {
   -ms-word-wrap: break-word;
+  font-family: system-ui;
+  font-size: 14px;
   word-wrap: break-word;
 }
 
 .toast-message a,
 .toast-message label {
   color: #ffffff;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-message a:hover {
   color: #cccccc;
   text-decoration: none;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-close-button {
@@ -1856,18 +1862,26 @@ button.toast-close-button {
 
 .toast-success {
   background-color: #00a651;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-error {
   background-color: #cc2424;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-info {
   background-color: #006644;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 .toast-warning {
   background-color: #f89406;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 /*Responsive Design*/
@@ -2219,6 +2233,8 @@ h1,
 h2,
 .h2 {
   font-size: 25px;
+  font-family: system-ui;
+  color:#001811
 }
 
 h3,
@@ -2450,7 +2466,7 @@ th {
 
 .table {
   width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 10px;
 }
 
 .table>thead>tr>th,
@@ -2518,8 +2534,9 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #80ffd4;
+  border: 1px solid #e6fff6;
   color: #001911;
+  vertical-align:middle;
 }
 
 .table-bordered>thead>tr>th,
@@ -2530,11 +2547,13 @@ th {
 .table-bordered>tfoot>tr>td {
   border: 1px solid #ffd480;
   color: #001911;
+  vertical-align:middle;
 }
 
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {
   background-color: #ffa800;
+  vertical-align:middle;
   border-bottom-width: 1px;
   color: #001911;
 }
@@ -2543,17 +2562,20 @@ th {
 .table-bordered>tfoot>tr>td {
   background-color: #ffa800;
   border-top-width: 1px;
+  vertical-align:middle;
   color: #001911;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: #e6fff6;
+  vertical-align:middle;
 }
 
 .table-hover>tbody>tr:hover>td,
 .table-hover>tbody>tr:hover>th {
   background-color: #ccffee;
+  vertical-align:middle;
 }
 
 table col[class*="col-"] {
@@ -2893,7 +2915,7 @@ output {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #00e698;
+  color: #81B9A7;
 }
 
 .form-control[disabled],
@@ -3431,8 +3453,10 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary {
   color: #ffffff;
-  background-color: #303641;
-  border-color: #303641;
+  font-size:14px ;
+  font-family: system-ui;
+  background-color: #006644;
+  border-color: #006644;
 }
 
 .btn-primary:hover,
@@ -3441,8 +3465,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #1f232a;
-  border-color: #16191e;
+  background-color: #009965;
+  border-color: #008055;
 }
 
 .btn-primary:active,
@@ -4554,6 +4578,8 @@ fieldset[disabled] .btn-warning.active {
   color: #ffffff;
   background-color: #cc2424;
   border-color: #cc2424;
+  font-family:system-ui;
+  font-size:14px;
 }
 
 .btn-danger:hover,
@@ -5674,23 +5700,24 @@ input[type="button"].btn-block {
 }
 
 .page-body .select2-container .select2-choice {
-  border-color: #ebebeb !important;
-  background: #fff;
+  border-color: #ffa800 !important;
+  background: #ffd480;
   -moz-box-shadow: none;
+  vertical-align:middle;
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  height: 42px;
-  line-height: 41px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20x;
+  border-radius: 20px;
+  height: 30px;
+  line-height: 29px;
+  margin-top:7px;
   outline: none;
   padding-left: 15px;
 }
-
 .page-body .select2-container .select2-choice .select2-arrow {
   border-left: 1px solid #ebebeb;
   width: 40px;
@@ -5711,7 +5738,7 @@ input[type="button"].btn-block {
   font-family: 'Entypo';
   content: '\e873';
   display: block;
-  color: #303641;
+  color: #003322;
   -moz-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   -webkit-transition: all 150ms ease-in-out;
@@ -5828,6 +5855,8 @@ input[type="button"].btn-block {
 .page-body .select2-drop .select2-search .select2-result-label,
 .page-body .select2-drop .select2-results .select2-result-label {
   padding: 4px 15px;
+  font-size: 14px;
+  font-family: system-ui;
 }
 
 .page-body .select2-drop .select2-search .select2-result-selectable,

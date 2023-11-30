@@ -4,17 +4,18 @@
 
 ## User Credentials (Password for all is 123)
 #### School Admin 
-admin@gmail.com <br>
+admin@gmail.com <br><br>
 #### Parent's
 p_riham@gmail.com <br>
 p_zakir@gmail.com <br>
 p_safran@gmail.com <br>
-p_ilma@gmail.com <br>
+p_ilma@gmail.com <br><br>
 #### Student's
 riham@gmail.com <br>
 zakir@gmail.com <br>
 safran@gmail.com <br>
-ilma@gmail.com <br>
+ilma@gmail.com <br><br>
 #### Teacher's
 t_kasun@mail.com <br>
-t_savithree@gmail.com <br>
+t_lahiru@gmail.com <br>
+t_padmini@gmail.com <br><br>
