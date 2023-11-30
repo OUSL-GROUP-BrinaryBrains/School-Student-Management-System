@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -15,11 +14,9 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
         <div class="tab-content">
             <!----TABLE LISTING STARTS-->
             <div class="tab-pane box active" id="list">
-
                 <table class="table table-bordered table-hover table-striped datatable" id="table_export">
                     <thead>
                         <tr>
@@ -54,7 +51,6 @@
                                             Action <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu dropdown-default pull-right" role="menu">
-
                                             <!-- EDITING LINK -->
                                             <li>
                                                 <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_class/<?php echo $row['class_id']; ?>');">
@@ -63,7 +59,6 @@
                                                 </a>
                                             </li>
                                             <li class="divider"></li>
-
                                             <!-- DELETION LINK -->
                                             <li>
                                                 <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/classes/delete/<?php echo $row['class_id']; ?>');">
@@ -80,7 +75,6 @@
                 </table>
             </div>
             <!----TABLE LISTING ENDS--->
-
             <!----CREATION FORM STARTS---->
             <div class="tab-pane box" id="add" style="padding: 5px">
                 <div class="box-content">
@@ -89,7 +83,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Class Name'); ?></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" placeholder="Enter Class Name Here"  name="name" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
+                                <input type="text" class="form-control" placeholder="Enter Class Name Here" name="name" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -126,16 +120,10 @@
         </div>
     </div>
 </div>
-
-
-
 <!-----  DATA TABLE EXPORT CONFIGURATIONS ---->
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-
-
         var datatable = $("#table_export").dataTable();
-
         $(".dataTables_wrapper select").select2({
             minimumResultsForSearch: -1
         });

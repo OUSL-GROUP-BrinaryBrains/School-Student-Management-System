@@ -62,7 +62,6 @@ $edit_data  = $this->db->get_where('class_routine', array('class_routine_id' => 
                         $time_start        =    $row['time_start'] - 12;
                         $starting_ampm    =    2;
                     }
-
                     ?>
                     <select name="time_start" class="form-control">
                         <?php for ($i = 1; $i <= 12; $i++) : ?>
@@ -79,8 +78,6 @@ $edit_data  = $this->db->get_where('class_routine', array('class_routine_id' => 
             <div class="form-group">
                 <label class="col-sm-3 control-label"><?php echo ('End Time'); ?></label>
                 <div class="col-sm-5">
-
-
                     <?php
                     if ($row['time_end'] < 13) {
                         $time_end        =    $row['time_end'];
@@ -89,7 +86,6 @@ $edit_data  = $this->db->get_where('class_routine', array('class_routine_id' => 
                         $time_end        =    $row['time_end'] - 12;
                         $ending_ampm    =    2;
                     }
-
                     ?>
                     <select name="time_end" class="form-control">
                         <?php for ($i = 1; $i <= 12; $i++) : ?>

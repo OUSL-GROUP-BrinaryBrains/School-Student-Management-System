@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -15,7 +14,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
         <div class="tab-content">
             <!----TABLE LISTING STARTS-->
             <div class="tab-pane box active" id="list">
@@ -53,7 +51,6 @@
                                             Action <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu dropdown-default pull-right" role="menu">
-
                                             <!-- EDITING LINK -->
                                             <li>
                                                 <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_notice/<?php echo $row['notice_id']; ?>');">
@@ -62,7 +59,6 @@
                                                 </a>
                                             </li>
                                             <li class="divider"></li>
-
                                             <!-- DELETION LINK -->
                                             <li>
                                                 <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/noticeboard/delete/<?php echo $row['notice_id']; ?>');">
@@ -79,8 +75,6 @@
                 </table>
             </div>
             <!----TABLE LISTING ENDS--->
-
-
             <!----CREATION FORM STARTS---->
             <div class="tab-pane box" id="add" style="padding: 5px">
                 <div class="box-content">
@@ -109,7 +103,6 @@
                             <input placeholder="Pick a Date Here" type="text" class="datepicker form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="create_timestamp" />
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-5">
                             <button type="submit" class="btn btn-info"><?php echo ('Add Notice'); ?></button>
@@ -119,7 +112,6 @@
                 </div>
             </div>
             <!----CREATION FORM ENDS-->
-
         </div>
     </div>
 </div>
