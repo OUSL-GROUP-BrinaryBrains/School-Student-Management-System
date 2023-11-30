@@ -28,23 +28,15 @@
                         <i class="entypo-chart-bar"></i>
                         <?php echo ('View Marksheet'); ?>
                     </a>
-
-
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
-
-
-
 <!-----  DATA TABLE EXPORT CONFIGURATIONS ---->
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-
-
         var datatable = $("#table_export").dataTable();
-
         $(".dataTables_wrapper select").select2({
             minimumResultsForSearch: -1
         });

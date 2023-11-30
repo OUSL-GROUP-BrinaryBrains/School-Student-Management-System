@@ -37,13 +37,11 @@
                 <td><?php echo $row['address']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td>
-
                     <div class="btn-group">
                         <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
                             Action <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-default pull-right" role="menu">
-
                             <!-- STUDENT PROFILE LINK -->
                             <li>
                                 <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_student_profile/<?php echo $row['student_id']; ?>');">
@@ -51,7 +49,6 @@
                                     <?php echo ('Profile'); ?>
                                 </a>
                             </li>
-
                             <!-- STUDENT EDITING LINK -->
                             <li>
                                 <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_student_edit/<?php echo $row['student_id']; ?>');">
@@ -60,7 +57,6 @@
                                 </a>
                             </li>
                             <li class="divider"></li>
-
                             <!-- STUDENT DELETION LINK -->
                             <li>
                                 <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?teacher/student/<?php echo $class_id; ?>/delete/<?php echo $row['student_id']; ?>');">
@@ -70,27 +66,19 @@
                             </li>
                         </ul>
                     </div>
-
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
-
-
-
 <!-----  DATA TABLE EXPORT CONFIGURATIONS ----->
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-
-
         var datatable = $("#table_export").dataTable({
             "sPaginationType": "bootstrap",
             "sDom": "<'row'<'col-xs-3 col-left'l><'col-xs-9 col-right'<'export-data'T>f>r>t<'row'<'col-xs-3 col-left'i><'col-xs-9 col-right'p>>",
             "oTableTools": {
-                "aButtons": [
-
-                    {
+                "aButtons": [{
                         "sExtends": "xls",
                         "mColumns": [0, 2, 3, 4]
                     },
@@ -104,11 +92,8 @@
                         "fnClick": function(nButton, oConfig) {
                             datatable.fnSetColumnVis(1, false);
                             datatable.fnSetColumnVis(5, false);
-
                             this.fnPrint(true, oConfig);
-
                             window.print();
-
                             $(window).keyup(function(e) {
                                 if (e.which == 27) {
                                     datatable.fnSetColumnVis(1, true);
@@ -116,13 +101,10 @@
                                 }
                             });
                         },
-
                     },
                 ]
             },
-
         });
-
         $(".dataTables_wrapper select").select2({
             minimumResultsForSearch: -1
         });

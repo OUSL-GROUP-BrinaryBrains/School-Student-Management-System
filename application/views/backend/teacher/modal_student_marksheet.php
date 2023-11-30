@@ -8,16 +8,13 @@
         font-size: 14px;
     }
 </style>
-
 <?php
 $student_info = $this->crud_model->get_student_info($param2);
 foreach ($student_info as $row1) :
 ?>
     <center>
         <div style="color:#001911 ;font-family: system-ui; font-size: 20px;font-weight: 600;margin: 10px;"><?php echo $row1['name']; ?></div>
-
         <div class="panel-group joined" id="accordion-test-2" style="color:#001911 ;font-family: system-ui;font-size:14px;">
-
             <?php
             /////SEMESTER WISE RESULT, RESULTSHEET FOR EACH SEMESTER SEPERATELY
             $toggle = true;
@@ -34,7 +31,6 @@ foreach ($student_info as $row1) :
                             </a>
                         </h4>
                     </div>
-
                     <div id="collapse<?php echo $row0['exam_id']; ?>" class="panel-collapse collapse <?php
                                                                                                         if ($toggle) {
                                                                                                             echo 'in';
@@ -59,8 +55,8 @@ foreach ($student_info as $row1) :
                                         ?>
                                             <tr>
                                                 <td style="font-size: 14px;"><?php echo $row2['name'];
-                                                    $subject_name[] = $row2['name']; ?></td>
-                                                <td style="font-size: 14px;"> 
+                                                                                $subject_name[] = $row2['name']; ?></td>
+                                                <td style="font-size: 14px;">
                                                     <?php
                                                     //obtained marks
                                                     $verify_data = array(
@@ -69,7 +65,6 @@ foreach ($student_info as $row1) :
                                                         'subject_id' => $row2['subject_id'],
                                                         'student_id' => $row1['student_id']
                                                     );
-
                                                     $query = $this->db->get_where('mark', $verify_data);
                                                     $marks = $query->result_array();
                                                     foreach ($marks as $row3) :
