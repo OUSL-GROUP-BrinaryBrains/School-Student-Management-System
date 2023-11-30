@@ -17,4 +17,5 @@ safran@gmail.com <br>
 ilma@gmail.com <br>
 #### Teacher's
 t_kasun@mail.com <br>
-t_savithree@gmail.com <br>
+t_lahiru@gmail.com <br>
+t_padmini@gmail.com <br>
