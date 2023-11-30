@@ -615,7 +615,7 @@ class Admin extends CI_Controller
                 ));
                 $this->session->set_flashdata('flash_success', 'Account Password Updated!');
             } else {
-                $this->session->set_flashdata('flash_error_message', 'Password is Not Matching!');
+                $this->session->set_flashdata('flash_error', 'Password is Not Matching!');
             }
             redirect(base_url() . 'index.php?admin/manage_profile/', 'refresh');
         }
