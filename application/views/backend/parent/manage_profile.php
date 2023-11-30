@@ -1,9 +1,7 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------->
         <ul class="nav nav-tabs bordered">
-
             <li class="active">
                 <a href="#list" data-toggle="tab"><i class="entypo-user"></i>
                     <?php echo ('Manage Profile'); ?>
@@ -11,8 +9,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------->
-
-
         <div class="tab-content">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
@@ -45,19 +41,14 @@
                 </div>
             </div>
             <!----EDITING FORM ENDS--->
-
         </div>
     </div>
 </div>
-
-
 <!--password-->
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
-
             <li class="active">
                 <a href="#list" data-toggle="tab"><i class="entypo-lock"></i>
                     <?php echo ('Change Password'); ?>
@@ -65,8 +56,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
-
         <div class="tab-content">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
@@ -105,7 +94,6 @@
                 </div>
             </div>
             <!----EDITING FORM ENDS-->
-
         </div>
     </div>
 </div>
