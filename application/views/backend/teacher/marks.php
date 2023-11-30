@@ -15,21 +15,21 @@
                 <?php echo form_open(base_url() . 'index.php?teacher/marks'); ?>
                 <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped">
                     <tr>
-                        <td><?php echo ('Select exam'); ?></td>
-                        <td><?php echo ('Select class'); ?></td>
-                        <td><?php echo ('Select subject'); ?></td>
-                        <td>&nbsp;</td>
+                        <th style="font-weight:600;font-family:system-ui; background:#ffa800;"><?php echo ('Select Exam'); ?></td>
+                        <th style="font-weight:600;font-family:system-ui; background:#ffa800;"><?php echo ('Select Class'); ?></td>
+                        <th style="font-weight:600;font-family:system-ui; background:#ffa800;"><?php echo ('Select Subject'); ?></td>
+                        <th style="font-weight:600;font-family:system-ui; background:#ffa800;"><?php echo ('Options'); ?></td>
                     </tr>
                     <tr>
                         <td>
                             <select name="exam_id" class="form-control" style="float:left;">
-                                <option value=""><?php echo ('Select an exam'); ?></option>
+                                <option value=""><?php echo ('Select an Exam'); ?></option>
                                 <?php
                                 $exams = $this->db->get('exam')->result_array();
                                 foreach ($exams as $row) :
                                 ?>
                                     <option value="<?php echo $row['exam_id']; ?>" <?php if ($exam_id == $row['exam_id']) echo 'selected'; ?>>
-                                        <?php echo ('Class'); ?> <?php echo $row['name']; ?></option>
+                                        <?php echo $row['name']; ?></option>
                                 <?php
                                 endforeach;
                                 ?>
@@ -37,13 +37,13 @@
                         </td>
                         <td>
                             <select name="class_id" class="form-control" onchange="show_subjects(this.value)" style="float:left;">
-                                <option value=""><?php echo ('Select a class'); ?></option>
+                                <option value=""><?php echo ('Select a Class'); ?></option>
                                 <?php
                                 $classes = $this->db->get('class')->result_array();
                                 foreach ($classes as $row) :
                                 ?>
                                     <option value="<?php echo $row['class_id']; ?>" <?php if ($class_id == $row['class_id']) echo 'selected'; ?>>
-                                        Class <?php echo $row['name']; ?></option>
+                                    <?php echo $row['name']; ?></option>
                                 <?php
                                 endforeach;
                                 ?>
@@ -57,7 +57,7 @@
                                 <select name="<?php if ($class_id == $row['class_id']) echo 'subject_id';
                                                 else echo 'temp'; ?>" id="subject_id_<?php echo $row['class_id']; ?>" style="display:<?php if ($class_id == $row['class_id']) echo 'block';
                                                                                                                                                                                             else echo 'none'; ?>;" class="form-control" style="float:left;">
-                                    <option value="">Subject of class <?php echo $row['name']; ?></option>
+                                    <option value="">Subject of <?php echo $row['name']; ?></option>
                                     <?php
                                     $subjects    =    $this->crud_model->get_subjects_by_class($row['class_id']);
                                     foreach ($subjects as $row2) : ?>
@@ -69,12 +69,12 @@
                             <?php endforeach; ?>
                             <select name="temp" id="subject_id_0" style="display:<?php if (isset($subject_id) && $subject_id > 0) echo 'none';
                                                                                     else echo 'block'; ?>;" class="form-control" style="float:left;">
-                                <option value="">Select a class first</option>
+                                <option value="">Select a Class First</option>
                             </select>
                         </td>
                         <td>
                             <input type="hidden" name="operation" value="selection" />
-                            <input type="submit" value="<?php echo ('Manage marks'); ?>" class="btn btn-info" />
+                            <input type="submit" value="<?php echo ('Show Marks'); ?>" class="btn btn-info" />
                         </td>
                     </tr>
                 </table>
@@ -100,10 +100,10 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <td><?php echo ('Student'); ?></td>
-                            <td><?php echo ('Mark obtained'); ?>(out of 100)</td>
-                            <td><?php echo ('Comment'); ?></td>
-                            <td></td>
+                        <td style="font-weight:600"><?php echo ('Student Name'); ?></td>
+                            <td style="font-weight:600"><?php echo ('Marks Obtained '); ?>(Out of 100%)</td>
+                            <td style="font-weight:600"><?php echo ('Comment'); ?></td>
+                            <td style="font-weight:600"><?php echo ('Action'); ?></td>
                         </tr>
                     </thead>
                     <tbody>

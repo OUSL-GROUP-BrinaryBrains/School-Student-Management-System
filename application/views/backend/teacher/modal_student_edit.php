@@ -8,7 +8,7 @@ foreach ($edit_data as $row) :
 				<div class="panel-heading">
 					<div class="panel-title">
 						<i class="entypo-plus-circled"></i>
-						<?php echo ('Edit student'); ?>
+						<?php echo ('Edit Student'); ?>
 					</div>
 				</div>
 				<div class="panel-body">
@@ -35,13 +35,13 @@ foreach ($edit_data as $row) :
 					<div class="form-group">
 						<label for="field-1" class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>" value="<?php echo $row['name']; ?>">
+							<input type="text" class="form-control" name="name" placeholder="Enter Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" value="<?php echo $row['name']; ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Parent'); ?></label>
 						<div class="col-sm-5">
-							<select name="parent_id" class="form-control" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>">
+							<select name="parent_id" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 								<option value=""><?php echo ('Select'); ?></option>
 								<?php
 								$parents = $this->db->get('parent')->result_array();
@@ -59,7 +59,7 @@ foreach ($edit_data as $row) :
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Class'); ?></label>
 						<div class="col-sm-5">
-							<select name="class_id" class="form-control" data-validate="required" id="class_id" data-message-required="<?php echo get_phrase('value_required'); ?>" onchange="return get_class_sections(this.value)">
+							<select name="class_id" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" onchange="return get_class_sections(this.value)">
 								<option value=""><?php echo ('Select'); ?></option>
 								<?php
 								$classes = $this->db->get('class')->result_array();
@@ -78,48 +78,48 @@ foreach ($edit_data as $row) :
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Section'); ?></label>
 						<div class="col-sm-5">
 							<select name="section_id" class="form-control" id="section_selector_holder">
-								<option value=""><?php echo ('Select class first'); ?></option>
+								<option value=""><?php echo ('Select Class First'); ?></option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Roll'); ?></label>
+						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Index No'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="roll" value="<?php echo $row['roll']; ?>">
+							<input  placeholder="Enter Index No Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="index_no" value="<?php echo $row['index_no']; ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Birthday'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control datepicker" name="birthday" value="<?php echo $row['birthday']; ?>" data-start-view="2">
+							<input placeholder="Enter Birthday Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control datepicker" name="birthday" value="<?php echo $row['birthday']; ?>" data-start-view="2">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Gender'); ?></label>
 						<div class="col-sm-5">
-							<select name="sex" class="form-control">
+							<select name="gender" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 								<option value=""><?php echo ('Select'); ?></option>
-								<option value="Male" <?php if ($row['sex'] == 'Male') echo 'selected'; ?>><?php echo ('Male'); ?></option>
-								<option value="Female" <?php if ($row['sex'] == 'Female') echo 'selected'; ?>><?php echo ('Female'); ?></option>
+								<option value="Male" <?php if ($row['gender'] == 'Male') echo 'selected'; ?>><?php echo ('Male'); ?></option>
+								<option value="Female" <?php if ($row['gender'] == 'Female') echo 'selected'; ?>><?php echo ('Female'); ?></option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Address'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="address" value="<?php echo $row['address']; ?>">
+							<input placeholder="Enter Address Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="address" value="<?php echo $row['address']; ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-2" class="col-sm-3 control-label"><?php echo ('Phone'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="phone" value="<?php echo $row['phone']; ?>">
+							<input placeholder="Enter Phone Number Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="phone" value="<?php echo $row['phone']; ?>">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="field-1" class="col-sm-3 control-label"><?php echo ('Email'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>">
+							<input placeholder="Enter Email Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>">
 						</div>
 					</div>
 					<div class="form-group">
