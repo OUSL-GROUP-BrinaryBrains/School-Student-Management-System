@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------->
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -10,15 +9,10 @@
             </li>
         </ul>
         <!------CONTROL TABS END------->
-
-
         <div class="tab-content">
             <!----TABLE LISTING STARTS--->
             <div class="tab-pane active" id="list">
                 <div class="panel-group joined" id="accordion-test-2">
-
-
-
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -27,14 +21,12 @@
                                 </a>
                             </h4>
                         </div>
-
                         <div id="collapse" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped">
                                     <tbody>
                                         <?php
                                         for ($d = 1; $d <= 7; $d++) :
-
                                             if ($d == 1) $day = 'Monday';
                                             else if ($d == 2) $day = 'Tuesday';
                                             else if ($d == 3) $day = 'Wednesday';
@@ -58,24 +50,17 @@
                                                             <?php echo '(' . $row2['time_start'] . '-' . $row2['time_end'] . ')'; ?>
                                                         </button>
                                                     <?php endforeach; ?>
-
                                                 </td style="font-weight:600; vertical-align:middle;">
                                             </tr>
                                         <?php endfor; ?>
-
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!----TABLE LISTING ENDS--->
-
-
-
-
         </div>
     </div>
 </div>
