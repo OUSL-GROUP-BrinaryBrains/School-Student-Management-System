@@ -74,7 +74,7 @@
                         </td>
                         <td>
                             <input type="hidden" name="operation" value="selection" />
-                            <input type="submit" value="<?php echo ('Manage Marks'); ?>" class="btn btn-info" />
+                            <input type="submit" value="<?php echo ('Show Marks'); ?>" class="btn btn-info" />
                         </td>
                     </tr>
                 </table>
