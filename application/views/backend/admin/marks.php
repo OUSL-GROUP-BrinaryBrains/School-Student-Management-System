@@ -103,7 +103,7 @@
                             <td style="font-weight:600"><?php echo ('Student Name'); ?></td>
                             <td style="font-weight:600"><?php echo ('Marks Obtained '); ?>(Out of 100%)</td>
                             <td style="font-weight:600"><?php echo ('Comment'); ?></td>
-                            <td style="font-weight:600"><?php echo ('Action'); ?></td>
+                            <td style="font-weight:600"></td>
                         </tr>
                     </thead>
                     <tbody>

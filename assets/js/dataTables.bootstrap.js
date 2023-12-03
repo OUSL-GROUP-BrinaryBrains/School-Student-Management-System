@@ -3,7 +3,7 @@ jQuery.extend( true, jQuery.fn.dataTable.defaults, {
 	"sDom": "<'row'<'col-xs-6 col-left'l><'col-xs-6 col-right'f>r>t<'row'<'col-xs-6 col-left'i><'col-xs-6 col-right'p>>",
 	"sPaginationType": "bootstrap",
 	"oLanguage": {
-		"sLengthMenu": "_MENU_ Per Page"
+		"sLengthMenu": "_MENU_ per page"
 	}
 } );
 

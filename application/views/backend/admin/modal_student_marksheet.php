@@ -14,7 +14,7 @@ foreach ($student_info as $row1) :
 ?>
     <center>
         <div style="color:#001911 ;font-family: system-ui; font-size: 20px;font-weight: 600;margin: 10px;"><?php echo $row1['name']; ?></div>
-        <div class="panel-group joined" id="accordion-test-2" style="color:#001911 ;font-family: system-ui;font-size:14px;">
+        <div class="panel-group joined" id="accordion-test-2" style="color:#001911 ;font-family: system-ui;font-size:14px;>
             <?php
             /////SEMESTER WISE RESULT, RESULTSHEET FOR EACH SEMESTER SEPERATELY
             $toggle = true;
@@ -23,7 +23,7 @@ foreach ($student_info as $row1) :
                 $total_marks = 0;
                 $total_subjects = 0;
             ?>
-                <div class="panel panel-default">
+                <div class=" panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion-test-2" href="#collapse<?php echo $row0['exam_id']; ?>">
@@ -42,9 +42,9 @@ foreach ($student_info as $row1) :
                         <table class="table table-bordered table-hover table-striped ">
                             <thead>
                                 <tr>
-                                <th style="font-weight:600; font-size: 14px;">Subject</th>
-                                            <th style="font-weight:600; font-size: 14px;">Obtained Marks</th>
-                                            <th style="font-weight:600; font-size: 14px;">Highest Mark</th>
+                                    <th style="font-weight:600">Subject</th>
+                                    <th style="font-weight:600">Obtained Marks</th>
+                                    <th style="font-weight:600">Highest Mark</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,9 +54,9 @@ foreach ($student_info as $row1) :
                                     $total_subjects++;
                                 ?>
                                     <tr>
-                                        <td style="font-size: 14px;"><?php echo $row2['name'];
+                                        <td><?php echo $row2['name'];
                                             $subject_name[] = $row2['name']; ?></td>
-                                        <td style="font-size: 14px;">
+                                        <td>
                                             <?php
                                             //obtained marks
                                             $verify_data = array(
@@ -74,7 +74,7 @@ foreach ($student_info as $row1) :
                                             endforeach;
                                             ?>
                                         </td>
-                                        <td style="font-size: 14px;">
+                                        <td>
                                             <?php
                                             //highest marks
                                             $verify_data = array(
@@ -94,8 +94,10 @@ foreach ($student_info as $row1) :
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+                        <hr />
                         Total Marks : <?php echo $total_marks; ?>
                         <hr />
+                        <div id="chartdiv"></div>
                         <script>
                             setTimeout(function() {
                                 var chart = AmCharts.makeChart("chartdiv", {

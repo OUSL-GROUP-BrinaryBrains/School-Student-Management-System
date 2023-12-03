@@ -1,7 +1,7 @@
 <style>
     #chartdiv {
         width: 100%;
-        height: auto;
+        height: 250px;
         font-size: 11px;
         color: #001911;
         font-family: system-ui;
@@ -27,7 +27,7 @@ foreach ($student_info as $row1) :
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion-test-2" href="#collapse<?php echo $row0['exam_id']; ?>">
-                                <i class="fa fa-chevron-circle-right"></i> <?php echo $row0['name']; ?>
+                                <i class="entypo-rss"></i> <?php echo $row0['name']; ?>
                             </a>
                         </h4>
                     </div>
@@ -94,8 +94,10 @@ foreach ($student_info as $row1) :
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
+                                <hr />
                                 Total Marks : <?php echo $total_marks; ?>
                                 <hr />
+                                <div id="chartdiv"></div>
                                 <script>
                                     setTimeout(function() {
                                         var chart = AmCharts.makeChart("chartdiv", {

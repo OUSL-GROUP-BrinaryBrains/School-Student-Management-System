@@ -8464,7 +8464,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-body {
   position: relative;
-  padding: 5px 15px;
+  padding: 15px;
 }
 
 .panel-body:before,
@@ -8929,7 +8929,7 @@ lesshat-selector {
 
 .panel-primary>.panel-heading {
   color: #373e4a;
-  background-color: #ffa800;
+  background-color: #ffffff;
   border-color: #ebebeb;
 }
 
@@ -10565,7 +10565,6 @@ button.close {
   position: relative;
   padding: 10px;
   color: #001911;
-
   font-size: 14px;
   font-family: system-ui;
 }
