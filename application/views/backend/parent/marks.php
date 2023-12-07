@@ -11,9 +11,7 @@ foreach ($child_of_parent as $row) :
     <br><br>
     <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
         <div class="col-md-12">
-
             <div class="tabs-vertical-env">
-
                 <ul class="nav tabs-vertical">
                     <?php
                     $exams = $this->db->get('exam')->result_array();
@@ -26,9 +24,7 @@ foreach ($child_of_parent as $row) :
                         </li>
                     <?php endforeach; ?>
                 </ul>
-
                 <div class="tab-content">
-
                     <?php
                     foreach ($exams as $exam) :
                         $this->db->where('exam_id', $exam['exam_id']);
@@ -66,11 +62,8 @@ foreach ($child_of_parent as $row) :
                             </table>
                         </div>
                     <?php endforeach; ?>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 <?php endforeach; ?>

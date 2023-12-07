@@ -1,5 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
-    <div class="col-md-12" >
+    <div class="col-md-12">
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -9,7 +9,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
         <div class="tab-content" style="margin-top:0px; margin-bottom:0px;">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
@@ -18,21 +17,18 @@
                     foreach ($edit_data as $row) :
                     ?>
                         <?php echo form_open(base_url() . 'index.php?admin/manage_profile/update_profile_info', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
-
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Name'); ?></label>
                             <div class="col-sm-5">
                                 <input placeholder="Enter Name Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" type="text" class="form-control" name="name" value="<?php echo $row['name']; ?>" />
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ('Email'); ?></label>
                             <div class="col-sm-5">
                                 <input type="text" placeholder="Enter Email Here" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" class="form-control" name="email" value="<?php echo $row['email']; ?>" />
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
                                 <button type="submit" class="btn btn-info"><?php echo ('Update Profile'); ?></button>
@@ -45,19 +41,14 @@
                 </div>
             </div>
             <!----EDITING FORM ENDS-->
-
         </div>
     </div>
 </div>
-
-
 <!--password-->
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------->
         <ul class="nav nav-tabs bordered">
-
             <li class="active">
                 <a href="#list" data-toggle="tab"><i class="entypo-lock"></i>
                     <?php echo ('Change Password'); ?>
@@ -65,7 +56,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------->
-
         <div class="tab-content" style="margin-top:0px; margin-bottom:0px;">
             <!----EDITING FORM STARTS---->
             <div class="tab-pane box active" id="list" style="padding: 5px">
@@ -104,7 +94,6 @@
                 </div>
             </div>
             <!----EDITING FORM ENDS--->
-
         </div>
     </div>
 </div>

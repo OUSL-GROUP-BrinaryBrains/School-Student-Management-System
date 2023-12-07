@@ -2,7 +2,7 @@
 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover table-striped" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <thead>
         <tr>
-        <th style="font-weight:600"><?php echo ('Select Date'); ?></th>
+            <th style="font-weight:600"><?php echo ('Select Date'); ?></th>
             <th style="font-weight:600"><?php echo ('Select Month'); ?></th>
             <th style="font-weight:600"><?php echo ('Select Year'); ?></th>
             <th style="font-weight:600"><?php echo ('Select Class'); ?></th>

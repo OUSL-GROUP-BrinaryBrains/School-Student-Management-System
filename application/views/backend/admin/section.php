@@ -4,13 +4,10 @@
 	<?php echo ('Add New Section'); ?>
 </a>
 <br><br><br>
-
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
 	<div class="col-md-12">
-
 		<div class="tabs-vertical-env">
-
-			<ul class="nav tabs-vertical" >
+			<ul class="nav tabs-vertical">
 				<?php
 				$classes = $this->db->get('class')->result_array();
 				foreach ($classes as $row) :
@@ -23,9 +20,7 @@
 					</li>
 				<?php endforeach; ?>
 			</ul>
-
 			<div class="tab-content">
-
 				<div class="tab-pane active">
 					<table class="table table-bordered table-hover table-striped responsive">
 						<thead>
@@ -38,7 +33,6 @@
 							</tr>
 						</thead>
 						<tbody>
-
 							<?php
 							$count    = 1;
 							$sections = $this->db->get_where('section', array(
@@ -61,7 +55,6 @@
 												Action <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu dropdown-default pull-right" role="menu">
-
 												<!-- EDITING LINK -->
 												<li>
 													<a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/section_edit/<?php echo $row['section_id']; ?>');">
@@ -70,7 +63,6 @@
 													</a>
 												</li>
 												<li class="divider"></li>
-
 												<!-- DELETION LINK -->
 												<li>
 													<a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/sections/delete/<?php echo $row['section_id']; ?>');">
@@ -83,14 +75,10 @@
 									</td>
 								</tr>
 							<?php endforeach; ?>
-
 						</tbody>
 					</table>
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
 </div>

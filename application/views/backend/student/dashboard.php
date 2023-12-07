@@ -21,31 +21,23 @@
             </div>
         </div>
     </div>
-
     <div class="col-md-4">
         <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
             <div class="col-md-12">
-
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="fa fa-group"></i></div>
                     <div class="num" data-start="0" data-end="<?php echo $this->db->count_all('student'); ?>" data-postfix="" data-duration="1500" data-delay="0">0</div>
-
                     <h3><?php echo ('Total Students'); ?></h3>
                 </div>
-
             </div>
             <div class="col-md-12">
-
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-users"></i></div>
                     <div class="num" data-start="0" data-end="<?php echo $this->db->count_all('teacher'); ?>" data-postfix="" data-duration="800" data-delay="0">0</div>
                     <h3><?php echo ('Total Teachers'); ?></h3>
                 </div>
-
             </div>
-
             <div class="col-md-12">
-
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-chart-bar"></i></div>
                     <?php
@@ -54,21 +46,14 @@
                     $present_today        =    $query->num_rows();
                     ?>
                     <div class="num" data-start="0" data-end="<?php echo $present_today; ?>" data-postfix="" data-duration="500" data-delay="0">0</div>
-
                     <h3><?php echo ('Total Attendance Today'); ?></h3>
                 </div>
-
             </div>
         </div>
     </div>
-
 </div>
-
-
-
 <script>
     $(document).ready(function() {
-
         var calendar = $('#notice_calendar');
         $('#notice_calendar').fullCalendar({
             header: {

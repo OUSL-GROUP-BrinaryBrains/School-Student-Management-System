@@ -64,7 +64,6 @@ foreach ($edit_data as $row) :
             </div>
         </div>
     </div>
-
 <?php
 endforeach;
 ?>

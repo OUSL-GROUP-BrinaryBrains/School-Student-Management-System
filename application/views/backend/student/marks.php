@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -10,8 +9,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END----->
-
-
         <!----TABLE LISTING STARTS-->
         <div class="tab-pane  <?php if (!isset($edit_data) && !isset($personal_profile) && !isset($academic_result)) echo 'active'; ?>" id="list">
             <center>
@@ -48,8 +45,6 @@
                                                                                             echo 'selected="selected"'; ?>><?php echo $row2['name']; ?>
                                     </option>
                                 <?php endforeach; ?>
-
-
                             </select>
                         </td>
                         <td>
@@ -61,11 +56,7 @@
                 </table>
                 </form>
             </center>
-
-
             <br /><br />
-
-
             <?php if ($exam_id > 0 && $class_id > 0 && $subject_id > 0) : ?>
                 <?php
                 ////CREATE THE MARK ENTRY ONLY IF NOT EXISTS////
@@ -78,7 +69,6 @@
                         'student_id' => $row['student_id']
                     );
                     $query = $this->db->get_where('mark', $verify_data);
-
                     if ($query->num_rows() < 1)
                         $this->db->insert('mark', $verify_data);
                 endforeach;
@@ -92,18 +82,15 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php
                         $students    =    $this->db->get_where('student', array('student_id' => $student_id))->result_array();
                         foreach ($students as $row) :
-
                             $verify_data    =    array(
                                 'exam_id' => $exam_id,
                                 'class_id' => $class_id,
                                 'subject_id' => $subject_id,
                                 'student_id' => $row['student_id']
                             );
-
                             $query = $this->db->get_where('mark', $verify_data);
                             $marks    =    $query->result_array();
                             foreach ($marks as $row2) :
@@ -114,7 +101,6 @@
                                     </td>
                                     <td style="text-align:center;">
                                         <?php echo $row2['mark_obtained']; ?>
-
                                     </td>
                                     <td style="width:200px;">
                                         <?php echo $row2['comment']; ?>
@@ -126,19 +112,15 @@
                         ?>
                     </tbody>
                 </table>
-
             <?php endif; ?>
         </div>
         <!----TABLE LISTING ENDS-->
-
     </div>
 </div>
 </div>
-
 <script type="text/javascript">
     function show_subjects(class_id) {
         for (i = 0; i <= 100; i++) {
-
             try {
                 document.getElementById('subject_id_' + i).style.display = 'none';
                 document.getElementById('subject_id_' + i).setAttribute("name", "temp");

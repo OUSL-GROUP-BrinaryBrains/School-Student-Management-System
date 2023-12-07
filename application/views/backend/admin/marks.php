@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;">
     <div class="col-md-12">
-
         <!------CONTROL TABS START------>
         <ul class="nav nav-tabs bordered">
             <li class="active">
@@ -10,8 +9,6 @@
             </li>
         </ul>
         <!------CONTROL TABS END------>
-
-
         <!----TABLE LISTING STARTS-->
         <div class="tab-pane  <?php if (!isset($edit_data) && !isset($personal_profile) && !isset($academic_result)) echo 'active'; ?>" id="list">
             <center>
@@ -57,13 +54,10 @@
                             <?php
                             $classes    =    $this->crud_model->get_classes();
                             foreach ($classes as $row) : ?>
-
                                 <select name="<?php if ($class_id == $row['class_id']) echo 'subject_id';
                                                 else echo 'temp'; ?>" id="subject_id_<?php echo $row['class_id']; ?>" style="display:<?php if ($class_id == $row['class_id']) echo 'block';
-                                                                                                                                                                                            else echo 'none'; ?>;" class="form-control" style="float:left;">
-
+                                                                                                                                        else echo 'none'; ?>;" class="form-control" style="float:left;">
                                     <option value="">Subject of <?php echo $row['name']; ?></option>
-
                                     <?php
                                     $subjects    =    $this->crud_model->get_subjects_by_class($row['class_id']);
                                     foreach ($subjects as $row2) : ?>
@@ -71,12 +65,8 @@
                                                                                                 echo 'selected="selected"'; ?>><?php echo $row2['name']; ?>
                                         </option>
                                     <?php endforeach; ?>
-
-
                                 </select>
                             <?php endforeach; ?>
-
-
                             <select name="temp" id="subject_id_0" style="display:<?php if (isset($subject_id) && $subject_id > 0) echo 'none';
                                                                                     else echo 'block'; ?>;" class="form-control" style="float:left;">
                                 <option value="">Select a Class First</option>
@@ -84,17 +74,13 @@
                         </td>
                         <td>
                             <input type="hidden" name="operation" value="selection" />
-                            <input type="submit" value="<?php echo ('Manage Marks'); ?>" class="btn btn-info" />
+                            <input type="submit" value="<?php echo ('Show Marks'); ?>" class="btn btn-info" />
                         </td>
                     </tr>
                 </table>
                 </form>
             </center>
-
-
             <br /><br />
-
-
             <?php if ($exam_id > 0 && $class_id > 0 && $subject_id > 0) : ?>
                 <?php
                 ////CREATE THE MARK ENTRY ONLY IF NOT EXISTS////
@@ -107,7 +93,6 @@
                         'student_id' => $row['student_id']
                     );
                     $query = $this->db->get_where('mark', $verify_data);
-
                     if ($query->num_rows() < 1)
                         $this->db->insert('mark', $verify_data);
                 endforeach;
@@ -122,18 +107,15 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <?php
                         $students    =    $this->crud_model->get_students($class_id);
                         foreach ($students as $row) :
-
                             $verify_data    =    array(
                                 'exam_id' => $exam_id,
                                 'class_id' => $class_id,
                                 'subject_id' => $subject_id,
                                 'student_id' => $row['student_id']
                             );
-
                             $query = $this->db->get_where('mark', $verify_data);
                             $marks    =    $query->result_array();
                             foreach ($marks as $row2) :
@@ -145,18 +127,15 @@
                                     </td>
                                     <td>
                                         <input type="number" value="<?php echo $row2['mark_obtained']; ?>" name="mark_obtained" class="form-control" />
-
                                     </td>
                                     <td>
                                         <textarea name="comment" class="form-control"><?php echo $row2['comment']; ?></textarea>
                                     </td>
                                     <td>
                                         <input type="hidden" name="mark_id" value="<?php echo $row2['mark_id']; ?>" />
-
                                         <input type="hidden" name="exam_id" value="<?php echo $exam_id; ?>" />
                                         <input type="hidden" name="class_id" value="<?php echo $class_id; ?>" />
                                         <input type="hidden" name="subject_id" value="<?php echo $subject_id; ?>" />
-
                                         <input type="hidden" name="operation" value="update" />
                                         <button type="submit" class="btn btn-primary"> Update</button>
                                     </td>
@@ -168,19 +147,15 @@
                         ?>
                     </tbody>
                 </table>
-
             <?php endif; ?>
         </div>
         <!----TABLE LISTING ENDS-->
-
     </div>
 </div>
 </div>
-
 <script type="text/javascript">
     function show_subjects(class_id) {
         for (i = 0; i <= 100; i++) {
-
             try {
                 document.getElementById('subject_id_' + i).style.display = 'none';
                 document.getElementById('subject_id_' + i).setAttribute("name", "temp");

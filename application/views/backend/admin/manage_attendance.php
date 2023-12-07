@@ -67,7 +67,7 @@
                         <?php endforeach; ?>
                     </select>
                 </td>
-                <td align="center"><input type="submit" value="<?php echo ('Manage Attendance'); ?>" class="btn btn-info" /></td>
+                <td align="center"><input type="submit" value="<?php echo ('View Attendance'); ?>" class="btn btn-info" /></td>
             </tr>
         </form>
     </tbody>

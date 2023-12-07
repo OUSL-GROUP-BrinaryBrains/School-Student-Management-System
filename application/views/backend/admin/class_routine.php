@@ -1,6 +1,5 @@
 <div class="row" style="color:#001911 ;font-family: system-ui;font-size:14px;"">
 	<div class=" col-md-12">
-
     <!------CONTROL TABS START------>
     <ul class="nav nav-tabs bordered">
         <li class="active">
@@ -15,8 +14,6 @@
         </li>
     </ul>
     <!------CONTROL TABS END------>
-
-
     <div class="tab-content">
         <!----TABLE LISTING STARTS-->
         <div class="tab-pane active" id="list">
@@ -34,7 +31,6 @@
                                 </a>
                             </h4>
                         </div>
-
                         <div id="collapse<?php echo $row['class_id']; ?>" class="panel-collapse collapse <?php if ($toggle) {
                                                                                                                 echo 'in';
                                                                                                                 $toggle = false;
@@ -44,7 +40,6 @@
                                     <tbody>
                                         <?php
                                         for ($d = 1; $d <= 7; $d++) :
-
                                             if ($d == 1) $day = 'Monday';
                                             else if ($d == 2) $day = 'Tuesday';
                                             else if ($d == 3) $day = 'Wednesday';
@@ -76,7 +71,6 @@
                                                                         <?php echo ('Edit'); ?>
                                                                     </a>
                                                                 </li>
-
                                                                 <li>
                                                                     <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/class_routine/delete/<?php echo $row2['class_routine_id']; ?>');">
                                                                         <i class="entypo-trash"></i>
@@ -86,14 +80,11 @@
                                                             </ul>
                                                         </div>
                                                     <?php endforeach; ?>
-
                                                 </td>
                                             </tr>
                                         <?php endfor; ?>
-
                                     </tbody>
                                 </table>
-
                             </div>
                         </div>
                     </div>
@@ -103,8 +94,6 @@
             </div>
         </div>
         <!----TABLE LISTING ENDS--->
-
-
         <!----CREATION FORM STARTS---->
         <div class="tab-pane box" id="add" style="padding: 5px">
             <div class="box-content">
@@ -130,7 +119,6 @@
                     <div class="col-sm-5">
                         <select data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" name="subject_id" class="form-control" style="width:100%;" id="subject_selection_holder">
                             <option value=""><?php echo ('Select Class First'); ?></option>
-
                         </select>
                     </div>
                 </div>
@@ -185,11 +173,8 @@
             </div>
         </div>
         <!----CREATION FORM ENDS-->
-
     </div>
 </div>
-
-
 <script type="text/javascript">
     function get_class_subject(class_id) {
         $.ajax({

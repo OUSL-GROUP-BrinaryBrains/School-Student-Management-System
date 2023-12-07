@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row" style="color:#001911 ;font-size:14px;">
-        
             <!-- Dashboard Tiles -->
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
@@ -10,7 +9,6 @@
                     <h3><?php echo ('Total Students'); ?></h3>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-users"></i></div>
@@ -18,7 +16,6 @@
                     <h3><?php echo ('Total Teachers'); ?></h3>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-calendar"></i></div>
@@ -30,7 +27,6 @@
                     <h3><?php echo ('Today Attendance'); ?></h3>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-user"></i></div>
@@ -38,7 +34,6 @@
                     <h3><?php echo ('Total Parents'); ?></h3>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-flow-tree"></i></div>
@@ -46,7 +41,6 @@
                     <h3><?php echo ('Available Classes'); ?></h3>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="tile-stats tile-red">
                     <div class="icon"><i class="entypo-alert"></i></div>
@@ -54,7 +48,6 @@
                     <h3><?php echo ('Notices'); ?></h3>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

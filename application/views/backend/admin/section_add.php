@@ -8,28 +8,21 @@
 				</div>
 			</div>
 			<div class="panel-body">
-
 				<?php echo form_open(base_url() . 'index.php?admin/sections/create/', array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data')); ?>
-
 				<div class="form-group">
 					<label for="field-1" class="col-sm-3 control-label"><?php echo ('Section Name'); ?></label>
-
 					<div class="col-sm-5">
 						<input placeholder="Enter Section Name Here" type="text" class="form-control" name="name" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>" value="" autofocus>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="field-2" class="col-sm-3 control-label"><?php echo ('Nick Name'); ?></label>
-
 					<div class="col-sm-5">
 						<input placeholder="Enter Nick Name Here" type="text" class="form-control" name="nick_name" value="" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="field-2" class="col-sm-3 control-label"><?php echo ('Class'); ?></label>
-
 					<div class="col-sm-5">
 						<select name="class_id" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 							<option value=""><?php echo ('Select'); ?></option>
@@ -46,10 +39,8 @@
 						</select>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="field-2" class="col-sm-3 control-label"><?php echo ('Class Teacher'); ?></label>
-
 					<div class="col-sm-5">
 						<select name="teacher_id" class="form-control" data-validate="required" data-message-required="<?php echo ('*This Field is Required'); ?>">
 							<option value=""><?php echo ('Select'); ?></option>
@@ -66,7 +57,6 @@
 						</select>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<div class="col-sm-offset-3 col-sm-5">
 						<button type="submit" class="btn btn-info"><?php echo ('Add Section'); ?></button>

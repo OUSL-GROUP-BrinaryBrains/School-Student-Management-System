@@ -54,7 +54,6 @@
 </div>
 <script>
     $(document).ready(function() {
-
         var calendar = $('#notice_calendar');
         $('#notice_calendar').fullCalendar({
             header: {
