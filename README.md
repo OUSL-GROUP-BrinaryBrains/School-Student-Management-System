@@ -1,4 +1,5 @@
-# School Student Management System
+<h1 align="center">School Student Management System</h1>
+
 ### Steps
 1. Download the zip file
 2. Extract the file and copy htdocs folder
